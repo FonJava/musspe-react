@@ -3,8 +3,6 @@ import Header from "./components/Header/Header";
 /* import Sidebar from "./components/Sidebar/Sidebar";
 import Footer from "./components/Footer/Footer"; */
 
-import "./assets/css/estilo.css";
-
 import Home from "./pages/Home/Home";
 /* import Noticias from "./pages/Noticias/Noticias";
 import Acervo from "./pages/Acervo/Acervo";
