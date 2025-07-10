@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Header from "./components/Header/Header";
 /* import Sidebar from "./components/Sidebar/Sidebar";
 import Footer from "./components/Footer/Footer"; */
@@ -11,25 +12,47 @@ import Visita from "./pages/Visita/Visita";
 import Jogos from "./pages/Jogos/Jogos"; */
 import NotFound from "./pages/NotFound/NotFound";
 
-function App() {
+function AppWrapper() {
+  const location = useLocation();
+  const [activePage, setActivePage] = useState("home");
+
+  useEffect(() => {
+    const pathToPage = {
+      "/": "home",
+      "/noticias": "noticias",
+      "/acervo": "acervo",
+      "/jogos": "jogos",
+      "/colaboradores": "colaboradores",
+      "/visita": "visita",
+    };
+    const page = pathToPage[location.pathname] || "notfound";
+    setActivePage(page);
+  }, [location.pathname]);
+
   return (
-    <BrowserRouter>
-      <Header />
-      {/* <Sidebar /> */}
+    <>
+      <Header activePage={activePage} setActivePage={setActivePage} />
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* <Route path="/noticias" element={<Noticias />} />
+          {/* 
+          <Route path="/noticias" element={<Noticias />} />
           <Route path="/acervo" element={<Acervo />} />
           <Route path="/jogos" element={<Jogos />} />
           <Route path="/colaboradores" element={<Colaboradores />} />
-          <Route path="/visita" element={<Visita />} />*/}
+          <Route path="/visita" element={<Visita />} />
+          */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
-      {/* <Footer /> */}
-    </BrowserRouter>
+    </>
   );
 }
 
-export default App;
+export default function App() {
+  return (
+    <BrowserRouter>
+      <AppWrapper />
+    </BrowserRouter>
+  );
+}
