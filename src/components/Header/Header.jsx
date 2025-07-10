@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { FaInstagram, FaFacebook, FaYoutube, FaTiktok } from "react-icons/fa";
 import logo from "../../../public/imagens/logo-cabecalho.png";
 
 export default function Header({ activePage, setActivePage }) {
@@ -41,7 +42,9 @@ export default function Header({ activePage, setActivePage }) {
                 <span className="relative z-10">Início</span>
                 <div
                   className={`absolute top-3/4 left-0 right-0 h-1 bg-brand-tangerina rounded-full transition-all duration-300 ease-out ${
-                    activePage === "home" ? "scale-x-100 opacity-100" : "scale-x-0 opacity-0"
+                    activePage === "home"
+                      ? "scale-x-100 opacity-100"
+                      : "scale-x-0 opacity-0"
                   }`}
                 />
               </Link>
@@ -55,7 +58,9 @@ export default function Header({ activePage, setActivePage }) {
                 <span className="relative z-10">Notícias</span>
                 <div
                   className={`absolute top-3/4 left-0 right-0 h-1 bg-brand-tangerina rounded-full transition-all duration-300 ease-out ${
-                    activePage === "noticias" ? "scale-x-100 opacity-100" : "scale-x-0 opacity-0"
+                    activePage === "noticias"
+                      ? "scale-x-100 opacity-100"
+                      : "scale-x-0 opacity-0"
                   }`}
                 />
               </Link>
@@ -69,7 +74,9 @@ export default function Header({ activePage, setActivePage }) {
                 <span className="relative z-10">Acervo</span>
                 <div
                   className={`absolute top-3/4 left-0 right-0 h-1 bg-brand-tangerina rounded-full transition-all duration-300 ease-out ${
-                    activePage === "acervo" ? "scale-x-100 opacity-100" : "scale-x-0 opacity-0"
+                    activePage === "acervo"
+                      ? "scale-x-100 opacity-100"
+                      : "scale-x-0 opacity-0"
                   }`}
                 />
               </Link>
@@ -83,7 +90,9 @@ export default function Header({ activePage, setActivePage }) {
                 <span className="relative z-10">Jogos</span>
                 <div
                   className={`absolute top-3/4 left-0 right-0 h-1 bg-brand-tangerina rounded-full transition-all duration-300 ease-out ${
-                    activePage === "jogos" ? "scale-x-100 opacity-100" : "scale-x-0 opacity-0"
+                    activePage === "jogos"
+                      ? "scale-x-100 opacity-100"
+                      : "scale-x-0 opacity-0"
                   }`}
                 />
               </Link>
@@ -97,7 +106,9 @@ export default function Header({ activePage, setActivePage }) {
                 <span className="relative z-10">Colaboradores</span>
                 <div
                   className={`absolute top-3/4 left-0 right-0 h-1 bg-brand-tangerina rounded-full transition-all duration-300 ease-out ${
-                    activePage === "colaboradores" ? "scale-x-100 opacity-100" : "scale-x-0 opacity-0"
+                    activePage === "colaboradores"
+                      ? "scale-x-100 opacity-100"
+                      : "scale-x-0 opacity-0"
                   }`}
                 />
               </Link>
@@ -112,7 +123,7 @@ export default function Header({ activePage, setActivePage }) {
                 }
                 onClick={() => setActivePage("visita")}
               >
-                Agende uma Visita
+                Agende uma visita
               </Link>
             </li>
           </ul>
@@ -121,16 +132,20 @@ export default function Header({ activePage, setActivePage }) {
 
       {/* Navegação mobile*/}
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform
+        className={`fixed top-0 right-0 h-full w-64 bg-brand-dark shadow-2xl transform
            transition-transform duration-300 ease-in-out z-40 ${
              isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
            } md:hidden`}
+        style={
+          isMobileMenuOpen
+            ? { boxShadow: "-10px 0 25px -5px rgba(0, 0, 0, 0.5)" }
+            : {}
+        }
       >
-        <div className="flex items-center justify-between p-4 border-b">
-          <h2 className="text-lg font-semibold">Menu</h2>
+        <div className="flex items-center justify-end p-4">
           <button
             onClick={toggleMobileMenu}
-            className="text-gray-800 focus:outline-none"
+            className="text-brand-bege focus:outline-none"
           >
             <svg
               className="w-6 h-6"
@@ -148,60 +163,164 @@ export default function Header({ activePage, setActivePage }) {
             </svg>
           </button>
         </div>
-        <ul className="flex flex-col p-4 space-y-4">
+        <ul className="flex flex-col p-4 space-y-4 text-white font-barlow-semibold">
           <li>
             <Link
               to="/"
-              className="block text-gray-700 hover:text-gray-900"
-              onClick={toggleMobileMenu}
+              className="relative inline-block"
+              onClick={() => {
+                setActivePage("home");
+                toggleMobileMenu();
+              }}
             >
-              Início
+              <span className="relative z-10">Início</span>
+              <div
+                className={`absolute top-3/4 left-0 right-0 h-1 bg-brand-tangerina rounded-full transition-all duration-300 ease-out ${
+                  activePage === "home"
+                    ? "scale-x-100 opacity-100"
+                    : "scale-x-0 opacity-0"
+                }`}
+              />
             </Link>
           </li>
           <li>
             <Link
               to="/noticias"
-              className="block text-gray-700 hover:text-gray-900"
-              onClick={toggleMobileMenu}
+              className="relative inline-block"
+              onClick={() => {
+                setActivePage("noticias");
+                toggleMobileMenu();
+              }}
             >
-              Notícias
+              <span className="relative z-10">Notícias</span>
+              <div
+                className={`absolute top-3/4 left-0 right-0 h-1 bg-brand-tangerina rounded-full transition-all duration-300 ease-out ${
+                  activePage === "noticias"
+                    ? "scale-x-100 opacity-100"
+                    : "scale-x-0 opacity-0"
+                }`}
+              />
             </Link>
           </li>
           <li>
             <Link
               to="/acervo"
-              className="block text-gray-700 hover:text-gray-900"
-              onClick={toggleMobileMenu}
+              className="relative inline-block"
+              onClick={() => {
+                setActivePage("acervo");
+                toggleMobileMenu();
+              }}
             >
-              Acervo
+              <span className="relative z-10">Acervo</span>
+              <div
+                className={`absolute top-3/4 left-0 right-0 h-1 bg-brand-tangerina rounded-full transition-all duration-300 ease-out ${
+                  activePage === "acervo"
+                    ? "scale-x-100 opacity-100"
+                    : "scale-x-0 opacity-0"
+                }`}
+              />
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/jogos"
+              className="relative inline-block"
+              onClick={() => {
+                setActivePage("jogos");
+                toggleMobileMenu();
+              }}
+            >
+              <span className="relative z-10">Jogos</span>
+              <div
+                className={`absolute top-3/4 left-0 right-0 h-1 bg-brand-tangerina rounded-full transition-all duration-300 ease-out ${
+                  activePage === "jogos"
+                    ? "scale-x-100 opacity-100"
+                    : "scale-x-0 opacity-0"
+                }`}
+              />
             </Link>
           </li>
           <li>
             <Link
               to="/colaboradores"
-              className="block text-gray-700 hover:text-gray-900"
-              onClick={toggleMobileMenu}
+              className="relative inline-block"
+              onClick={() => {
+                setActivePage("colaboradores");
+                toggleMobileMenu();
+              }}
             >
-              Colaboradores
+              <span className="relative z-10">Colaboradores</span>
+              <div
+                className={`absolute top-3/4 left-0 right-0 h-1 bg-brand-tangerina rounded-full transition-all duration-300 ease-out ${
+                  activePage === "colaboradores"
+                    ? "scale-x-100 opacity-100"
+                    : "scale-x-0 opacity-0"
+                }`}
+              />
             </Link>
           </li>
           <li>
             <Link
               to="/visita"
-              className="block text-gray-700 hover:text-gray-900"
-              onClick={toggleMobileMenu}
+              className={`relative inline-block ${
+                activePage === "visita"
+                  ? "text-white bg-brand-laranja rounded-full px-1.5 py-0 transition-colors duration-200 ease-out border-2 border-transparent"
+                  : "text-brand-laranja border-2 border-brand-laranja rounded-full px-1.5 py-0 transition-colors duration-200 ease-out"
+              }`}
+              onClick={() => {
+                setActivePage("visita");
+                toggleMobileMenu();
+              }}
             >
-              Visita
+              Agende uma visita
             </Link>
           </li>
         </ul>
+
+        {/* Redes Sociais */}
+        <div className="absolute bottom-0 left-0 right-0 p-4">
+          <div className="flex justify-center space-x-4">
+            <a
+              href="https://www.instagram.com/museudesolospe/?hl=pt-br"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-brand-bege hover:text-brand-laranja transition-colors duration-200"
+            >
+              <FaInstagram size={24} />
+            </a>
+            <a
+              href="https://www.youtube.com/@museudesolospe"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-brand-bege hover:text-brand-laranja transition-colors duration-200"
+            >
+              <FaYoutube size={24} />
+            </a>
+            <a
+              href="https://www.tiktok.com/@museudesolospe"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-brand-bege hover:text-brand-laranja transition-colors duration-200"
+            >
+              <FaTiktok size={24} />
+            </a>
+            <a
+              href="https://www.facebook.com/museudesolospe/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-brand-bege hover:text-brand-laranja transition-colors duration-200"
+            >
+              <FaFacebook size={24} />
+            </a>
+          </div>
+        </div>
       </div>
 
       {/* Overlay para fechar o menu clicando fora */}
       {isMobileMenuOpen && (
         <div
           onClick={toggleMobileMenu}
-          className="fixed inset-0 bg-black bg-opacity-40 z-30 md:hidden"
+          className="fixed inset-0 bg-opacity-100 z-30 md:hidden"
         ></div>
       )}
     </header>
