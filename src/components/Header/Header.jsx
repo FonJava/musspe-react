@@ -17,7 +17,11 @@ export default function Header({ activePage, setActivePage }) {
        lg:max-w-4xl xl:max-w-5xl"
       >
         {/* Logo */}
-        <Link to="/" className="flex items-center">
+        <Link
+          to="/musspe-react/"
+          className="flex items-center"
+          onClick={() => setActivePage("home")}
+        >
           <img src={logo} alt="Logo Musspe" className="h-10 w-auto mr-2" />
           <h1 className="text-2xl font-barlow-black text-brand-bege">MUSSPE</h1>
         </Link>
@@ -33,7 +37,7 @@ export default function Header({ activePage, setActivePage }) {
           <ul className="flex space-x-5 text-md text-white font-barlow-semibold">
             <li>
               <Link
-                to="/"
+                to="/musspe-react/"
                 className="relative"
                 onClick={() => setActivePage("home")}
               >
@@ -49,7 +53,7 @@ export default function Header({ activePage, setActivePage }) {
             </li>
             <li>
               <Link
-                to="/noticias"
+                to="/musspe-react/noticias"
                 className="relative"
                 onClick={() => setActivePage("noticias")}
               >
@@ -65,7 +69,7 @@ export default function Header({ activePage, setActivePage }) {
             </li>
             <li>
               <Link
-                to="/acervo"
+                to="/musspe-react/acervo"
                 className="relative"
                 onClick={() => setActivePage("acervo")}
               >
@@ -81,7 +85,7 @@ export default function Header({ activePage, setActivePage }) {
             </li>
             <li>
               <Link
-                to="/jogos"
+                to="/musspe-react/jogos"
                 className="relative"
                 onClick={() => setActivePage("jogos")}
               >
@@ -97,7 +101,7 @@ export default function Header({ activePage, setActivePage }) {
             </li>
             <li>
               <Link
-                to="/colaboradores"
+                to="/musspe-react/colaboradores"
                 className="relative"
                 onClick={() => setActivePage("colaboradores")}
               >
@@ -113,7 +117,7 @@ export default function Header({ activePage, setActivePage }) {
             </li>
             <li>
               <Link
-                to="/visita"
+                to="/musspe-react/visita"
                 className={
                   activePage === "visita"
                     ? "text-white bg-brand-laranja rounded-full px-1.5 py-1 transition-colors duration-200 ease-out focus:outline-none border-2 border-transparent"
@@ -163,7 +167,7 @@ export default function Header({ activePage, setActivePage }) {
         <ul className="flex flex-col p-4 space-y-4 text-white font-barlow-semibold">
           <li>
             <Link
-              to="/"
+              to="/musspe-react/"
               className="relative inline-block"
               onClick={() => {
                 setActivePage("home");
@@ -182,7 +186,7 @@ export default function Header({ activePage, setActivePage }) {
           </li>
           <li>
             <Link
-              to="/noticias"
+              to="/musspe-react/noticias"
               className="relative inline-block"
               onClick={() => {
                 setActivePage("noticias");
@@ -201,7 +205,7 @@ export default function Header({ activePage, setActivePage }) {
           </li>
           <li>
             <Link
-              to="/acervo"
+              to="/musspe-react/acervo"
               className="relative inline-block"
               onClick={() => {
                 setActivePage("acervo");
@@ -220,7 +224,7 @@ export default function Header({ activePage, setActivePage }) {
           </li>
           <li>
             <Link
-              to="/jogos"
+              to="/musspe-react/jogos"
               className="relative inline-block"
               onClick={() => {
                 setActivePage("jogos");
@@ -239,7 +243,7 @@ export default function Header({ activePage, setActivePage }) {
           </li>
           <li>
             <Link
-              to="/colaboradores"
+              to="/musspe-react/colaboradores"
               className="relative inline-block"
               onClick={() => {
                 setActivePage("colaboradores");
@@ -258,7 +262,7 @@ export default function Header({ activePage, setActivePage }) {
           </li>
           <li>
             <Link
-              to="/visita"
+              to="/musspe-react/visita"
               className={`relative inline-block ${
                 activePage === "visita"
                   ? "text-white bg-brand-laranja rounded-full px-1.5 py-0 transition-colors duration-200 ease-out border-2 border-transparent"
