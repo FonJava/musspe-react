@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Header from "./components/Header/Header";
 /* import Sidebar from "./components/Sidebar/Sidebar";
 import Footer from "./components/Footer/Footer"; */
@@ -11,25 +12,47 @@ import Visita from "./pages/Visita/Visita";
 import Jogos from "./pages/Jogos/Jogos"; */
 import NotFound from "./pages/NotFound/NotFound";
 
-function App() {
+function AppWrapper() {
+  const location = useLocation();
+  const [activePage, setActivePage] = useState("home");
+
+  useEffect(() => {
+    const pathToPage = {
+      "/musspe-react/": "home",
+      "/musspe-react/noticias": "noticias",
+      "/musspe-react/acervo": "acervo",
+      "/musspe-react/jogos": "jogos",
+      "/musspe-react/colaboradores": "colaboradores",
+      "/musspe-react/visita": "visita",
+    };
+    const page = pathToPage[location.pathname] || "notfound";
+    setActivePage(page);
+  }, [location.pathname]);
+
   return (
-    <BrowserRouter>
-      <Header />
-      {/* <Sidebar /> */}
+    <>
+      <Header activePage={activePage} setActivePage={setActivePage} />
       <main>
         <Routes>
-          <Route path="/" element={<Home />} />
-          {/* <Route path="/noticias" element={<Noticias />} />
-          <Route path="/acervo" element={<Acervo />} />
-          <Route path="/jogos" element={<Jogos />} />
-          <Route path="/colaboradores" element={<Colaboradores />} />
-          <Route path="/visita" element={<Visita />} />*/}
+          <Route path="/musspe-react/" element={<Home />} />
+          {/*
+          <Route path="/musspe-react/noticias" element={<Noticias />} />
+          <Route path="/musspe-react/acervo" element={<Acervo />} />
+          <Route path="/musspe-react/jogos" element={<Jogos />} />
+          <Route path="/musspe-react/colaboradores" element={<Colaboradores />} />
+          <Route path="/musspe-react/visita" element={<Visita />} />
+          */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
-      {/* <Footer /> */}
-    </BrowserRouter>
+    </>
   );
 }
 
-export default App;
+export default function App() {
+  return (
+    <BrowserRouter>
+      <AppWrapper />
+    </BrowserRouter>
+  );
+}
