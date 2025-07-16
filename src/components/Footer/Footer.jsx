@@ -11,19 +11,19 @@ export default function Footer() {
             <Link to="/musspe-react/" className="hover:underline">
               Início
             </Link>
-            <Link to="/musspe-react/" className="hover:underline">
+            <Link to="/musspe-react/noticias" className="hover:underline">
               Noticias
             </Link>
-            <Link to="/musspe-react/" className="hover:underline">
+            <Link to="/musspe-react/acervo" className="hover:underline">
               Acervo
             </Link>
-            <Link to="/musspe-react/" className="hover:underline">
+            <Link to="/musspe-react/jogos" className="hover:underline">
               Jogos
             </Link>
-            <Link to="/musspe-react/" className="hover:underline">
+            <Link to="/musspe-react/colaboradores" className="hover:underline">
               Colaboradores
             </Link>
-            <Link to="/musspe-react/" className="hover:underline">
+            <Link to="/musspe-react/visita" className="hover:underline">
               Agende uma visita
             </Link>
           </div>
