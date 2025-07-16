@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Header from "./components/Header/Header";
-/* import Sidebar from "./components/Sidebar/Sidebar";
-import Footer from "./components/Footer/Footer"; */
+import Footer from "./components/Footer/Footer";
 
 import Home from "./pages/Home/Home";
 /* import Noticias from "./pages/Noticias/Noticias";
@@ -45,6 +44,7 @@ function AppWrapper() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
+      <Footer />
     </>
   );
 }

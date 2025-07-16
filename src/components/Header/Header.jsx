@@ -12,10 +12,7 @@ export default function Header({ activePage, setActivePage }) {
 
   return (
     <header className="bg-brand-dark shadow-md relative z-50">
-      <div
-        className="w-full mx-auto flex items-center justify-between p-4 max-w-2xl md:max-w-3xl
-       lg:max-w-4xl xl:max-w-5xl"
-      >
+      <div className="w-full mx-auto flex items-center justify-between p-4 max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-5xl">
         {/* Logo */}
         <Link
           to="/musspe-react/"

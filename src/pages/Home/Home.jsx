@@ -24,6 +24,156 @@ export default function Home() {
           <li>
             <Link to="/visita">Visita</Link>
           </li>
+          <li>
+            <Link to="/noticias">Notícias</Link>
+          </li>
+          <li>
+            <Link to="/acervo">Acervo</Link>
+          </li>
+          <li>
+            <Link to="/jogos">Jogos</Link>
+          </li>
+          <li>
+            <Link to="/colaboradores">Colaboradores</Link>
+          </li>
+          <li>
+            <Link to="/visita">Visita</Link>
+          </li>
+          <li>
+            <Link to="/noticias">Notícias</Link>
+          </li>
+          <li>
+            <Link to="/acervo">Acervo</Link>
+          </li>
+          <li>
+            <Link to="/jogos">Jogos</Link>
+          </li>
+          <li>
+            <Link to="/colaboradores">Colaboradores</Link>
+          </li>
+          <li>
+            <Link to="/visita">Visita</Link>
+          </li>
+          <li>
+            <Link to="/noticias">Notícias</Link>
+          </li>
+          <li>
+            <Link to="/acervo">Acervo</Link>
+          </li>
+          <li>
+            <Link to="/jogos">Jogos</Link>
+          </li>
+          <li>
+            <Link to="/colaboradores">Colaboradores</Link>
+          </li>
+          <li>
+            <Link to="/visita">Visita</Link>
+          </li>
+          <li>
+            <Link to="/noticias">Notícias</Link>
+          </li>
+          <li>
+            <Link to="/acervo">Acervo</Link>
+          </li>
+          <li>
+            <Link to="/jogos">Jogos</Link>
+          </li>
+          <li>
+            <Link to="/colaboradores">Colaboradores</Link>
+          </li>
+          <li>
+            <Link to="/visita">Visita</Link>
+          </li>
+          <li>
+            <Link to="/noticias">Notícias</Link>
+          </li>
+          <li>
+            <Link to="/acervo">Acervo</Link>
+          </li>
+          <li>
+            <Link to="/jogos">Jogos</Link>
+          </li>
+          <li>
+            <Link to="/colaboradores">Colaboradores</Link>
+          </li>
+          <li>
+            <Link to="/visita">Visita</Link>
+          </li>
+          <li>
+            <Link to="/noticias">Notícias</Link>
+          </li>
+          <li>
+            <Link to="/acervo">Acervo</Link>
+          </li>
+          <li>
+            <Link to="/jogos">Jogos</Link>
+          </li>
+          <li>
+            <Link to="/colaboradores">Colaboradores</Link>
+          </li>
+          <li>
+            <Link to="/visita">Visita</Link>
+          </li>
+          <li>
+            <Link to="/noticias">Notícias</Link>
+          </li>
+          <li>
+            <Link to="/acervo">Acervo</Link>
+          </li>
+          <li>
+            <Link to="/jogos">Jogos</Link>
+          </li>
+          <li>
+            <Link to="/colaboradores">Colaboradores</Link>
+          </li>
+          <li>
+            <Link to="/visita">Visita</Link>
+          </li>
+          <li>
+            <Link to="/noticias">Notícias</Link>
+          </li>
+          <li>
+            <Link to="/acervo">Acervo</Link>
+          </li>
+          <li>
+            <Link to="/jogos">Jogos</Link>
+          </li>
+          <li>
+            <Link to="/colaboradores">Colaboradores</Link>
+          </li>
+          <li>
+            <Link to="/visita">Visita</Link>
+          </li>
+          <li>
+            <Link to="/noticias">Notícias</Link>
+          </li>
+          <li>
+            <Link to="/acervo">Acervo</Link>
+          </li>
+          <li>
+            <Link to="/jogos">Jogos</Link>
+          </li>
+          <li>
+            <Link to="/colaboradores">Colaboradores</Link>
+          </li>
+          <li>
+            <Link to="/visita">Visita</Link>
+          </li>
+          <li>
+            <Link to="/noticias">Notícias</Link>
+          </li>
+          <li>
+            <Link to="/acervo">Acervo</Link>
+          </li>
+          <li>
+            <Link to="/jogos">Jogos</Link>
+          </li>
+          <li>
+            <Link to="/colaboradores">Colaboradores</Link>
+          </li>
+          <li>
+            <Link to="/visita">Visita</Link>
+          </li>
         </ul>
       </nav>
     </div>
