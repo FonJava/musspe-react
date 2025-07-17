@@ -52,7 +52,7 @@ export default function Apresentacao({ imagem, titulo, descricao, children }) {
           <FaFacebook size={20} />
         </a>
       </div>
-      <div className="flex flex-col md:flex-row w-full justify-center items-center w-[344px] md:w-[500px] lg:w-[750px] mx-auto ">
+      <div className="flex flex-col md:flex-row justify-center items-center w-[320px] md:w-[500px] lg:w-[750px] mx-auto ">
         <img
           src={imagem}
           alt={titulo}
