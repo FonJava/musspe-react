@@ -5,7 +5,7 @@ import imgesq from "/imagens/sobre-nos-esquerda.png";
 import imgdir from "/imagens/sobre-nos-direita.png";
 import sobrenos from "/imagens/sobre-nos-imagem.png";
 import sobrenosicon from "/imagens/sobre-nos-icon.png";
-import BarraVisita from "../../components/Barra-visita";
+import BarraVisita from "../../components/Barra-visitaa";
 import Apresentacao from "../../components/Apresentacao";
 import mateuszinho from "/imagens/mateuzinho.png";
 

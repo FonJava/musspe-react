@@ -1,3 +1,4 @@
+/* Barra-visita */
 import React from "react";
 import Botao from "./Botao";
 import { Link } from "react-router-dom";
