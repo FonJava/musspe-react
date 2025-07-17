@@ -19,7 +19,12 @@ export default function Header({ activePage, setActivePage }) {
           className="flex items-center"
           onClick={() => setActivePage("home")}
         >
-          <img src={logo} alt="Logo Musspe" className="h-10 w-auto mr-2" />
+          <img
+            src={logo}
+            alt="Logo Musspe"
+            className="h-10 w-auto mr-2"
+            draggable="false"
+          />
           <h1 className="text-2xl font-barlow-black text-brand-bege">MUSSPE</h1>
         </Link>
 
