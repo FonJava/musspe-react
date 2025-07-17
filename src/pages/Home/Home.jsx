@@ -5,6 +5,7 @@ import imgesq from "../../../public/imagens/sobre-nos-esquerda.png";
 import imgdir from "../../../public/imagens/sobre-nos-direita.png";
 import sobrenos from "../../../public/imagens/sobre-nos-imagem.png";
 import sobrenosicon from "../../../public/imagens/sobre-nos-icon.png";
+import BarraVisita from "../../components/barra-visita";
 
 export default function Home() {
   /* sobre-nós */
@@ -125,6 +126,9 @@ export default function Home() {
           </div>
         </section>
       )}
+      {/* fim de sobre-nos ############################## */}
+      {/* barra de visita */}
+      <BarraVisita />
     </div>
   );
 }
