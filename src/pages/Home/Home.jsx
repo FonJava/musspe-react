@@ -163,28 +163,28 @@ export default function Home() {
         {/* nossos princípios */}
         {/* ======== SEÇÃO MOBILE ========= */}
         {isMobile && (
-          <section className="relative bg-[#FFDCD2] text-[#471A24] h-[1880px] py-4">
+          <section className="relative bg-[#FFDCD2] text-[#471A24] min-h-[1880px] py-4">
             <img
               src={imgprincipiosesq}
               alt="Decoração esquerda"
-              className="absolute bottom-0 w-20"
+              className="absolute bottom-0 w-14"
               draggable="false"
             />
 
             <img
               src={imgprincipiosdir}
               alt="Decoração direita"
-              className="absolute top-0 right-0 w-20"
+              className="absolute top-0 right-0 w-14"
               draggable="false"
             />
             <div className="flex items-center justify-center mb-4">
               <img
                 src={principiosicon}
-                alt="Ícone sobre nós"
+                alt="Ícone princípios"
                 className="w-7 h-6 mr-2 mt-9"
                 draggable="false"
               />
-              <h2 className="text-5xl font-barlow-extrabold text-[#471A24] my-2 mt-10">
+              <h2 className="text-4xl sm:text-5xl font-barlow-extrabold text-[#471A24] my-2 mt-10">
                 Nossos Princípios
               </h2>
             </div>
@@ -199,14 +199,14 @@ export default function Home() {
 
               <img
                 src={principiosvisao}
-                alt="Imagem sobre nós"
+                alt="Imagem visão"
                 className="max-w-xs h-[500px] rounded-lg mt-20"
                 draggable="false"
               />
 
               <img
                 src={principiosvalores}
-                alt="Imagem sobre nós"
+                alt="Imagem valores"
                 className="max-w-xs h-[500px] rounded-lg mt-20"
                 draggable="false"
               />
@@ -219,22 +219,22 @@ export default function Home() {
             <img
               src={imgprincipiosesq}
               alt="Decoração esquerda"
-              className="absolute bottom-0 w-20"
+              className="absolute bottom-0 w-16"
               draggable="false"
             />
 
             <img
               src={imgprincipiosdir}
               alt="Decoração direita"
-              className="absolute top-0 right-0 w-20"
+              className="absolute top-0 right-0 w-16"
               draggable="false"
             />
 
             <div className="flex items-center justify-center">
               <img
                 src={principiosicon}
-                alt="Ícone sobre nós"
-                className="w-5 h-5 mr-2 mt-5 mt-11"
+                alt="Ícone princípios"
+                className="w-5 h-5 mr-2 mt-11"
                 draggable="false"
               />
               <h2 className="text-4xl font-barlow-extrabold text-[#471A24] mt-10">
@@ -252,14 +252,14 @@ export default function Home() {
 
               <img
                 src={principiosvisao}
-                alt="Imagem sobre nós"
+                alt="Imagem visão"
                 className="max-w-xs rounded-lg mt-12 xl:h-[380px] lg:h-[400px] md:h-[350px]"
                 draggable="false"
               />
 
               <img
                 src={principiosvalores}
-                alt="Imagem sobre nós"
+                alt="Imagem valores"
                 className="max-w-xs  rounded-lg mt-12 xl:h-[380px] lg:h-[400px] md:h-[350px]"
                 draggable="false"
               />
@@ -267,7 +267,6 @@ export default function Home() {
           </section>
         )}
 
-        {/* fim de sobre-nos ############################## */}
         {/* barra de visita */}
         <BarraVisita />
       </div>
