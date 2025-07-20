@@ -58,24 +58,24 @@ export default function Home() {
           className="absolute top-[-1px] w-[150px] md:w-[200px] [transform:rotateX(180deg)]"
           draggable="false"
         />
-        <div className="display flex w-full sm:w-[750px] lg:w-[1000px] mx-auto relative">
+        <div className="display flex w-[340px] sm:w-[645px] md:w-[750px] lg:w-[1000px] mx-auto relative">
           <img
             src={detalhevazio}
-            className="w-[152px] sm:w-[425px] lg:w-[455px] absolute top-[182px] sm:top-[250px] lg:bottom-[-56px] right-[5%]"
+            className="w-[152px] sm:w-[400px] md:w-[425px] lg:w-[455px] absolute top-[182px] sm:top-[252px] md:top-[250px] lg:bottom-[-56px] right-[25px] lg:right-[50px]"
             draggable="false"
           />
           <img
             src={detalhe}
-            className="w-[152px] sm:w-[425px] lg:w-[455px] absolute top-[24px] sm:top-0 right-[5%]"
+            className="w-[152px] sm:w-[400px] md:w-[425px] lg:w-[455px] absolute top-[24px] sm:top-0 right-[25px] lg:right-[50px]"
             draggable="false"
           />
           <img
             src={notidialogo}
-            className="w-[240px] sm:w-[420px] lg:w-[455px] relative left-0 sm:left-[7%] top-[71px] sm:top-[75px] lg:top-[56px]"
+            className="w-[215px] sm:w-[360px] md:w-[420px] lg:w-[455px] relative left-[0px] md:left-[7%] top-[85px] sm:top-[106px] md:top-[75px] lg:top-[56px]"
             draggable="false"
           />
           <div
-            className="relative top-[135px] sm:top-[184px] lg:top-[172px] left-[-140px] sm:left-[-230px] lg:left-[-250px] w-[210px] sm:w-[270px] lg:w-[300px] text-brand-laranja font-barlow-medium text-[12px] sm:text-[21px] text-center"
+            className="relative top-[145px] sm:top-[200px] md:top-[184px] lg:top-[172px] left-[-130px] sm:left-[-250px] md:left-[-230px] lg:left-[-250px] w-[210px] sm:w-[270px] lg:w-[300px] text-brand-laranja font-barlow-medium text-[10px] sm:text-[21px] text-center"
             style={{ fontWeight: 700, lineHeight: "1.3" }}
           >
             VAMOS ACOMPANHAR AS NOTÍCIAS?
@@ -90,7 +90,7 @@ export default function Home() {
               </Botao>
             </Link>
           </div>
-          <div className="absolute right-[5%] border-[0.5px] sm:border-2 border-brand-roxo rounded-lg text-center w-[83px] sm:w-[230px] lg:w-[247px] top-[56px] sm:top-[85px] lg:top-[80px] p-[-10px] sm:p-0">
+          <div className="absolute right-[25px] lg:right-[50px] border-[0.5px] sm:border-2 border-brand-roxo rounded-lg text-center w-[83px] sm:w-[216px] md:w-[230px] lg:w-[247px] top-[56px] sm:top-[85px] lg:top-[80px] p-[-10px] sm:p-0">
             <h3 className="font-barlow-extrabold text-brand-laranja text-[18px] sm:text-[29px] lg:text-[32px] mt-[5px] sm:mt-[20px]">
               Você!
             </h3>
