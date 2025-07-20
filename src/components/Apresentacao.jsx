@@ -59,7 +59,7 @@ export default function Apresentacao({ imagem, titulo, descricao, children }) {
           draggable="false"
           className="w-[350px] h-[350px] md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px] object-contain pt-8 md:order-2"
         />
-        <div className="md:order-1 max-w-[300px] mt-[-40px] md:mt-[-20px] pb-16 sm:pb-6">
+        <div className="md:order-1 sm:max-w-[340px] mt-[-40px] md:mt-[-20px] pb-16 sm:pb-6">
           <h2 className="font-barlow-extrabold text-[28px] sm:text-[40px] md:text-[30px] lg:text-[40px] leading-tight">
             {titulo}
           </h2>
