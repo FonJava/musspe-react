@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import Botao from "../../components/Botao";
 import imgesq from "/imagens/sobre-nos-esquerda.png";
@@ -20,19 +20,6 @@ import detalhevazio from "/imagens/vazios.png";
 import detalhe from "/imagens/preenchidos.png";
 
 export default function Home() {
-  /* sobre-nós */
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   return (
     <>
       {/* apresentação */}
@@ -106,223 +93,109 @@ export default function Home() {
         </div>
       </section>
       {/* sobre-nós */}
-      {/* ======== SEÇÃO MOBILE ========= */}
-      {isMobile && (
-        <section className="relative bg-[#471A24] text-[#FFDCD2] h-[860px] py-4">
+      <section className="relative bg-[#471A24] text-[#FFDCD2] h-[860px] md:h-auto py-4">
+        <img
+          src={imgesq}
+          alt="Decoração esquerda"
+          className="absolute bottom-0 w-14 md:w-16"
+          draggable="false"
+        />
+
+        <img
+          src={imgdir}
+          alt="Decoração direita"
+          className="absolute top-0 right-0 w-14 md:w-16"
+          draggable="false"
+        />
+
+        <div className="flex items-center justify-center mb-4">
           <img
-            src={imgesq}
-            alt="Decoração esquerda"
-            className="absolute bottom-0 w-14"
+            src={sobrenosicon}
+            alt="Ícone sobre nós"
+            className="w-4 h-5 mr-2 mt-1 md:mt-5"
             draggable="false"
           />
+          <h2 className="text-3xl font-barlow-extrabold text-[#FFDCD2] my-2 md:mt-4">
+            Sobre nós
+          </h2>
+        </div>
 
+        <div className="flex flex-col items-center md:max-w-2xl md:mx-auto md:flex-row md:items-center md:gap-40">
           <img
-            src={imgdir}
-            alt="Decoração direita"
-            className="absolute top-0 right-0 w-14"
+            src={sobrenos}
+            alt="Imagem sobre nós"
+            className="w-[300px] rounded-xl mb-6 md:max-w-xs md:h-[290px] md:rounded-lg md:mb-10 md:order-2"
             draggable="false"
           />
-          <div className="flex items-center justify-center mb-4">
-            <img
-              src={sobrenosicon}
-              alt="Ícone sobre nós"
-              className="w-4 h-5 mr-2 mt-1"
-              draggable="false"
-            />
-            <h2 className="text-3xl font-barlow-extrabold text-[#FFDCD2] my-2">
-              Sobre nós
-            </h2>
+          <div className="md:mb-16 md:order-1">
+            <p className="text-lg text-[#FFDCD2] font-barlow max-w-xs text-justify md:text-base md:mt-8 md:mr-4 md:mb-4 md:max-w-none">
+              O Museu de Solos de Pernambuco Professor Mateus Rosas Ribeiro
+              (MUSSPE) foi idealizado pelos pesquisadores Mateus Rosas Ribeiro e
+              Paulo Klinger Tito Jacomine vinculados à Universidade Federal
+              Rural de Pernambuco (UFRPE). Teve origem em 1994 com o projeto de
+              pesquisa intitulado "Caracterização e classificação de solos de
+              referência do estado de Pernambuco", com o apoio da FACEPE e do
+              CNPq, visando uma exposição permanente dos solos de referência do
+              estado.
+            </p>
+            <Link to="/musspe-react/acervo">
+              <Botao marginY="my-3 md:my-0">Confira nosso acervo</Botao>
+            </Link>
           </div>
-
-          <div className="flex flex-col items-center">
-            <img
-              src={sobrenos}
-              alt="Imagem sobre nós"
-              className="w-[300px] rounded-xl mb-6"
-              draggable="false"
-            />
-            <div>
-              <p className="text-lg text-[#FFDCD2] font-barlow max-w-xs text-justify">
-                O Museu de Solos de Pernambuco Professor Mateus Rosas Ribeiro
-                (MUSSPE) foi idealizado pelos pesquisadores Mateus Rosas Ribeiro
-                e Paulo Klinger Tito Jacomine vinculados à Universidade Federal
-                Rural de Pernambuco (UFRPE). Teve origem em 1994 com o projeto
-                de pesquisa intitulado "Caracterização e classificação de solos
-                de referência do estado de Pernambuco", com o apoio da FACEPE e
-                do CNPq, visando uma exposição permanente dos solos de
-                referência do estado.
-              </p>
-              <Link to="/musspe-react/acervo">
-                <Botao marginY="my-3">Confira nosso acervo</Botao>
-              </Link>
-            </div>
-          </div>
-        </section>
-      )}
-      {/* ======== SEÇÃO DESKTOP  ========= */}
-      {!isMobile && (
-        <section className="relative bg-[#471A24] text-[#FFDCD2]">
-          <img
-            src={imgesq}
-            alt="Decoração esquerda"
-            className="absolute bottom-0 w-16"
-            draggable="false"
-          />
-
-          <img
-            src={imgdir}
-            alt="Decoração direita"
-            className="absolute top-0 right-0 w-16"
-            draggable="false"
-          />
-
-          <div className="flex items-center justify-center">
-            <img
-              src={sobrenosicon}
-              alt="Ícone sobre nós"
-              className="w-4 h-5 mr-2 mt-5"
-              draggable="false"
-            />
-            <h2 className="text-3xl font-barlow-extrabold text-[#FFDCD2] mt-4">
-              Sobre nós
-            </h2>
-          </div>
-
-          <div className=" max-w-2xl mx-auto flex flex-col md:flex-row items-center md:gap-40">
-            <div className="mb-16">
-              <p className="text-base mt-8 mr-4 mb-4 font-barlow text-[#FFDCD2]">
-                O Museu de Solos de Pernambuco Professor Mateus Rosas Ribeiro
-                (MUSSPE) foi idealizado pelos pesquisadores Mateus Rosas Ribeiro
-                e Paulo Klinger Tito Jacomine vinculados à Universidade Federal
-                Rural de Pernambuco (UFRPE). Teve origem em 1994 com o projeto
-                de pesquisa intitulado "Caracterização e classificação de solos
-                de referência do estado de Pernambuco", com o apoio da FACEPE e
-                do CNPq, visando uma exposição permanente dos solos de
-                referência do estado.
-              </p>
-              <Link to="/musspe-react/acervo">
-                <Botao>Confira nosso acervo</Botao>
-              </Link>
-            </div>
-
-            <div>
-              <img
-                src={sobrenos}
-                alt="Imagem sobre nós"
-                className="max-w-xs h-[290px] rounded-lg mb-10"
-                draggable="false"
-              />
-            </div>
-          </div>
-        </section>
-      )}
+        </div>
+      </section>
 
       {/* nossos princípios */}
-      {/* ======== SEÇÃO MOBILE ========= */}
-      {isMobile && (
-        <section className="relative bg-[#FFDCD2] text-[#471A24] min-h-[1880px] py-4">
+      <section className="relative bg-[#FFDCD2] text-[#471A24] sm:h-[1880px] md:h-[610px] lg:h-[650px] py-4">
+        <img
+          src={imgprincipiosesq}
+          alt="Decoração esquerda"
+          className="absolute bottom-0 w-14 md:w-16"
+          draggable="false"
+        />
+
+        <img
+          src={imgprincipiosdir}
+          alt="Decoração direita"
+          className="absolute top-0 right-0 w-14 md:w-16"
+          draggable="false"
+        />
+
+        <div className="flex items-center justify-center mb-4">
           <img
-            src={imgprincipiosesq}
-            alt="Decoração esquerda"
-            className="absolute bottom-0 w-14"
+            src={principiosicon}
+            alt="Ícone princípios"
+            className="w-7 h-6 mr-2 mt-9 md:w-5 md:h-5 md:mt-11"
+            draggable="false"
+          />
+          <h2 className="text-4xl sm:text-5xl font-barlow-extrabold text-[#471A24] my-2 mt-10 md:text-4xl md:mt-10">
+            Nossos Princípios
+          </h2>
+        </div>
+
+        <div className="flex flex-col items-center md:max-w-2xl md:mx-auto md:flex-row md:items-center md:justify-center md:gap-4 lg:gap-16 xl:gap-32">
+          <img
+            src={principiosmissao}
+            alt="Imagem princípios missão"
+            className="max-w-xs h-[400px] rounded-lg mt-6 md:mt-12 sm:h-[500px] md:h-[380px] lg:h-[450px] xl:h-[450px]"
             draggable="false"
           />
 
           <img
-            src={imgprincipiosdir}
-            alt="Decoração direita"
-            className="absolute top-0 right-0 w-14"
-            draggable="false"
-          />
-          <div className="flex items-center justify-center mb-4">
-            <img
-              src={principiosicon}
-              alt="Ícone princípios"
-              className="w-7 h-6 mr-2 mt-9"
-              draggable="false"
-            />
-            <h2 className="text-4xl sm:text-5xl font-barlow-extrabold text-[#471A24] my-2 mt-10">
-              Nossos Princípios
-            </h2>
-          </div>
-
-          <div className="flex flex-col items-center">
-            <img
-              src={principiosmissao}
-              alt="Imagem princípios missão"
-              className="max-w-xs h-[500px] rounded-lg mt-6"
-              draggable="false"
-            />
-
-            <img
-              src={principiosvisao}
-              alt="Imagem visão"
-              className="max-w-xs h-[500px] rounded-lg mt-20"
-              draggable="false"
-            />
-
-            <img
-              src={principiosvalores}
-              alt="Imagem valores"
-              className="max-w-xs h-[500px] rounded-lg mt-20"
-              draggable="false"
-            />
-          </div>
-        </section>
-      )}
-      {/* ======== SEÇÃO DESKTOP  ========= */}
-      {!isMobile && (
-        <section className="relative bg-[#FFDCD2] text-[#471A24] h-[580px] ">
-          <img
-            src={imgprincipiosesq}
-            alt="Decoração esquerda"
-            className="absolute bottom-0 w-16"
+            src={principiosvisao}
+            alt="Imagem visão"
+            className="max-w-xs h-[400px] rounded-lg mt-20 md:mt-12 sm:h-[500px] md:h-[380px] lg:h-[450px] xl:h-[450px]"
             draggable="false"
           />
 
           <img
-            src={imgprincipiosdir}
-            alt="Decoração direita"
-            className="absolute top-0 right-0 w-16"
+            src={principiosvalores}
+            alt="Imagem valores"
+            className="max-w-xs h-[400px] rounded-lg mt-20 md:mt-12 sm:h-[500px] md:h-[380px] lg:h-[450px] xl:h-[450px]"
             draggable="false"
           />
-
-          <div className="flex items-center justify-center">
-            <img
-              src={principiosicon}
-              alt="Ícone princípios"
-              className="w-5 h-5 mr-2 mt-11"
-              draggable="false"
-            />
-            <h2 className="text-4xl font-barlow-extrabold text-[#471A24] mt-10">
-              Nossos princípios
-            </h2>
-          </div>
-
-          <div className=" max-w-2xl mx-auto flex xl:flex-row lg:flex-row md:flex-row  items-center justify-center xl:gap-32 lg:gap-16 md:gap-4">
-            <img
-              src={principiosmissao}
-              alt="Imagem princípios missão"
-              className="max-w-xs  rounded-lg mt-12 xl:h-[380px] lg:h-[400px] md:h-[350px]"
-              draggable="false"
-            />
-
-            <img
-              src={principiosvisao}
-              alt="Imagem visão"
-              className="max-w-xs rounded-lg mt-12 xl:h-[380px] lg:h-[400px] md:h-[350px]"
-              draggable="false"
-            />
-
-            <img
-              src={principiosvalores}
-              alt="Imagem valores"
-              className="max-w-xs  rounded-lg mt-12 xl:h-[380px] lg:h-[400px] md:h-[350px]"
-              draggable="false"
-            />
-          </div>
-        </section>
-      )}
+        </div>
+      </section>
 
       {/* barra de visita */}
       <BarraVisita />
