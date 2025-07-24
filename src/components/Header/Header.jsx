@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaInstagram, FaFacebook, FaYoutube, FaTiktok } from "react-icons/fa";
-import logo from "../../../public/imagens/logo-cabecalho.png";
+import logo from "/imagens/logo-cabecalho.png";
 
 export default function Header({ activePage, setActivePage }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
