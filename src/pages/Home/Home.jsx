@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Botao from "../../components/Botao";
 import imgesq from "/imagens/sobre-nos-esquerda.png";
@@ -18,8 +18,102 @@ import apreesq from "/imagens/apresentacao-esquerda.png";
 import notidialogo from "/imagens/dialogo.png";
 import detalhevazio from "/imagens/vazios.png";
 import detalhe from "/imagens/preenchidos.png";
+import nossahistoriaicon from "/imagens/nossa-historia-icon.png";
+import carrossel1 from "/imagens/carrossel/Carrossel1.png";
+import carrossel2 from "/imagens/carrossel/Carrossel2.png";
+import carrossel3 from "/imagens/carrossel/Carrossel3.png";
+import carrossel4 from "/imagens/carrossel/Carrossel4.png";
+import carrossel5 from "/imagens/carrossel/Carrossel5.png";
+import carrossel6 from "/imagens/carrossel/Carrossel6.png";
+import carrossel7 from "/imagens/carrossel/Carrossel7.png";
+import carrossel8 from "/imagens/carrossel/Carrossel8.png";
+import carrossel9 from "/imagens/carrossel/Carrossel9.png";
 
 export default function Home() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [touchStart, setTouchStart] = useState(null);
+  const [touchEnd, setTouchEnd] = useState(null);
+  const [isManualNavigation, setIsManualNavigation] = useState(false);
+
+  const carrosselImages = [
+    carrossel1,
+    carrossel2,
+    carrossel3,
+    carrossel4,
+    carrossel5,
+    carrossel6,
+    carrossel7,
+    carrossel8,
+    carrossel9,
+  ];
+
+  useEffect(() => {
+    if (isManualNavigation) {
+      // Se houve navegação manual, para o timer por 10 segundos
+      const pauseTimer = setTimeout(() => {
+        setIsManualNavigation(false);
+      }, 10000);
+
+      return () => clearTimeout(pauseTimer);
+    }
+
+    // Timer automático do carrossel
+    const interval = setInterval(() => {
+      if (!isManualNavigation) {
+        setCurrentSlide((prev) => (prev + 1) % carrosselImages.length);
+      }
+    }, 7000);
+
+    return () => clearInterval(interval);
+  }, [carrosselImages.length, isManualNavigation]);
+
+  const nextSlide = () => {
+    setIsManualNavigation(true);
+    setCurrentSlide((prev) => (prev + 1) % carrosselImages.length);
+  };
+
+  const prevSlide = () => {
+    setIsManualNavigation(true);
+    setCurrentSlide(
+      (prev) => (prev - 1 + carrosselImages.length) % carrosselImages.length
+    );
+  };
+
+  const goToSlide = (index) => {
+    setIsManualNavigation(true);
+    setCurrentSlide(index);
+  };
+
+  const handleTouchStart = (e) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+
+    if (isLeftSwipe || isRightSwipe) {
+      setIsManualNavigation(true);
+    }
+
+    if (isLeftSwipe) {
+      setCurrentSlide((prev) => (prev + 1) % carrosselImages.length);
+    }
+    if (isRightSwipe) {
+      setCurrentSlide(
+        (prev) => (prev - 1 + carrosselImages.length) % carrosselImages.length
+      );
+    }
+  };
+
   return (
     <>
       {/* apresentação */}
@@ -141,6 +235,77 @@ export default function Home() {
             <Link to="/musspe-react/acervo">
               <Botao marginY="my-3 md:my-0">Confira nosso acervo</Botao>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Nossa história */}
+      <section className="bg-[#471A24] h-[515px] sm:h-[565px]">
+        <div className="flex flex-col items-center">
+          <div className="text-[#FFDCD2] font-barlow-extrabold text-4xl flex items-center gap-3 py-6">
+            <img
+              src={nossahistoriaicon}
+              alt="icone nossa historia"
+              className="w-6 h-6 mt-1.5"
+            />
+            Nossa história
+          </div>
+          <div className="flex items-center justify-center gap-[75px]">
+            {/* Seta esquerda - apenas em desktop */}
+            <div
+              className="hidden md:flex text-[#B89A9A] text-4xl font-barlow-bold border-[6px] border-[#8c4e2e] rounded-full w-[60px] h-[60px] pb-1 pr-1 justify-center items-center hover:text-[#FFDCD2] hover:border-[#cc7042] cursor-pointer transition-colors duration-200 mt-[-45px]"
+              onClick={prevSlide}
+            >
+              &lt;
+            </div>
+
+            <div className="flex flex-col items-center">
+              <div
+                className="relative w-[300px] h-[300px] sm:w-[350px] sm:h-[350px] overflow-hidden rounded-lg border-2 border-[#FFDCD2]"
+                onTouchStart={handleTouchStart}
+                onTouchMove={handleTouchMove}
+                onTouchEnd={handleTouchEnd}
+              >
+                <div
+                  className="flex transition-transform duration-500 ease-in-out"
+                  style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                >
+                  {carrosselImages.map((image, index) => (
+                    <img
+                      key={index}
+                      src={image}
+                      alt={`Carrossel ${index + 1}`}
+                      className="w-full h-full object-cover flex-shrink-0"
+                      draggable="false"
+                    />
+                  ))}
+                </div>
+              </div>
+              <div className="mt-3 mb-8">
+                <ol className="flex items-center justify-center gap-2">
+                  {carrosselImages.map((_, index) => (
+                    <li
+                      key={index}
+                      className={`w-[10px] h-[10px] rounded-full cursor-pointer transition-colors duration-200 ${
+                        currentSlide === index ? "bg-[#cc7042]" : "bg-[#FFDCD2]"
+                      }`}
+                      onClick={() => goToSlide(index)}
+                    ></li>
+                  ))}
+                </ol>
+              </div>
+              <Link to="/musspe-react/colaboradores">
+                <Botao>Conheça nossos colaboradores</Botao>
+              </Link>
+            </div>
+
+            {/* Seta direita - apenas em desktop */}
+            <div
+              className="hidden md:flex text-[#B89A9A] text-4xl font-barlow-bold border-[6px] border-[#8c4e2e] rounded-full w-[60px] h-[60px] pb-1 pl-1 justify-center items-center hover:text-[#FFDCD2] hover:border-[#cc7042] cursor-pointer transition-colors duration-200 mt-[-45px]"
+              onClick={nextSlide}
+            >
+              &gt;
+            </div>
           </div>
         </div>
       </section>
