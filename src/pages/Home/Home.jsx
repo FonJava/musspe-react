@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Botao from "../../components/Botao";
+import Carrossel from "../../components/Carrossel";
 import imgesq from "/imagens/sobre-nos-esquerda.png";
 import imgdir from "/imagens/sobre-nos-direita.png";
 import sobrenos from "/imagens/sobre-nos-imagem.png";
@@ -18,8 +19,30 @@ import apreesq from "/imagens/apresentacao-esquerda.png";
 import notidialogo from "/imagens/dialogo.png";
 import detalhevazio from "/imagens/vazios.png";
 import detalhe from "/imagens/preenchidos.png";
+import nossahistoriaicon from "/imagens/nossa-historia-icon.png";
+import carrossel1 from "/imagens/carrossel/Carrossel1.png";
+import carrossel2 from "/imagens/carrossel/Carrossel2.png";
+import carrossel3 from "/imagens/carrossel/Carrossel3.png";
+import carrossel4 from "/imagens/carrossel/Carrossel4.png";
+import carrossel5 from "/imagens/carrossel/Carrossel5.png";
+import carrossel6 from "/imagens/carrossel/Carrossel6.png";
+import carrossel7 from "/imagens/carrossel/Carrossel7.png";
+import carrossel8 from "/imagens/carrossel/Carrossel8.png";
+import carrossel9 from "/imagens/carrossel/Carrossel9.png";
 
 export default function Home() {
+  const carrosselImages = [
+    carrossel1,
+    carrossel2,
+    carrossel3,
+    carrossel4,
+    carrossel5,
+    carrossel6,
+    carrossel7,
+    carrossel8,
+    carrossel9,
+  ];
+
   return (
     <>
       {/* apresentação */}
@@ -140,6 +163,31 @@ export default function Home() {
             </p>
             <Link to="/musspe-react/acervo">
               <Botao marginY="my-3 md:my-0">Confira nosso acervo</Botao>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Nossa história */}
+      <section className="bg-[#471A24] h-[515px] sm:h-[565px]">
+        <div className="flex flex-col items-center">
+          <div className="text-[#FFDCD2] font-barlow-extrabold text-4xl flex items-center gap-3 py-6">
+            <img
+              src={nossahistoriaicon}
+              alt="icone nossa historia"
+              className="w-6 h-6 mt-1.5"
+            />
+            Nossa história
+          </div>
+          <Carrossel
+            images={carrosselImages}
+            width="w-[300px] sm:w-[350px]"
+            height="h-[300px] sm:h-[350px]"
+            showArrows={true}
+          />
+          <div>
+            <Link to="/musspe-react/colaboradores">
+              <Botao>Conheça nossos colaboradores</Botao>
             </Link>
           </div>
         </div>
