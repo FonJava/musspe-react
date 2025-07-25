@@ -48,6 +48,7 @@ export default function Home() {
       {/* apresentação */}
       <Apresentacao
         imagem={mateuszinho}
+        larguraTexto={250}
         titulo="Conheça nossos solos, rochas e minerais!"
         descricao="O Museu de Solos de Pernambuco Professor Mateus Rosas Ribeiro tem temática única no estado!"
       >

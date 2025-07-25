@@ -9,6 +9,7 @@ export default function Apresentacao({
   descricao,
   children,
   tamanhoImagem = 350,
+  larguraTexto = 300,
 }) {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -24,7 +25,16 @@ export default function Apresentacao({
     return tamanhoImagem;
   };
 
+  const getTextWidth = () => {
+    if (windowWidth >= 1024) return larguraTexto + 100;
+    if (windowWidth >= 768) return larguraTexto + 150;
+    if (windowWidth >= 640) return larguraTexto + 150;
+    return larguraTexto + 200;
+  };
+
   const currentSize = getImageSize();
+  const currentTextWidth = getTextWidth();
+  const currentParagraphWidth = currentTextWidth - 50;
 
   return (
     <section className="relative bg-brand-bege text-brand-dark">
@@ -79,17 +89,23 @@ export default function Apresentacao({
           src={imagem}
           alt={titulo}
           draggable="false"
-          className="mt-[-60px] pt-6 object-contain md:order-2"
+          className="mt-[-30px] pt-2 object-contain md:order-2"
           style={{
             width: `${currentSize}px`,
             height: `${currentSize}px`,
           }}
         />
-        <div className="md:order-1 max-w-[300px] sm:max-w-[400px] md:max-w-[450px] lg:max-w-[450px] mt-[-40px] md:mt-[-20px] pb-16 sm:pb-6">
+        <div
+          className="md:order-1 mt-[-40px] md:mt-[-20px] pb-16 sm:pb-6"
+          style={{ maxWidth: `${currentTextWidth}px` }}
+        >
           <h2 className="font-barlow-extrabold text-[28px] sm:text-[40px] md:text-[30px] lg:text-[40px] leading-tight">
             {titulo}
           </h2>
-          <p className="font-barlow text-[18px] sm:text-[20px] md:text-[18px] lg:text-[20px] max-w-[300px] sm:max-w-[400px] md:max-w-[450px] lg:max-w-[400px] pb-3">
+          <p
+            className="font-barlow text-[18px] sm:text-[20px] md:text-[18px] lg:text-[20px] pb-3"
+            style={{ maxWidth: `${currentParagraphWidth}px` }}
+          >
             {descricao}
           </p>
           {children}
