@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from "react";
 
-export default function Carrossel({ images, width, height, showArrows }) {
+export default function Carrossel({
+  images,
+  width = "300px",
+  height = "300px",
+  showArrows = true,
+}) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [touchStart, setTouchStart] = useState(null);
   const [touchEnd, setTouchEnd] = useState(null);
@@ -130,9 +135,3 @@ export default function Carrossel({ images, width, height, showArrows }) {
     </div>
   );
 }
-
-Carrossel.defaultProps = {
-  width: "300px",
-  height: "300px",
-  showArrows: true,
-};
