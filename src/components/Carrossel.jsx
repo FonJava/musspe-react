@@ -1,19 +1,13 @@
 import React, { useState, useEffect } from "react";
 
-export default function Carrossel({
-  images,
-  width,
-  height,
-  interval,
-  dotCount,
-  showArrows,
-}) {
+export default function Carrossel({ images, width, height, showArrows }) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [touchStart, setTouchStart] = useState(null);
   const [touchEnd, setTouchEnd] = useState(null);
   const [isPaused, setIsPaused] = useState(false);
 
-  const slides = images.slice(0, dotCount);
+  const interval = 7000;
+  const slides = images;
   const slideCount = slides.length;
 
   // autoplay
@@ -140,7 +134,5 @@ export default function Carrossel({
 Carrossel.defaultProps = {
   width: "300px",
   height: "300px",
-  interval: 7000,
-  dotCount: undefined, // undefined faz com que slice use length total
   showArrows: true,
 };

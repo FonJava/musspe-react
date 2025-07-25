@@ -183,8 +183,6 @@ export default function Home() {
             images={carrosselImages}
             width="w-[300px] sm:w-[350px]"
             height="h-[300px] sm:h-[350px]"
-            interval={7000}
-            dotCount={carrosselImages.length}
             showArrows={true}
           />
           <div>
