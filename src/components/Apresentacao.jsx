@@ -1,9 +1,31 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import apreesq from "/imagens/apresentacao-esquerda.png";
 import apredir from "/imagens/apresentacao-direita.png";
 import { FaInstagram, FaYoutube, FaTiktok, FaFacebook } from "react-icons/fa";
 
-export default function Apresentacao({ imagem, titulo, descricao, children }) {
+export default function Apresentacao({
+  imagem,
+  titulo,
+  descricao,
+  children,
+  tamanhoImagem = 350,
+}) {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const getImageSize = () => {
+    if (windowWidth >= 1024) return tamanhoImagem + 50;
+    if (windowWidth >= 768) return tamanhoImagem - 50;
+    return tamanhoImagem;
+  };
+
+  const currentSize = getImageSize();
+
   return (
     <section className="relative bg-brand-bege text-brand-dark">
       <img
@@ -52,12 +74,16 @@ export default function Apresentacao({ imagem, titulo, descricao, children }) {
           <FaFacebook size={20} />
         </a>
       </div>
-      <div className="flex flex-col md:flex-row justify-center items-center w-[300px] sm:w-[400px] md:w-[600px] lg:w-[900px] mx-auto ">
+      <div className="flex flex-col md:flex-row justify-center items-center w-[300px] sm:w-[400px] md:w-[600px] lg:w-[900px] mx-auto pt-8">
         <img
           src={imagem}
           alt={titulo}
           draggable="false"
-          className="w-[350px] h-[350px] md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px] object-contain pt-8 md:order-2"
+          className="mt-[-60px] pt-6 object-contain md:order-2"
+          style={{
+            width: `${currentSize}px`,
+            height: `${currentSize}px`,
+          }}
         />
         <div className="md:order-1 max-w-[300px] sm:max-w-[400px] md:max-w-[450px] lg:max-w-[450px] mt-[-40px] md:mt-[-20px] pb-16 sm:pb-6">
           <h2 className="font-barlow-extrabold text-[28px] sm:text-[40px] md:text-[30px] lg:text-[40px] leading-tight">

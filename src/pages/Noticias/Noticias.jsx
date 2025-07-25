@@ -8,6 +8,7 @@ export default function Noticias() {
   return (
     <>
       <Apresentacao
+        tamanhoImagem={400}
         imagem={mzinho}
         titulo={"Fique por dentro das novidades do MUSSPE!"}
         descricao={
