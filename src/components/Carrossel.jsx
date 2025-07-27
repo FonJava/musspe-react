@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export default function Carrossel({
   images,
-  width = "300px",
-  height = "300px",
+  width = "w-[300px]",
+  height = "h-[300px]",
   showArrows = true,
+  temLink = false,
+  links = [],
 }) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [touchStart, setTouchStart] = useState(null);
@@ -97,15 +100,30 @@ export default function Carrossel({
               height: "100%",
             }}
           >
-            {slides.map((src, idx) => (
-              <img
-                key={idx}
-                src={src}
-                alt={`Slide ${idx + 1}`}
-                className="w-full h-full object-cover flex-shrink-0"
-                draggable="false"
-              />
-            ))}
+            {slides.map((src, idx) =>
+              temLink && links[idx] ? (
+                <Link
+                  key={idx}
+                  to={links[idx]}
+                  className="w-full h-full flex-shrink-0"
+                >
+                  <img
+                    src={src}
+                    alt={`Slide ${idx + 1}`}
+                    className="w-full h-full object-cover"
+                    draggable="false"
+                  />
+                </Link>
+              ) : (
+                <img
+                  key={idx}
+                  src={src}
+                  alt={`Slide ${idx + 1}`}
+                  className="w-full h-full object-cover flex-shrink-0"
+                  draggable="false"
+                />
+              )
+            )}
           </div>
         </div>
 
