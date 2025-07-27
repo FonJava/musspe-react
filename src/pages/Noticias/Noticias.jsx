@@ -12,11 +12,11 @@ import imgN2 from "/imagens/noticias/n3/coleta-condado.png";
 import n3Img1 from "/imagens/noticias/n4/jogo1.png";
 import n3Img2 from "/imagens/noticias/n4/jogo2.png";
 import n3Img3 from "/imagens/noticias/n4/jogo3.png";
-import n5Img1 from "/imagens/noticias/n1/WhatsApp Image 2025-04-07 at 14.50.17 (1).jpeg";
-import n5Img2 from "/imagens/noticias/n1/WhatsApp Image 2025-04-07 at 14.50.17 (2).jpeg";
-import n5Img3 from "/imagens/noticias/n1/WhatsApp Image 2025-04-07 at 14.50.17.jpeg";
-import n5Img4 from "/imagens/noticias/n1/WhatsApp Image 2025-04-07 at 14.50.18 (1).jpeg";
-import n5Img5 from "/imagens/noticias/n1/WhatsApp Image 2025-04-07 at 14.50.18.jpeg";
+import n5Img1 from "/imagens/noticias/n1/n5-1.jpeg";
+import n5Img2 from "/imagens/noticias/n1/n5-2.jpeg";
+import n5Img3 from "/imagens/noticias/n1/n5-3.jpeg";
+import n5Img4 from "/imagens/noticias/n1/n5-4.jpeg";
+import n5Img5 from "/imagens/noticias/n1/n5-5.jpeg";
 
 export default function Noticias() {
   const scrollToNoticias = () => {

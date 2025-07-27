@@ -101,10 +101,10 @@ export default function Carrossel({
             }}
           >
             {slides.map((src, idx) =>
-              temLink ? (
+              temLink && links[idx] ? (
                 <Link
                   key={idx}
-                  to={links[idx] || "#"}
+                  to={links[idx]}
                   className="w-full h-full flex-shrink-0"
                 >
                   <img
