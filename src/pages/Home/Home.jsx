@@ -213,12 +213,12 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col items-center order-2 flex-shrink-0"
-          <div className="rounded-2xl overflow-hidden mb-6 flex-shrink-0">
+          <div className="rounded-3xl overflow-hidden mb-6 flex-shrink-0">
             <video
               src={videoVisita}
               controls
               preload="none"
-              className="h-[600px] w-[400px] sm:h-[600px] sm:w-[400px] md:h-[340px] md:w-[200px] lg:h-[340px] lg:w-[200px] xl:h-[340px] xl:w-[200px] flex-shrink-0 block"
+              className="h-[600px] w-[340px] sm:h-[600px] sm:w-[340px] md:h-[340px] md:w-[190px] lg:h-[340px] lg:w-[190px] xl:h-[340px] xl:w-[190px] flex-shrink-0 block"
               poster=""
             ></video>
           </div>
