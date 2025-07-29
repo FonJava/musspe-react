@@ -157,7 +157,7 @@ export default function Home() {
             draggable="false"
           />
           <div className="md:mb-16 md:order-1">
-            <p className="text-lg text-[#FFDCD2] font-barlow max-w-xs text-justify md:text-base md:mt-8 md:mr-4 md:mb-4 md:max-w-none">
+            <p className="text-lg text-[#FFDCD2] font-barlow max-w-[300px] text-justify md:text-base md:mt-8 md:mr-4 md:mb-4 md:max-w-none">
               O Museu de Solos de Pernambuco Professor Mateus Rosas Ribeiro
               (MUSSPE) foi idealizado pelos pesquisadores Mateus Rosas Ribeiro e
               Paulo Klinger Tito Jacomine vinculados à Universidade Federal
