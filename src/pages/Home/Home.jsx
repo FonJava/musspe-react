@@ -175,72 +175,72 @@ export default function Home() {
       </section>
 
       {/* Visitas guiadas */}
-      <section className="bg-[#FFDCD2] text-[#471A24] xl:h-[565px] lg:h-[565px] md:h-[565px] sm:h-[840px] relative overflow-hidden">
-        <div className="absolute flex mt-64 sm:mt-48 md:mt-48 lg:mt-48 xl:mt-48">
+     <section className="bg-[#FFDCD2] text-[#471A24] xl:h-[565px] lg:h-[565px] md:h-[565px] sm:h-[840px] relative overflow-hidden">
+  <div className="absolute flex mt-64 sm:mt-48 md:mt-48 lg:mt-48 xl:mt-48">
+    <img
+      src={backgroundImg}
+      alt="Fundo visitas guiadas"
+      className="w-full h-full object-contain"
+    />
+  </div>
+
+  <div className="relative">
+    <div className="text-[#471A24] font-barlow-extrabold mt-6 text-4xl flex items-center justify-center">
+      <img
+        src={visitasicon}
+        alt="icone nossa historia"
+        className="w-4 h-5 mt-1 mr-2"
+      />
+      Visitas guiadas
+    </div>
+
+    <div className="text-center px-4 pb-4 w-full">
+      <p className="text-[#471A24] font-barlow lg:text-xl md:text-xl sm:text-xl text-xl mt-4 max-w-2xl mx-auto text-center w-full">
+        Venha conhecer o MUSSPE! Chame sua família e amigos
+        <br />
+        para conhecer o nosso acervo acompanhado por um de nossos guias!
+      </p>
+    </div>
+
+    <div>
+      <div className="w-full max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center px-4 md:px-6">
+        <div className="hidden sm:hidden md:block lg:block lg:mt-20 md:mt-20 flex-shrink-0 order-1 md:mr-6 lg:mr-8">
           <img
-            src={backgroundImg}
-            alt="Fundo visitas guiadas"
-            className="w-full h-full object-contain"
+            src={guia1}
+            alt="Guia médica"
+            className="md:w-[280px] md:h-[280px] lg:w-[280px] lg:h-[280px] xl:w-[280px] xl:h-[280px]"
           />
         </div>
 
-        <div className="relative">
-          <div className="text-[#471A24] font-barlow-extrabold mt-6 text-4xl flex items-center justify-center">
-            <img
-              src={visitasicon}
-              alt="icone nossa historia"
-              className="w-4 h-5 mt-1 mr-2"
-            />
-            Visitas guiadas
+        <div className="flex flex-col items-center order-2 flex-shrink-0"
+          <div className="rounded-2xl overflow-hidden mb-6 flex-shrink-0">
+            <video
+              src={videoVisita}
+              controls
+              preload="none"
+              className="h-[600px] w-[400px] sm:h-[600px] sm:w-[400px] md:h-[340px] md:w-[200px] lg:h-[340px] lg:w-[200px] xl:h-[340px] xl:w-[200px] flex-shrink-0 block"
+              poster=""
+            ></video>
           </div>
 
-          <div className="text-center px-4 pb-4 w-full">
-            <p className="text-[#471A24] font-barlow lg:text-xl md:text-xl sm:text-xl text-xl mt-4 max-w-2xl mx-auto text-center w-full">
-              Venha conhecer o MUSSPE! Chame sua família e amigos
-              <br />
-              para conhecer o nosso acervo acompanhado por um de nossos guias!
-            </p>
-          </div>
-
-          <div>
-            <div className="w-full max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center px-4 md:px-6">
-              <div className="hidden sm:hidden md:block lg:block lg:mt-20 md:mt-20 flex-shrink-0 order-1 md:mr-6 lg:mr-8">
-                <img
-                  src={guia1}
-                  alt="Guia médica"
-                  className="md:w-[280px] md:h-[280px] lg:w-[280px] lg:h-[280px] xl:w-[280px] xl:h-[280px]"
-                />
-              </div>
-
-              <div className="flex flex-col items-center order-2 flex-shrink-0">
-                <div className="rounded-4xl overflow-hidden mb-6 flex-shrink-0">
-                  <video
-                    src={videoVisita}
-                    controls
-                    preload="none"
-                    className="h-[600px] w-[400px] sm:h-[600px] sm:w-[400px] md:h-[340px] md:w-[200px] lg:h-[340px] lg:w-[200px] xl:h-[340px] xl:w-[200px] flex-shrink-0 rounded-2xl"
-                    poster=""
-                  ></video>
-                </div>
-
-                <div className="mb-8 md:mb-20 flex-shrink-0">
-                  <Link to="/musspe-react/visita">
-                    <Botao>Agende uma visita</Botao>
-                  </Link>
-                </div>
-              </div>
-
-              <div className="hidden sm:hidden md:block lg:block xl:block lg:mt-20 md:mt-20 flex-shrink-0 order-3 md:ml-6 lg:ml-8">
-                <img
-                  src={guia2}
-                  alt="Guia senhor"
-                  className="md:w-[280px] md:h-[280px] lg:w-[280px] lg:h-[280px] xl:w-[280px] xl:h-[280px]"
-                />
-              </div>
-            </div>
+          <div className="mb-8 md:mb-20 flex-shrink-0">
+            <Link to="/musspe-react/visita">
+              <Botao>Agende uma visita</Botao>
+            </Link>
           </div>
         </div>
-      </section>
+
+        <div className="hidden sm:hidden md:block lg:block xl:block lg:mt-20 md:mt-20 flex-shrink-0 order-3 md:ml-6 lg:ml-8">
+          <img
+            src={guia2}
+            alt="Guia senhor"
+            className="md:w-[280px] md:h-[280px] lg:w-[280px] lg:h-[280px] xl:w-[280px] xl:h-[280px]"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Nossa história */}
       <section className="bg-[#471A24] h-[515px] sm:h-[565px]">
