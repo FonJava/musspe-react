@@ -218,7 +218,7 @@ export default function Home() {
               src={videoVisita}
               controls
               preload="none"
-              className="h-[600px] w-[340px] sm:h-[600px] sm:w-[340px] md:h-[340px] md:w-[190px] lg:h-[340px] lg:w-[190px] xl:h-[340px] xl:w-[190px] flex-shrink-0 block"
+              className="h-[530px] w-[340px] sm:h-[600px] sm:w-[340px] md:h-[340px] md:w-[190px] lg:h-[340px] lg:w-[190px] xl:h-[340px] xl:w-[190px] flex-shrink-0 block"
               poster=""
             ></video>
           </div>
