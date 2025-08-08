@@ -13,6 +13,7 @@ import estrelaDir from "/imagens/estrela-direita.png";
 import caixaSolos from "/imagens/caixa-solos.png";
 import caixaRochas from "/imagens/caixa-rochas.png";
 import caixaMinerais from "/imagens/caixa-minerais.png";
+import MapaInterativo from "../../components/MapaInterativo";
 
 export default function Acervo() {
   const [isSolosModalOpen, setIsSolosModalOpen] = useState(false);
@@ -138,7 +139,14 @@ export default function Acervo() {
           draggable="false"
         />
       </section>
-      <section className="bg-brand-bege min-h-[400px]"></section>
+      <section className="bg-brand-bege min-h-[600px] flex items-center flex-col pt-4">
+        <h2 className="text-2xl sm:text-3xl font-barlow-extrabold text-brand-dark mt-4 mb-8 md:mb-6">
+          Mapa Interativo - Perfis de Solo
+        </h2>
+        <div className="w-full px-4 md:pt-2 pb-6 md:pb-8">
+          <MapaInterativo />
+        </div>
+      </section>
       <BarraVisita />
 
       {/* Modais */}
