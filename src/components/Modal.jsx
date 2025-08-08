@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { IoMdClose } from "react-icons/io";
 import BotaoAlt from "./Botao-alt";
 
@@ -9,23 +9,29 @@ const Modal = ({
   children,
   larguraModal = "w-[80%] md:w-[800px]",
 }) => {
-  // Desativar scroll quando modal estiver aberto
+  const [isVisible, setIsVisible] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
+
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
+      setIsAnimating(true);
+
+      setTimeout(() => setIsVisible(true), 10);
     } else {
       document.body.style.overflow = "unset";
+      setIsVisible(false);
+
+      setTimeout(() => setIsAnimating(false), 300);
     }
 
-    // Cleanup: restaurar scroll quando componente for desmontado
     return () => {
       document.body.style.overflow = "unset";
     };
   }, [isOpen]);
 
-  if (!isOpen) return null;
+  if (!isOpen && !isAnimating) return null;
 
-  // Função para fechar modal ao clicar no fundo
   const handleBackdropClick = (e) => {
     if (e.target === e.currentTarget) {
       onClose();
@@ -34,11 +40,17 @@ const Modal = ({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
+      className={`fixed inset-0 z-50 flex items-center justify-center bg-black transition-opacity duration-300 ease-in-out ${
+        isVisible ? "bg-opacity-50" : "bg-opacity-0"
+      }`}
       onClick={handleBackdropClick}
     >
       <div
-        className={`bg-white rounded-lg ${larguraModal} w-full mx-4 max-h-[100vh] overflow-y-auto shadow-xl`}
+        className={`bg-white rounded-lg ${larguraModal} w-full mx-4 max-h-[100vh] overflow-y-auto shadow-xl transform transition-all duration-300 ease-in-out ${
+          isVisible
+            ? "opacity-100 scale-100 translate-y-0"
+            : "opacity-0 scale-95 translate-y-4"
+        }`}
       >
         <div className="flex items-center justify-between p-6">
           <h2 className="mx-auto mt-4 text-[27px] sm:text-3xl font-barlow-bold text-black">
