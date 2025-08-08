@@ -46,7 +46,7 @@ const Modal = ({
       onClick={handleBackdropClick}
     >
       <div
-        className={`bg-white rounded-lg ${larguraModal} w-full mx-4 max-h-[100vh] overflow-y-auto shadow-xl transform transition-all duration-300 ease-in-out ${
+        className={`bg-white rounded-lg ${larguraModal} w-full mx-4 max-h-[95vh] overflow-y-auto shadow-xl transform transition-all duration-300 ease-in-out ${
           isVisible
             ? "opacity-100 scale-100 translate-y-0"
             : "opacity-0 scale-95 translate-y-4"
