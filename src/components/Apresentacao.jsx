@@ -10,6 +10,7 @@ export default function Apresentacao({
   children,
   tamanhoImagem = 350,
   larguraTexto = 300,
+  ajusteBottom,
 }) {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -89,7 +90,7 @@ export default function Apresentacao({
           src={imagem}
           alt={titulo}
           draggable="false"
-          className="mt-[-30px] pt-2 object-contain md:order-2"
+          className={`mt-[-30px] pt-2 object-contain md:order-2 ${ajusteBottom}`}
           style={{
             width: `${currentSize}px`,
             height: `${currentSize}px`,
