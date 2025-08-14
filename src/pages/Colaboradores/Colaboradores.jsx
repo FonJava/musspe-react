@@ -40,6 +40,8 @@ import Botao from "../../components/Botao";
 import iconeCoord from "/imagens/filtro-coordenacao-icon.png";
 import iconeEdu from "/imagens/filtro-educacao-icon.png";
 import iconeCom from "/imagens/filtro-comunicacao-icon.png";
+import colaboradoresImg from "/imagens/colaboradores-imagem.png";
+import { FaArrowDown } from "react-icons/fa";
 
 const voluntarios = [
   {
@@ -341,6 +343,18 @@ function ApoiadoresTab() {
 }
 
 export default function Colaboradores() {
+  const scrollToColaboradores = () => {
+    const colaboradoresSection = document.getElementById(
+      "colaboradores-section"
+    );
+    if (colaboradoresSection) {
+      colaboradoresSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   const [activeTab, setActiveTab] = useState(0);
 
   const tabs = [
@@ -364,8 +378,27 @@ export default function Colaboradores() {
 
   return (
     <>
-      <Apresentacao></Apresentacao>
-      <section className="bg-brand-dark flex flex-col items-center py-12">
+      <Apresentacao
+        tamanhoImagem={350}
+        imagem={colaboradoresImg}
+        titulo={"Colaboradores(as)"}
+        descricao={
+          "Atualmente, a equipe do MUSSPE é composta por 31 membros, sendo 1 coordenador, 11 bolsistas e 19 colaboradores (as)."
+        }
+      >
+        <Botao
+          tamanhoFonte="text-[18px] sm:text-[20px] py-[2.5px] md:text-[16px] lg:text-[20px]"
+          paddingY="md:py-[1.5px] lg:py-[2.5px]"
+          onClick={scrollToColaboradores}
+        >
+          <FaArrowDown className="inline mr-2" />
+          Conheça nossa equipe
+        </Botao>
+      </Apresentacao>
+      <section
+        id="colaboradores-section"
+        className="bg-brand-dark flex flex-col items-center py-12"
+      >
         <div className="flex items-center mb-14">
           <img src={colabIcon} className="w-6 mr-2" draggable="false" />
           <h2 className="text-brand-bege font-barlow-extrabold text-3xl">
