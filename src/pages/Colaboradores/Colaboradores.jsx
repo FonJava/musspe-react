@@ -43,18 +43,6 @@ import iconeCom from "/imagens/filtro-comunicacao-icon.png";
 import colaboradoresImg from "/imagens/colaboradores-imagem.png";
 import { FaArrowDown } from "react-icons/fa";
 
-const scrollToColaboradores = () => {
-    const colaboradoresSection = document.getElementById("colaboradores-section");
-    if (colaboradoresSection) {
-      colaboradoresSection.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
-  };
-
-
-
 const voluntarios = [
   {
     id: 1,
@@ -355,6 +343,18 @@ function ApoiadoresTab() {
 }
 
 export default function Colaboradores() {
+  const scrollToColaboradores = () => {
+    const colaboradoresSection = document.getElementById(
+      "colaboradores-section"
+    );
+    if (colaboradoresSection) {
+      colaboradoresSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   const [activeTab, setActiveTab] = useState(0);
 
   const tabs = [
@@ -395,7 +395,10 @@ export default function Colaboradores() {
           Conheça nossa equipe
         </Botao>
       </Apresentacao>
-      <section id="colaboradores-section" className="bg-brand-dark flex flex-col items-center py-12">
+      <section
+        id="colaboradores-section"
+        className="bg-brand-dark flex flex-col items-center py-12"
+      >
         <div className="flex items-center mb-14">
           <img src={colabIcon} className="w-6 mr-2" draggable="false" />
           <h2 className="text-brand-bege font-barlow-extrabold text-3xl">
