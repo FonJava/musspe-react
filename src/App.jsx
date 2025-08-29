@@ -7,8 +7,9 @@ import Noticias from "./pages/Noticias/Noticias";
 import Acervo from "./pages/Acervo/Acervo";
 import Colaboradores from "./pages/Colaboradores/Colaboradores";
 import Jogos from "./pages/Jogos/Jogos";
-/*
 import Visita from "./pages/Visita/Visita";
+/*
+
  */
 import NotFound from "./pages/NotFound/NotFound";
 
@@ -45,8 +46,8 @@ function AppWrapper() {
             path="/musspe-react/colaboradores"
             element={<Colaboradores />}
           />
-          {/* <Route path="/musspe-react/visita" element={<Visita />} />
-           */}
+          <Route path="/musspe-react/visita" element={<Visita />} />
+          
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
