@@ -212,6 +212,7 @@ const FormularioVisita = () => {
         }}
         title=""
         larguraModal="w-[90%] md:w-[600px]"
+        textoBotao="Voltar para a página inicial"
       >
         <div className="flex flex-col items-center gap-4 text-[#E9B80E]">
           <img

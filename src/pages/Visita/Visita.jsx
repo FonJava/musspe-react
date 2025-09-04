@@ -6,7 +6,6 @@ import {
   FaFacebook,
   FaMapMarkerAlt,
 } from "react-icons/fa";
-import { Link } from "react-router-dom";
 
 import visitaDesktop from "/imagens/imagem-visitas.png";
 import visitaMobile from "/imagens/imagem-visitas2.png";

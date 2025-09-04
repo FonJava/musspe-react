@@ -8,6 +8,7 @@ const Modal = ({
   title,
   children,
   larguraModal = "w-[80%] md:w-[800px]",
+  textoBotao = "Fechar",
 }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
@@ -62,7 +63,7 @@ const Modal = ({
           onClick={onClose}
           className="flex mx-auto text-gray-500 hover:text-gray-700 transition-colors duration-200 mb-4"
         >
-          <BotaoAlt>Fechar</BotaoAlt>
+          <BotaoAlt>{textoBotao}</BotaoAlt>
         </button>
       </div>
     </div>
