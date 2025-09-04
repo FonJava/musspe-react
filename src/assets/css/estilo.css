@@ -1,3 +1,27 @@
+/* Customização do calendário flatpickr */
+.flatpickr-calendar {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.flatpickr-day.today {
+  background-color: #663540;
+  color: #fff;
+  border: none;
+}
+
+.flatpickr-day.selected {
+  background-color: #ff8f00;
+  color: #fff;
+  border: none;
+}
+
+.flatpickr-day:hover {
+  background-color: #cc7042;
+  color: #fff;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
