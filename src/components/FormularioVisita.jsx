@@ -78,9 +78,12 @@ const FormularioVisita = () => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <span className="font-barlow-medium text-brand-dark text-3xl flex">
+    <div className="grid md:flex md:flex-col items-center">
+      <form
+        onSubmit={handleSubmit}
+        className="flex flex-col items-center md:items-start"
+      >
+        <span className="font-barlow-medium text-brand-dark text-3xl flex items-start justify-start w-full">
           <span className="mr-2 border rounded-3xl border-brand-dark bg-brand-roxo text-white text-2xl py-[3px] px-[10px] font-barlow-semibold">
             01
           </span>
@@ -96,7 +99,7 @@ const FormularioVisita = () => {
         <h2 className="font-barlow-medium text-brand-dark text-lg">
           Selecione um horário
         </h2>
-        <div className="grid grid-cols-2 bg-brand-roxo py-[35px] px-[20px] rounded-3xl mt-2 w-[670px] mb-[60px]">
+        <div className="grid grid-cols-2 bg-brand-roxo py-[15px] md:py-[35px] px-[10px] md:px-[20px] rounded-3xl mt-2 w-[300px] sm:w-[450px] md:w-[670px] mb-[60px]">
           {[
             "13h às 14h30",
             "14h30 às 16h",
@@ -110,8 +113,8 @@ const FormularioVisita = () => {
               type="button"
               className={
                 selectedTime === time
-                  ? "font-barlow text-2xl bg-brand-laranja px-2 w-[300px] rounded-2xl my-2 py-3 mx-1 text-white transition-colors duration-300"
-                  : "font-barlow text-2xl bg-white px-2 w-[300px] rounded-2xl my-2 py-3 mx-1 transition-colors duration-300"
+                  ? "font-barlow text-xl md:text-2xl  bg-brand-laranja px-2 w-[130px] sm:w-[200px] md:w-[300px] rounded-2xl my-2 py-2 md:py-3 mx-1 text-white transition-colors duration-300"
+                  : "font-barlow text-xl md:text-2xl bg-white px-2 w-[130px] sm:w-[200px] md:w-[300px] rounded-2xl my-2 py-2 md:py-3 mx-1 transition-colors duration-300"
               }
               onClick={() => handleTimeClick(time)}
             >
@@ -120,14 +123,14 @@ const FormularioVisita = () => {
           ))}
         </div>
 
-        <span className="font-barlow-medium text-brand-dark text-3xl flex">
+        <span className="font-barlow-medium text-brand-dark text-3xl flex items-start justify-start w-full">
           <span className="mr-2 border rounded-3xl border-brand-dark bg-brand-roxo text-white text-2xl py-[3px] px-[9px] font-barlow-semibold">
             02
           </span>
           <h2>Identifique-se</h2>
         </span>
 
-        <div className="grid gap-4">
+        <div className="grid gap-4 justify-center items-center">
           <p className="font-barlow-medium text-brand-dark mt-4 mb-[-13px]">
             Nome do responsável
           </p>
@@ -138,7 +141,7 @@ const FormularioVisita = () => {
             value={formData.nome}
             onChange={handleChange}
             required
-            className="w-[280px] rounded-3xl py-1.5 pl-4 text-md font-barlow"
+            className="w-[200px] md:w-[280px] rounded-3xl py-1.5 pl-4 text-md font-barlow"
           />
           <p className="font-barlow-medium text-brand-dark mt-1 mb-[-13px]">
             Número para contato
@@ -153,7 +156,7 @@ const FormularioVisita = () => {
               setFormData((prev) => ({ ...prev, telefone: val }));
             }}
             required
-            className="w-[280px] rounded-3xl py-1.5 pl-4 text-md font-barlow"
+            className="w-[200px] md:w-[280px] rounded-3xl py-1.5 pl-4 text-md font-barlow"
             pattern="[0-9()\-\s]{10,20}"
             maxLength={20}
             inputMode="text"
@@ -168,7 +171,7 @@ const FormularioVisita = () => {
             value={formData.email}
             onChange={handleChange}
             required
-            className="w-[280px] rounded-3xl py-1.5 pl-4 text-md font-barlow"
+            className="w-[200px] md:w-[280px] rounded-3xl py-1.5 pl-4 text-md font-barlow"
             pattern="^[^@\s]+@[^@\s]+\.[^@\s]+$"
             title="Digite um e-mail válido (deve conter @ e .)"
           />
@@ -182,7 +185,7 @@ const FormularioVisita = () => {
             value={formData.motivo}
             onChange={handleChange}
             required
-            className="w-[470px] rounded-3xl py-1.5 px-4 text-md font-barlow resize-none"
+            className="w-[280px] md:w-[470px] rounded-3xl py-1.5 px-4 text-md font-barlow resize-none"
           />
         </div>
 
@@ -194,7 +197,7 @@ const FormularioVisita = () => {
           >
             Confirmar agendamento
           </button>
-          <p className="font-barlow-italic text-brand-laranja w-[280px]">
+          <p className="font-barlow-italic text-brand-laranja w-[50%] md:w-[280px]">
             *Após agendar a visita entraremos em contato para a confirmação do
             agendamento próximo à data da sua visita!
           </p>

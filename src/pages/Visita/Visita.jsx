@@ -67,8 +67,8 @@ export default function Visita() {
         />
       </section>
       <section className="bg-brand-bege">
-        <div className="flex pt-[100px] font-barlow-italic text-xl w-[670px] mx-auto items-center">
-          <div className="w-[415px] text-start">
+        <div className="md:pl-0 pl-2 md:flex pt-[70px] md:pt-[100px] font-barlow-italic text-lg sm:text-xl md:w-[670px] mx-auto items-center">
+          <div className="md:w-[415px] text-start">
             <h2 className="font-barlow-bold text-brand-dark text-3xl mt-[-25px] lg:mt-0">
               Sua visita
             </h2>
@@ -93,7 +93,7 @@ export default function Visita() {
           <a href="https://maps.app.goo.gl/DzJmnuAaG8ijhjwm6">
             <img
               src={imagemMaps}
-              className="w-[280px]"
+              className="w-[280px] md:mt-0 mt-4 sm:mx-auto"
               alt="Localização no Google Maps"
             />
           </a>
