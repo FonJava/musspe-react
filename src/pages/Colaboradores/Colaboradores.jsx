@@ -414,8 +414,8 @@ export default function Colaboradores() {
                 onClick={() => setActiveTab(index)}
                 className={`text-white font-barlow-semibold text-sm sm:text-xl rounded-[15px] pb-7 p-2 sm:p-4 sm:pb-7 cursor-pointer transition-colors duration-300 ml-1 ${
                   activeTab === index
-                    ? "bg-brand-roxo border border-transparent border-[3px] border-b-0"
-                    : "border border-brand-laranja border-[3px] border-b-0"
+                    ? "bg-brand-roxo border-transparent border-[3px] border-b-0"
+                    : "border-brand-laranja border-[3px] border-b-0"
                 }`}
               >
                 {tab.name}
