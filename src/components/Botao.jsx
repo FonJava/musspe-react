@@ -7,10 +7,12 @@ const Botao = ({
   paddingX = "px-3",
   paddingY = "py-[1.5px]",
   onClick,
+  ...rest
 }) => (
   <button
     onClick={onClick}
     className={`inline-block bg-[#d37d46] text-white ${tamanhoFonte} font-barlow-medium ${paddingX} ${paddingY} ${marginY} rounded-full hover:bg-[#c66f39] transition-colors duration-200`}
+    {...rest}
   >
     {children}
   </button>

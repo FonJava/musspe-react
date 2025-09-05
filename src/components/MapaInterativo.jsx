@@ -349,12 +349,11 @@ const MapaInterativo = () => {
                 <button
                   onClick={closeModal}
                   className="text-gray-400 hover:text-gray-600 text-2xl font-bold"
+                  aria-label="Fechar modal"
                 >
                   ×
                 </button>
               </div>
-
-              {/* Content */}
               <div className="p-4 overflow-y-auto max-h-[calc(90vh-120px)]">
                 {loading ? (
                   <div className="flex items-center justify-center py-8">

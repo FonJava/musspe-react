@@ -252,7 +252,8 @@ function BolsistasTab() {
               {filtro.icone && (
                 <img
                   src={filtro.icone}
-                  alt={`${filtro.nome} icon`}
+                  alt=""
+                  aria-hidden="true"
                   className="w-[15px] sm:w-[20px] inline-block mr-1 sm:mr-2"
                 />
               )}

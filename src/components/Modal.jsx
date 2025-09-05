@@ -62,6 +62,7 @@ const Modal = ({
         <button
           onClick={onClose}
           className="flex mx-auto text-gray-500 hover:text-gray-700 transition-colors duration-200 mb-4"
+          aria-label={textoBotao ? textoBotao : "Fechar modal"}
         >
           <BotaoAlt>{textoBotao}</BotaoAlt>
         </button>

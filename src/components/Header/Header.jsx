@@ -32,6 +32,7 @@ export default function Header({ activePage, setActivePage }) {
         <button
           className="md:hidden w-6 h-6 bg-no-repeat bg-center focus:outline-none bg-[url('data:image/svg+xml;charset=utf8,%3Csvg%20viewBox=%270%200%2030%2030%27%20xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cpath%20stroke=%27rgba(255,220,210,1)%27%20stroke-width=%272%27%20stroke-linecap=%27round%27%20stroke-miterlimit=%2710%27%20d=%27M4%207h22M4%2015h22M4%2023h22%27/%3E%3C/svg%3E')] border border-brand-laranja rounded px-7 py-5 bg-[length:1.8rem_1.8rem]"
           onClick={toggleMobileMenu}
+          aria-label="Abrir menu de navegação"
         ></button>
 
         {/* Navegação desktop */}
@@ -135,6 +136,7 @@ export default function Header({ activePage, setActivePage }) {
       </div>
 
       {/* Navegação mobile*/}
+
       <div
         className={`fixed top-0 right-0 h-full w-64 bg-brand-dark shadow-2xl transform transition-transform duration-300 ease-in-out z-40 ${
           isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
@@ -149,6 +151,7 @@ export default function Header({ activePage, setActivePage }) {
           <button
             onClick={toggleMobileMenu}
             className="text-brand-bege focus:outline-none"
+            aria-label="Fechar menu de navegação"
           >
             <svg
               className="w-6 h-6"
@@ -156,6 +159,7 @@ export default function Header({ activePage, setActivePage }) {
               stroke="currentColor"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
             >
               <path
                 strokeLinecap="round"

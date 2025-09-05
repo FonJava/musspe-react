@@ -89,6 +89,12 @@ const FormularioVisita = () => {
           </span>
           <h2>Selecione uma data</h2>
         </span>
+        <label
+          htmlFor="date"
+          className="font-barlow-medium text-brand-dark mt-4 mb-[-13px]"
+        >
+          Data da visita
+        </label>
         <input
           type="text"
           id="date"
@@ -117,6 +123,8 @@ const FormularioVisita = () => {
                   : "font-barlow text-xl md:text-2xl bg-white px-2 w-[130px] sm:w-[200px] md:w-[300px] rounded-2xl my-2 py-2 md:py-3 mx-1 transition-colors duration-300"
               }
               onClick={() => handleTimeClick(time)}
+              aria-pressed={selectedTime === time}
+              aria-label={`Selecionar horário ${time}`}
             >
               {time}
             </button>
@@ -131,11 +139,15 @@ const FormularioVisita = () => {
         </span>
 
         <div className="grid gap-4 justify-center items-center">
-          <p className="font-barlow-medium text-brand-dark mt-4 mb-[-13px]">
+          <label
+            htmlFor="nome"
+            className="font-barlow-medium text-brand-dark mt-4 mb-[-13px]"
+          >
             Nome do responsável
-          </p>
+          </label>
           <input
             type="text"
+            id="nome"
             name="nome"
             placeholder="Nome e sobrenome"
             value={formData.nome}
@@ -143,11 +155,15 @@ const FormularioVisita = () => {
             required
             className="w-[200px] md:w-[280px] rounded-3xl py-1.5 pl-4 text-md font-barlow"
           />
-          <p className="font-barlow-medium text-brand-dark mt-1 mb-[-13px]">
+          <label
+            htmlFor="telefone"
+            className="font-barlow-medium text-brand-dark mt-1 mb-[-13px]"
+          >
             Número para contato
-          </p>
+          </label>
           <input
             type="tel"
+            id="telefone"
             name="telefone"
             placeholder="(xx) xxxxx-xxxx"
             value={formData.telefone}
@@ -161,11 +177,15 @@ const FormularioVisita = () => {
             maxLength={20}
             inputMode="text"
           />
-          <p className="font-barlow-medium text-brand-dark mt-1 mb-[-13px]">
+          <label
+            htmlFor="email"
+            className="font-barlow-medium text-brand-dark mt-1 mb-[-13px]"
+          >
             E-mail para contato
-          </p>
+          </label>
           <input
             type="email"
+            id="email"
             name="email"
             placeholder="latossolo@email.com"
             value={formData.email}
@@ -175,10 +195,14 @@ const FormularioVisita = () => {
             pattern="^[^@\s]+@[^@\s]+\.[^@\s]+$"
             title="Digite um e-mail válido (deve conter @ e .)"
           />
-          <p className="font-barlow-medium text-brand-dark mt-1 mb-[-13px]">
+          <label
+            htmlFor="motivo"
+            className="font-barlow-medium text-brand-dark mt-1 mb-[-13px]"
+          >
             Motivo da visita
-          </p>
+          </label>
           <textarea
+            id="motivo"
             name="motivo"
             placeholder="Especifique a instituição e quantidade de alunos caso instituição de ensino. Exemplos: 'Sou professor da escola X e venho visitar com minha turma de 20 alunos' ou 'Venho fazer uma visita individual para conhecer o espaço!'"
             rows={6}

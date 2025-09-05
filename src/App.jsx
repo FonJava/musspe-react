@@ -40,14 +40,12 @@ function AppWrapper() {
 
           <Route path="/musspe-react/acervo" element={<Acervo />} />
           <Route path="/musspe-react/jogos" element={<Jogos />} />
-          {/*
-           */}
           <Route
             path="/musspe-react/colaboradores"
             element={<Colaboradores />}
           />
           <Route path="/musspe-react/visita" element={<Visita />} />
-          
+
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
