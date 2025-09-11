@@ -79,7 +79,7 @@ export default function Carrossel({
     <div className="flex items-center justify-center gap-[75px]">
       {showArrows && (
         <div
-          className="hidden md:flex text-[#B89A9A] text-4xl font-barlow-bold border-[6px] border-[#8c4e2e] rounded-full w-[60px] h-[60px] pb-1 pr-1 justify-center items-center hover:text-[#FFDCD2] hover:border-[#cc7042] cursor-pointer transition-colors duration-200 mt-[-45px]"
+          className="mt-[-45px] hidden h-[60px] w-[60px] cursor-pointer items-center justify-center rounded-full border-[6px] border-[#8c4e2e] pb-1 pr-1 font-barlow-bold text-4xl text-[#B89A9A] transition-colors duration-200 hover:border-[#cc7042] hover:text-[#FFDCD2] md:flex"
           onClick={prevSlide}
         >
           &lt;
@@ -105,12 +105,12 @@ export default function Carrossel({
                 <Link
                   key={idx}
                   to={links[idx]}
-                  className="w-full h-full flex-shrink-0"
+                  className="h-full w-full flex-shrink-0"
                 >
                   <img
                     src={src}
                     alt={`Slide ${idx + 1}`}
-                    className="w-full h-full object-cover"
+                    className="h-full w-full object-cover"
                     draggable="false"
                   />
                 </Link>
@@ -119,20 +119,20 @@ export default function Carrossel({
                   key={idx}
                   src={src}
                   alt={`Slide ${idx + 1}`}
-                  className="w-full h-full object-cover flex-shrink-0"
+                  className="h-full w-full flex-shrink-0 object-cover"
                   draggable="false"
                 />
-              )
+              ),
             )}
           </div>
         </div>
 
-        <div className="mt-3 mb-8">
+        <div className="mb-8 mt-3">
           <ol className="flex items-center justify-center gap-2">
             {Array.from({ length: slideCount }).map((_, idx) => (
               <li
                 key={idx}
-                className={`w-[10px] h-[10px] rounded-full cursor-pointer transition-colors duration-200 ${
+                className={`h-[10px] w-[10px] cursor-pointer rounded-full transition-colors duration-200 ${
                   currentSlide === idx ? "bg-[#cc7042]" : "bg-[#FFDCD2]"
                 }`}
                 onClick={() => goToSlide(idx)}
@@ -144,7 +144,7 @@ export default function Carrossel({
 
       {showArrows && (
         <div
-          className="hidden md:flex text-[#B89A9A] text-4xl font-barlow-bold border-[6px] border-[#8c4e2e] rounded-full w-[60px] h-[60px] pb-1 pl-1 justify-center items-center hover:text-[#FFDCD2] hover:border-[#cc7042] cursor-pointer transition-colors duration-200 mt-[-45px]"
+          className="mt-[-45px] hidden h-[60px] w-[60px] cursor-pointer items-center justify-center rounded-full border-[6px] border-[#8c4e2e] pb-1 pl-1 font-barlow-bold text-4xl text-[#B89A9A] transition-colors duration-200 hover:border-[#cc7042] hover:text-[#FFDCD2] md:flex"
           onClick={nextSlide}
         >
           &gt;

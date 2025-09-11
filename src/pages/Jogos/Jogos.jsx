@@ -4,16 +4,14 @@ import mzinhoJogos from "/imagens/mzinho-jogo.png";
 import Botao from "../../components/Botao";
 import { FaArrowDown } from "react-icons/fa";
 import ContainerJogo from "../../components/Container-jogo";
-import anagrama from "/imagens/jogos/anagrama.png"
-import caçaPalavras from "/imagens/jogos/caca-palavras.png"
-import classGrupos from "/imagens/jogos/class-grupos.png"
-import persegLab from "/imagens/jogos/perseg-lab.png"
-import pratConserv from "/imagens/jogos/prat-conserv.png"
-import questionario from "/imagens/jogos/questionario.png"
-import quiz from "/imagens/jogos/quiz.png"
-import vf from "/imagens/jogos/vf.png"
-
-
+import anagrama from "/imagens/jogos/anagrama.png";
+import caçaPalavras from "/imagens/jogos/caca-palavras.png";
+import classGrupos from "/imagens/jogos/class-grupos.png";
+import persegLab from "/imagens/jogos/perseg-lab.png";
+import pratConserv from "/imagens/jogos/prat-conserv.png";
+import questionario from "/imagens/jogos/questionario.png";
+import quiz from "/imagens/jogos/quiz.png";
+import vf from "/imagens/jogos/vf.png";
 
 export default function Jogos() {
   const scrollToJogos = () => {
@@ -25,7 +23,6 @@ export default function Jogos() {
       });
     }
   };
-
 
   return (
     <>
@@ -42,19 +39,20 @@ export default function Jogos() {
           paddingY="md:py-[1.5px] lg:py-[2.5px]"
           onClick={scrollToJogos}
         >
-          <FaArrowDown className="inline mr-2" />
+          <FaArrowDown className="mr-2 inline" />
           Descubra agora!
         </Botao>
       </Apresentacao>
       <section
         id="jogos-section"
-        className="bg-brand-dark py-[40px] sm:py-[80px] min-h-[700px]"
+        className="min-h-[700px] bg-brand-dark py-[40px] sm:py-[80px]"
       >
-
         <ContainerJogo
           titulo={"Perseguição no Labirinto: Conservação dos Solos"}
           ano={"(2025)"}
-          desenvolvedores={"Gabriel R C Leão, Glévia K. Lima, Anthony Guerra e Gabriel Henrique (MUSSPE/UFRPE/UAST)"}
+          desenvolvedores={
+            "Gabriel R C Leão, Glévia K. Lima, Anthony Guerra e Gabriel Henrique (MUSSPE/UFRPE/UAST)"
+          }
           imagem={persegLab}
           link={"https://wordwall.net/play/91771/646/910"}
         />
@@ -62,7 +60,9 @@ export default function Jogos() {
         <ContainerJogo
           titulo={"Associação: Práticas conservacionistas do solo"}
           ano={"(2025)"}
-          desenvolvedores={"Gabriel R C Leão, Glévia K. Lima, Anthony Guerra e Gabriel Henrique (MUSSPE/UFRPE/UAST)"}
+          desenvolvedores={
+            "Gabriel R C Leão, Glévia K. Lima, Anthony Guerra e Gabriel Henrique (MUSSPE/UFRPE/UAST)"
+          }
           imagem={pratConserv}
           link={"https://wordwall.net/play/89914/615/580"}
         />
@@ -70,7 +70,9 @@ export default function Jogos() {
         <ContainerJogo
           titulo={"Anagrama: Processos de degradação dos solos"}
           ano={"(2025)"}
-          desenvolvedores={"Gabriel R C Leão, Glévia K. Lima, Anthony Guerra e Gabriel Henrique (MUSSPE/UFRPE/UAST)"}
+          desenvolvedores={
+            "Gabriel R C Leão, Glévia K. Lima, Anthony Guerra e Gabriel Henrique (MUSSPE/UFRPE/UAST)"
+          }
           imagem={anagrama}
           link={"https://wordwall.net/play/91187/195/315"}
         />
@@ -78,7 +80,9 @@ export default function Jogos() {
         <ContainerJogo
           titulo={"Verdadeiro/Falso: Conservação dos solos"}
           ano={"(2025)"}
-          desenvolvedores={"Gabriel R C Leão, Glévia K. Lima, Anthony Guerra e Gabriel Henrique (MUSSPE/UFRPE/UAST)"}
+          desenvolvedores={
+            "Gabriel R C Leão, Glévia K. Lima, Anthony Guerra e Gabriel Henrique (MUSSPE/UFRPE/UAST)"
+          }
           imagem={vf}
           link={"https://wordwall.net/play/89885/602/241"}
         />
@@ -86,7 +90,9 @@ export default function Jogos() {
         <ContainerJogo
           titulo={"Quiz Show: Funções do solo"}
           ano={"(2024)"}
-          desenvolvedores={"Carlos A C C Silva e Glêvia K. Lima (MUSSPE/UFRPE/UAST)"}
+          desenvolvedores={
+            "Carlos A C C Silva e Glêvia K. Lima (MUSSPE/UFRPE/UAST)"
+          }
           imagem={quiz}
           link={"https://wordwall.net/play/13918/281/888"}
         />
@@ -94,7 +100,9 @@ export default function Jogos() {
         <ContainerJogo
           titulo={"Caça-Palavras: Minerais primários e secundários"}
           ano={"(2024)"}
-          desenvolvedores={"Lucas V S Euclides e Glêvia K. Lima (MUSSPE/UFRPE/UAST)"}
+          desenvolvedores={
+            "Lucas V S Euclides e Glêvia K. Lima (MUSSPE/UFRPE/UAST)"
+          }
           imagem={caçaPalavras}
           link={"https://wordwall.net/play/80298/652/309"}
         />
@@ -102,7 +110,9 @@ export default function Jogos() {
         <ContainerJogo
           titulo={"Classificação em grupos: Tipos de rochas"}
           ano={"(2024)"}
-          desenvolvedores={"Lucas V S Euclides e Glêvia K. Lima (MUSSPE/UFRPE/UAST)"}
+          desenvolvedores={
+            "Lucas V S Euclides e Glêvia K. Lima (MUSSPE/UFRPE/UAST)"
+          }
           imagem={classGrupos}
           link={"https://wordwall.net/play/79663/066/166"}
         />
@@ -110,15 +120,14 @@ export default function Jogos() {
         <ContainerJogo
           titulo={"Questionário: Tipos de solos"}
           ano={"(2025)"}
-          desenvolvedores={"Gabriel R C Leão, Glévia K. Lima, Anthony Guerra, Gabriel Henrique e Geovana Gabrielli (MUSSPE/UFRPE/UAST)"}
+          desenvolvedores={
+            "Gabriel R C Leão, Glévia K. Lima, Anthony Guerra, Gabriel Henrique e Geovana Gabrielli (MUSSPE/UFRPE/UAST)"
+          }
           imagem={questionario}
           link={"https://wordwall.net/play/93957/780/121"}
         />
-       
-        
-        
       </section>
       <BarraVisita />
-</>
-);
+    </>
+  );
 }

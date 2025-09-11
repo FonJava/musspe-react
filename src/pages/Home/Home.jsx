@@ -67,31 +67,31 @@ export default function Home() {
         </Link>
       </Apresentacao>
       {/* início-noticias*/}
-      <section className="relative bg-[#FFDCD2] h-[200px] sm:h-[300px]">
+      <section className="relative h-[200px] bg-[#FFDCD2] sm:h-[300px]">
         <img
           src={apreesq}
           alt="Decoração esquerda"
-          className="absolute top-[-1px] w-[150px] md:w-[200px] [transform:rotateX(180deg)]"
+          className="absolute top-[-1px] w-[150px] [transform:rotateX(180deg)] md:w-[200px]"
           draggable="false"
         />
-        <div className="flex w-[340px] sm:w-[645px] md:w-[750px] lg:w-[1000px] mx-auto relative">
+        <div className="relative mx-auto flex w-[340px] sm:w-[645px] md:w-[750px] lg:w-[1000px]">
           <img
             src={detalhevazio}
-            className="w-[152px] sm:w-[400px] md:w-[425px] lg:w-[455px] absolute top-[182px] sm:top-[252px] md:top-[250px] lg:bottom-[-56px] right-[25px] lg:right-[50px]"
+            className="absolute right-[25px] top-[182px] w-[152px] sm:top-[252px] sm:w-[400px] md:top-[250px] md:w-[425px] lg:bottom-[-56px] lg:right-[50px] lg:w-[455px]"
             draggable="false"
           />
           <img
             src={detalhe}
-            className="w-[152px] sm:w-[400px] md:w-[425px] lg:w-[455px] absolute top-[24px] sm:top-0 right-[25px] lg:right-[50px]"
+            className="absolute right-[25px] top-[24px] w-[152px] sm:top-0 sm:w-[400px] md:w-[425px] lg:right-[50px] lg:w-[455px]"
             draggable="false"
           />
           <img
             src={notidialogo}
-            className="w-[215px] sm:w-[360px] md:w-[420px] lg:w-[455px] relative left-[0px] md:left-[7%] top-[85px] sm:top-[106px] md:top-[75px] lg:top-[56px]"
+            className="relative left-[0px] top-[85px] w-[215px] sm:top-[106px] sm:w-[360px] md:left-[7%] md:top-[75px] md:w-[420px] lg:top-[56px] lg:w-[455px]"
             draggable="false"
           />
           <div
-            className="relative top-[145px] sm:top-[200px] md:top-[184px] lg:top-[172px] left-[-130px] sm:left-[-250px] md:left-[-230px] lg:left-[-250px] w-[210px] sm:w-[270px] lg:w-[300px] text-brand-laranja font-barlow-medium text-[10px] sm:text-[21px] text-center"
+            className="relative left-[-130px] top-[145px] w-[210px] text-center font-barlow-medium text-[10px] text-brand-laranja sm:left-[-250px] sm:top-[200px] sm:w-[270px] sm:text-[21px] md:left-[-230px] md:top-[184px] lg:left-[-250px] lg:top-[172px] lg:w-[300px]"
             style={{ fontWeight: 700, lineHeight: "1.3" }}
           >
             VAMOS ACOMPANHAR AS NOTÍCIAS?
@@ -106,12 +106,12 @@ export default function Home() {
               </Botao>
             </Link>
           </div>
-          <div className="absolute right-[25px] lg:right-[50px] border-[0.5px] sm:border-2 border-brand-roxo rounded-lg text-center w-[83px] sm:w-[216px] md:w-[230px] lg:w-[247px] top-[56px] sm:top-[85px] lg:top-[80px] sm:p-0">
-            <h3 className="font-barlow-extrabold text-brand-laranja text-[18px] sm:text-[29px] lg:text-[32px] mt-[5px] sm:mt-[20px]">
+          <div className="absolute right-[25px] top-[56px] w-[83px] rounded-lg border-[0.5px] border-brand-roxo text-center sm:top-[85px] sm:w-[216px] sm:border-2 sm:p-0 md:w-[230px] lg:right-[50px] lg:top-[80px] lg:w-[247px]">
+            <h3 className="mt-[5px] font-barlow-extrabold text-[18px] text-brand-laranja sm:mt-[20px] sm:text-[29px] lg:text-[32px]">
               Você!
             </h3>
             <p
-              className="font-barlow text-brand-dark text-[10px] sm:text-[15px] lg:text-[18px] pb-[5px] sm:pb-[10px] text-start px-3"
+              className="px-3 pb-[5px] text-start font-barlow text-[10px] text-brand-dark sm:pb-[10px] sm:text-[15px] lg:text-[18px]"
               style={{ lineHeight: "1.3" }}
             >
               Fique por dentro das últimas atualizações e eventos do Museu de
@@ -122,7 +122,7 @@ export default function Home() {
         </div>
       </section>
       {/* sobre-nós */}
-      <section className="relative bg-[#471A24] text-[#FFDCD2] h-[860px] md:h-auto py-4">
+      <section className="relative h-[860px] bg-[#471A24] py-4 text-[#FFDCD2] md:h-auto">
         <img
           src={imgesq}
           alt="Decoração esquerda"
@@ -133,31 +133,31 @@ export default function Home() {
         <img
           src={imgdir}
           alt="Decoração direita"
-          className="absolute top-0 right-0 w-14 md:w-16"
+          className="absolute right-0 top-0 w-14 md:w-16"
           draggable="false"
         />
 
-        <div className="flex items-center justify-center mb-4">
+        <div className="mb-4 flex items-center justify-center">
           <img
             src={sobrenosicon}
             alt="Ícone sobre nós"
-            className="w-4 h-5 mr-2 mt-1 md:mt-5"
+            className="mr-2 mt-1 h-5 w-4 md:mt-5"
             draggable="false"
           />
-          <h2 className="text-3xl font-barlow-extrabold text-[#FFDCD2] my-2 md:mt-4">
+          <h2 className="my-2 font-barlow-extrabold text-3xl text-[#FFDCD2] md:mt-4">
             Sobre nós
           </h2>
         </div>
 
-        <div className="flex flex-col items-center md:max-w-2xl md:mx-auto md:flex-row md:items-center md:gap-40">
+        <div className="flex flex-col items-center md:mx-auto md:max-w-2xl md:flex-row md:items-center md:gap-40">
           <img
             src={sobrenos}
             alt="Imagem sobre nós"
-            className="w-[300px] rounded-xl mb-6 md:max-w-xs md:h-[290px] md:rounded-lg md:mb-10 md:order-2"
+            className="mb-6 w-[300px] rounded-xl md:order-2 md:mb-10 md:h-[290px] md:max-w-xs md:rounded-lg"
             draggable="false"
           />
-          <div className="md:mb-16 md:order-1">
-            <p className="text-lg text-[#FFDCD2] font-barlow max-w-[300px] text-justify md:text-base md:mt-8 md:mr-4 md:mb-4 md:max-w-none">
+          <div className="md:order-1 md:mb-16">
+            <p className="max-w-[300px] text-justify font-barlow text-lg text-[#FFDCD2] md:mb-4 md:mr-4 md:mt-8 md:max-w-none md:text-base">
               O Museu de Solos de Pernambuco Professor Mateus Rosas Ribeiro
               (MUSSPE) foi idealizado pelos pesquisadores Mateus Rosas Ribeiro e
               Paulo Klinger Tito Jacomine vinculados à Universidade Federal
@@ -175,27 +175,27 @@ export default function Home() {
       </section>
 
       {/* Visitas guiadas */}
-      <section className="bg-[#FFDCD2] text-[#471A24] md:h-[565px] sm:h-[840px] relative overflow-hidden">
-        <div className="absolute flex mt-64 sm:mt-48 md:mt-48 lg:mt-48 xl:mt-48">
+      <section className="relative overflow-hidden bg-[#FFDCD2] text-[#471A24] sm:h-[840px] md:h-[565px]">
+        <div className="absolute mt-64 flex sm:mt-48 md:mt-48 lg:mt-48 xl:mt-48">
           <img
             src={backgroundImg}
             alt="Fundo visitas guiadas"
-            className="w-full h-full object-contain"
+            className="h-full w-full object-contain"
           />
         </div>
 
         <div className="relative">
-          <div className="text-[#471A24] font-barlow-extrabold mt-6 text-4xl flex items-center justify-center">
+          <div className="mt-6 flex items-center justify-center font-barlow-extrabold text-4xl text-[#471A24]">
             <img
               src={visitasicon}
               alt="icone nossa historia"
-              className="w-4 h-5 mt-1 mr-2"
+              className="mr-2 mt-1 h-5 w-4"
             />
             Visitas guiadas
           </div>
 
-          <div className="text-center px-4 pb-4 w-full">
-            <p className="text-[#471A24] font-barlow lg:text-xl md:text-xl sm:text-xl text-xl mt-4 max-w-2xl mx-auto text-center w-full">
+          <div className="w-full px-4 pb-4 text-center">
+            <p className="mx-auto mt-4 w-full max-w-2xl text-center font-barlow text-xl text-[#471A24] sm:text-xl md:text-xl lg:text-xl">
               Venha conhecer o MUSSPE! Chame sua família e amigos
               <br />
               para conhecer o nosso acervo acompanhado por um de nossos guias!
@@ -203,22 +203,22 @@ export default function Home() {
           </div>
 
           <div>
-            <div className="w-full max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center px-4 md:px-6">
-              <div className="hidden sm:hidden md:block lg:block lg:mt-20 md:mt-20 flex-shrink-0 order-1 md:mr-6 lg:mr-8">
+            <div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-center px-4 md:flex-row md:px-6">
+              <div className="order-1 hidden flex-shrink-0 sm:hidden md:mr-6 md:mt-20 md:block lg:mr-8 lg:mt-20 lg:block">
                 <img
                   src={guia1}
                   alt="Guia médica"
-                  className="md:w-[280px] md:h-[280px] lg:w-[280px] lg:h-[280px] xl:w-[280px] xl:h-[280px]"
+                  className="md:h-[280px] md:w-[280px] lg:h-[280px] lg:w-[280px] xl:h-[280px] xl:w-[280px]"
                 />
               </div>
 
-              <div className="flex flex-col items-center order-2 flex-shrink-0">
-                <div className="rounded-3xl overflow-hidden mb-6 flex-shrink-0">
+              <div className="order-2 flex flex-shrink-0 flex-col items-center">
+                <div className="mb-6 flex-shrink-0 overflow-hidden rounded-3xl">
                   <video
                     src={videoVisita}
                     controls
                     preload="none"
-                    className="h-[530px] w-[340px] sm:h-[600px] sm:w-[340px] md:h-[340px] md:w-[190px] lg:h-[340px] lg:w-[190px] xl:h-[340px] xl:w-[190px] flex-shrink-0 block"
+                    className="block h-[530px] w-[340px] flex-shrink-0 sm:h-[600px] sm:w-[340px] md:h-[340px] md:w-[190px] lg:h-[340px] lg:w-[190px] xl:h-[340px] xl:w-[190px]"
                     poster=""
                     ref={(el) => {
                       if (el) el.volume = 0.2;
@@ -226,18 +226,18 @@ export default function Home() {
                   ></video>
                 </div>
 
-                <div className="mb-8 md:mb-20 flex-shrink-0">
+                <div className="mb-8 flex-shrink-0 md:mb-20">
                   <Link to="/musspe-react/visita">
                     <Botao>Agende uma visita</Botao>
                   </Link>
                 </div>
               </div>
 
-              <div className="hidden sm:hidden md:block lg:block xl:block lg:mt-20 md:mt-20 flex-shrink-0 order-3 md:ml-6 lg:ml-8">
+              <div className="order-3 hidden flex-shrink-0 sm:hidden md:ml-6 md:mt-20 md:block lg:ml-8 lg:mt-20 lg:block xl:block">
                 <img
                   src={guia2}
                   alt="Guia senhor"
-                  className="md:w-[280px] md:h-[280px] lg:w-[280px] lg:h-[280px] xl:w-[280px] xl:h-[280px]"
+                  className="md:h-[280px] md:w-[280px] lg:h-[280px] lg:w-[280px] xl:h-[280px] xl:w-[280px]"
                 />
               </div>
             </div>
@@ -246,13 +246,13 @@ export default function Home() {
       </section>
 
       {/* Nossa história */}
-      <section className="bg-[#471A24] h-[515px] sm:h-[565px]">
+      <section className="h-[515px] bg-[#471A24] sm:h-[565px]">
         <div className="flex flex-col items-center">
-          <div className="text-[#FFDCD2] font-barlow-extrabold text-4xl flex items-center gap-3 py-6">
+          <div className="flex items-center gap-3 py-6 font-barlow-extrabold text-4xl text-[#FFDCD2]">
             <img
               src={nossahistoriaicon}
               alt="icone nossa historia"
-              className="w-6 h-6 mt-1.5"
+              className="mt-1.5 h-6 w-6"
             />
             Nossa história
           </div>
@@ -271,7 +271,7 @@ export default function Home() {
       </section>
 
       {/* nossos princípios */}
-      <section className="relative bg-[#FFDCD2] text-[#471A24] sm:h-[1880px] md:h-[610px] lg:h-[650px] py-4">
+      <section className="relative bg-[#FFDCD2] py-4 text-[#471A24] sm:h-[1880px] md:h-[610px] lg:h-[650px]">
         <img
           src={imgprincipiosesq}
           alt="Decoração esquerda"
@@ -282,41 +282,41 @@ export default function Home() {
         <img
           src={imgprincipiosdir}
           alt="Decoração direita"
-          className="absolute top-0 right-0 w-14 md:w-16"
+          className="absolute right-0 top-0 w-14 md:w-16"
           draggable="false"
         />
 
-        <div className="flex items-center justify-center mb-4">
+        <div className="mb-4 flex items-center justify-center">
           <img
             src={principiosicon}
             alt="Ícone princípios"
-            className="w-7 h-6 mr-2 mt-9 md:w-5 md:h-5 md:mt-11"
+            className="mr-2 mt-9 h-6 w-7 md:mt-11 md:h-5 md:w-5"
             draggable="false"
           />
-          <h2 className="text-4xl sm:text-5xl font-barlow-extrabold text-[#471A24] my-2 mt-10 md:text-4xl md:mt-10">
+          <h2 className="my-2 mt-10 font-barlow-extrabold text-4xl text-[#471A24] sm:text-5xl md:mt-10 md:text-4xl">
             Nossos Princípios
           </h2>
         </div>
 
-        <div className="flex flex-col items-center md:max-w-2xl md:mx-auto md:flex-row md:items-center md:justify-center md:gap-4 lg:gap-16 xl:gap-32">
+        <div className="flex flex-col items-center md:mx-auto md:max-w-2xl md:flex-row md:items-center md:justify-center md:gap-4 lg:gap-16 xl:gap-32">
           <img
             src={principiosmissao}
             alt="Imagem princípios missão"
-            className="max-w-xs h-[400px] rounded-lg mt-6 md:mt-12 sm:h-[500px] md:h-[380px] lg:h-[450px] xl:h-[450px]"
+            className="mt-6 h-[400px] max-w-xs rounded-lg sm:h-[500px] md:mt-12 md:h-[380px] lg:h-[450px] xl:h-[450px]"
             draggable="false"
           />
 
           <img
             src={principiosvisao}
             alt="Imagem visão"
-            className="max-w-xs h-[400px] rounded-lg mt-20 md:mt-12 sm:h-[500px] md:h-[380px] lg:h-[450px] xl:h-[450px]"
+            className="mt-20 h-[400px] max-w-xs rounded-lg sm:h-[500px] md:mt-12 md:h-[380px] lg:h-[450px] xl:h-[450px]"
             draggable="false"
           />
 
           <img
             src={principiosvalores}
             alt="Imagem valores"
-            className="max-w-xs h-[400px] rounded-lg mt-20 md:mt-12 sm:h-[500px] md:h-[380px] lg:h-[450px] xl:h-[450px]"
+            className="mt-20 h-[400px] max-w-xs rounded-lg sm:h-[500px] md:mt-12 md:h-[380px] lg:h-[450px] xl:h-[450px]"
             draggable="false"
           />
         </div>

@@ -16,12 +16,12 @@ export default function Visita() {
   return (
     <>
       <section className="mt-[-73px] bg-brand-dark">
-        <div className="absolute left-4 top-[100px] z-10 hidden md:flex flex-col space-y-2">
+        <div className="absolute left-4 top-[100px] z-10 hidden flex-col space-y-2 md:flex">
           <a
             href="https://www.instagram.com/museudesolospe/?hl=pt-br"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#FFDCD2] hover:text-brand-orange transition-colors duration-220"
+            className="duration-220 text-[#FFDCD2] transition-colors hover:text-brand-orange"
           >
             <FaInstagram size={22} />
           </a>
@@ -29,7 +29,7 @@ export default function Visita() {
             href="https://www.youtube.com/@museudesolospe"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#FFDCD2] hover:text-brand-orange transition-colors duration-220"
+            className="duration-220 text-[#FFDCD2] transition-colors hover:text-brand-orange"
           >
             <FaYoutube size={22} />
           </a>
@@ -37,7 +37,7 @@ export default function Visita() {
             href="https://www.tiktok.com/@museudesolospe"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#FFDCD2] hover:text-brand-orange transition-colors duration-220"
+            className="duration-220 text-[#FFDCD2] transition-colors hover:text-brand-orange"
           >
             <FaTiktok size={22} />
           </a>
@@ -45,7 +45,7 @@ export default function Visita() {
             href="https://www.facebook.com/museudesolospe/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#FFDCD2] hover:text-brand-orange transition-colors duration-220"
+            className="duration-220 text-[#FFDCD2] transition-colors hover:text-brand-orange"
           >
             <FaFacebook size={22} />
           </a>
@@ -54,32 +54,32 @@ export default function Visita() {
         <img
           src={visitaDesktop}
           alt="Visita guiada ao museu"
-          className="hidden md:block w-full my-[-4.5%]"
+          className="my-[-4.5%] hidden w-full md:block"
           draggable="false"
         />
 
         <img
           src={visitaMobile}
           alt="Visita guiada ao museu"
-          className="md:hidden w-full my-[-6.8%]"
+          className="my-[-6.8%] w-full md:hidden"
           draggable="false"
         />
       </section>
       <section className="bg-brand-bege">
-        <div className="md:pl-0 pl-2 md:flex pt-[70px] md:pt-[100px] font-barlow-italic text-lg sm:text-xl md:w-[670px] mx-auto items-center">
-          <div className="md:w-[415px] text-start">
-            <h2 className="font-barlow-bold text-brand-dark text-3xl mt-[-25px] lg:mt-0">
+        <div className="mx-auto items-center pl-2 pt-[70px] font-barlow-italic text-lg sm:text-xl md:flex md:w-[670px] md:pl-0 md:pt-[100px]">
+          <div className="text-start md:w-[415px]">
+            <h2 className="mt-[-25px] font-barlow-bold text-3xl text-brand-dark lg:mt-0">
               Sua visita
             </h2>
-            <span className="flex gap-2 my-4">
-              <FaClock size={16} className="text-brand-laranja mt-1.5" />
+            <span className="my-4 flex gap-2">
+              <FaClock size={16} className="mt-1.5 text-brand-laranja" />
               <p className="flex items-center gap-2">
                 Segunda a sexta (13h às 17h)
               </p>
             </span>
 
             <span className="flex gap-1">
-              <FaMapMarkerAlt size={19} className="text-brand-laranja mt-1" />
+              <FaMapMarkerAlt size={19} className="mt-1 text-brand-laranja" />
               <p className="flex gap-2">
                 Rua Dom Manoel de Medeiros, s/n, Prédio
                 <br /> Professor Mateus Rosas Ribeiro,
@@ -92,12 +92,12 @@ export default function Visita() {
           <a href="https://maps.app.goo.gl/DzJmnuAaG8ijhjwm6">
             <img
               src={imagemMaps}
-              className="w-[280px] md:mt-0 mt-4 sm:mx-auto"
+              className="mt-4 w-[280px] sm:mx-auto md:mt-0"
               alt="Localização no Google Maps"
             />
           </a>
         </div>
-        <div className="max-w-2xl mx-auto py-10 px-4">
+        <div className="mx-auto max-w-2xl px-4 py-10">
           <FormularioVisita />
         </div>
       </section>

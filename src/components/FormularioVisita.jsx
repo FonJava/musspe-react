@@ -78,34 +78,34 @@ const FormularioVisita = () => {
   };
 
   return (
-    <div className="grid md:flex md:flex-col items-center">
+    <div className="grid items-center md:flex md:flex-col">
       <form
         onSubmit={handleSubmit}
         className="flex flex-col items-center md:items-start"
       >
-        <span className="font-barlow-medium text-brand-dark text-3xl flex items-start justify-start w-full">
-          <span className="mr-2 border rounded-3xl border-brand-dark bg-brand-roxo text-white text-2xl py-[3px] px-[10px] font-barlow-semibold">
+        <span className="flex w-full items-start justify-start font-barlow-medium text-3xl text-brand-dark">
+          <span className="mr-2 rounded-3xl border border-brand-dark bg-brand-roxo px-[10px] py-[3px] font-barlow-semibold text-2xl text-white">
             01
           </span>
           <h2>Selecione uma data</h2>
         </span>
         <label
           htmlFor="date"
-          className="font-barlow-medium text-brand-dark mt-4 mb-[-13px]"
+          className="mb-[-13px] mt-4 font-barlow-medium text-brand-dark"
         >
           Data da visita
         </label>
         <input
           type="text"
           id="date"
-          className="border-brand-dark border-[2.5px] rounded-[5px] font-barlow text-xl text-gray-900 text-center my-4 cursor-pointer"
+          className="my-4 cursor-pointer rounded-[5px] border-[2.5px] border-brand-dark text-center font-barlow text-xl text-gray-900"
           placeholder="Abrir calendário"
           required
         />
-        <h2 className="font-barlow-medium text-brand-dark text-lg">
+        <h2 className="font-barlow-medium text-lg text-brand-dark">
           Selecione um horário
         </h2>
-        <div className="grid grid-cols-2 bg-brand-roxo py-[15px] md:py-[35px] px-[10px] md:px-[20px] rounded-3xl mt-2 w-[300px] sm:w-[450px] md:w-[670px] mb-[60px]">
+        <div className="mb-[60px] mt-2 grid w-[300px] grid-cols-2 rounded-3xl bg-brand-roxo px-[10px] py-[15px] sm:w-[450px] md:w-[670px] md:px-[20px] md:py-[35px]">
           {[
             "13h às 14h30",
             "14h30 às 16h",
@@ -119,8 +119,8 @@ const FormularioVisita = () => {
               type="button"
               className={
                 selectedTime === time
-                  ? "font-barlow text-xl md:text-2xl  bg-brand-laranja px-2 w-[130px] sm:w-[200px] md:w-[300px] rounded-2xl my-2 py-2 md:py-3 mx-1 text-white transition-colors duration-300"
-                  : "font-barlow text-xl md:text-2xl bg-white px-2 w-[130px] sm:w-[200px] md:w-[300px] rounded-2xl my-2 py-2 md:py-3 mx-1 transition-colors duration-300"
+                  ? "mx-1 my-2 w-[130px] rounded-2xl bg-brand-laranja px-2 py-2 font-barlow text-xl text-white transition-colors duration-300 sm:w-[200px] md:w-[300px] md:py-3 md:text-2xl"
+                  : "mx-1 my-2 w-[130px] rounded-2xl bg-white px-2 py-2 font-barlow text-xl transition-colors duration-300 sm:w-[200px] md:w-[300px] md:py-3 md:text-2xl"
               }
               onClick={() => handleTimeClick(time)}
               aria-pressed={selectedTime === time}
@@ -131,17 +131,17 @@ const FormularioVisita = () => {
           ))}
         </div>
 
-        <span className="font-barlow-medium text-brand-dark text-3xl flex items-start justify-start w-full">
-          <span className="mr-2 border rounded-3xl border-brand-dark bg-brand-roxo text-white text-2xl py-[3px] px-[9px] font-barlow-semibold">
+        <span className="flex w-full items-start justify-start font-barlow-medium text-3xl text-brand-dark">
+          <span className="mr-2 rounded-3xl border border-brand-dark bg-brand-roxo px-[9px] py-[3px] font-barlow-semibold text-2xl text-white">
             02
           </span>
           <h2>Identifique-se</h2>
         </span>
 
-        <div className="grid gap-4 justify-center items-center">
+        <div className="grid items-center justify-center gap-4">
           <label
             htmlFor="nome"
-            className="font-barlow-medium text-brand-dark mt-4 mb-[-13px]"
+            className="mb-[-13px] mt-4 font-barlow-medium text-brand-dark"
           >
             Nome do responsável
           </label>
@@ -153,11 +153,11 @@ const FormularioVisita = () => {
             value={formData.nome}
             onChange={handleChange}
             required
-            className="w-[200px] md:w-[280px] rounded-3xl py-1.5 pl-4 text-md font-barlow"
+            className="text-md w-[200px] rounded-3xl py-1.5 pl-4 font-barlow md:w-[280px]"
           />
           <label
             htmlFor="telefone"
-            className="font-barlow-medium text-brand-dark mt-1 mb-[-13px]"
+            className="mb-[-13px] mt-1 font-barlow-medium text-brand-dark"
           >
             Número para contato
           </label>
@@ -172,14 +172,14 @@ const FormularioVisita = () => {
               setFormData((prev) => ({ ...prev, telefone: val }));
             }}
             required
-            className="w-[200px] md:w-[280px] rounded-3xl py-1.5 pl-4 text-md font-barlow"
+            className="text-md w-[200px] rounded-3xl py-1.5 pl-4 font-barlow md:w-[280px]"
             pattern="[0-9()\-\s]{10,20}"
             maxLength={20}
             inputMode="text"
           />
           <label
             htmlFor="email"
-            className="font-barlow-medium text-brand-dark mt-1 mb-[-13px]"
+            className="mb-[-13px] mt-1 font-barlow-medium text-brand-dark"
           >
             E-mail para contato
           </label>
@@ -191,13 +191,13 @@ const FormularioVisita = () => {
             value={formData.email}
             onChange={handleChange}
             required
-            className="w-[200px] md:w-[280px] rounded-3xl py-1.5 pl-4 text-md font-barlow"
+            className="text-md w-[200px] rounded-3xl py-1.5 pl-4 font-barlow md:w-[280px]"
             pattern="^[^@\s]+@[^@\s]+\.[^@\s]+$"
             title="Digite um e-mail válido (deve conter @ e .)"
           />
           <label
             htmlFor="motivo"
-            className="font-barlow-medium text-brand-dark mt-1 mb-[-13px]"
+            className="mb-[-13px] mt-1 font-barlow-medium text-brand-dark"
           >
             Motivo da visita
           </label>
@@ -209,19 +209,19 @@ const FormularioVisita = () => {
             value={formData.motivo}
             onChange={handleChange}
             required
-            className="w-[280px] md:w-[470px] rounded-3xl py-1.5 px-4 text-md font-barlow resize-none"
+            className="text-md w-[280px] resize-none rounded-3xl px-4 py-1.5 font-barlow md:w-[470px]"
           />
         </div>
 
-        <span className="flex px-auto mt-8 items-center">
+        <span className="px-auto mt-8 flex items-center">
           <button
-            className="hover:bg-brand-orange bg-brand-laranja font-barlow-medium text-white cursor-pointer text-2xl rounded-3xl py-4 px-7 mr-10 disabled:bg-gray-300 disabled:text-gray-400 disabled:cursor-not-allowed"
+            className="mr-10 cursor-pointer rounded-3xl bg-brand-laranja px-7 py-4 font-barlow-medium text-2xl text-white hover:bg-brand-orange disabled:cursor-not-allowed disabled:bg-gray-300 disabled:text-gray-400"
             type="submit"
             disabled={!submitEnabled}
           >
             Confirmar agendamento
           </button>
-          <p className="font-barlow-italic text-brand-laranja w-[50%] md:w-[280px]">
+          <p className="w-[50%] font-barlow-italic text-brand-laranja md:w-[280px]">
             *Após agendar a visita entraremos em contato para a confirmação do
             agendamento próximo à data da sua visita!
           </p>
@@ -244,10 +244,10 @@ const FormularioVisita = () => {
             alt="Imagem de sucesso"
             className="mt-[-50px] w-[200px]"
           />
-          <h1 className="font-barlow-bold text-3xl text-center">
+          <h1 className="text-center font-barlow-bold text-3xl">
             Visita em análise para aprovação
           </h1>
-          <p className="mt-[-15px] font-barlow text-center text-lg mb-[-10px]">
+          <p className="mb-[-10px] mt-[-15px] text-center font-barlow text-lg">
             ATENÇÃO: Em até 24 horas você receberá uma mensagem de confirmação
             do agendamento em seu e-mail.
           </p>

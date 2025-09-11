@@ -47,21 +47,21 @@ const Modal = ({
       onClick={handleBackdropClick}
     >
       <div
-        className={`bg-white rounded-lg ${larguraModal} w-full mx-4 max-h-[95vh] overflow-y-auto shadow-xl transform transition-all duration-300 ease-in-out ${
+        className={`rounded-lg bg-white ${larguraModal} mx-4 max-h-[95vh] w-full transform overflow-y-auto shadow-xl transition-all duration-300 ease-in-out ${
           isVisible
-            ? "opacity-100 scale-100 translate-y-0"
-            : "opacity-0 scale-95 translate-y-4"
+            ? "translate-y-0 scale-100 opacity-100"
+            : "translate-y-4 scale-95 opacity-0"
         }`}
       >
         <div className="flex items-center justify-between p-6">
-          <h2 className="mx-auto mt-4 text-[27px] sm:text-3xl font-barlow-bold text-black">
+          <h2 className="mx-auto mt-4 font-barlow-bold text-[27px] text-black sm:text-3xl">
             {title}
           </h2>
         </div>
         <div className="mt-[-14px] p-6">{children}</div>
         <button
           onClick={onClose}
-          className="flex mx-auto text-gray-500 hover:text-gray-700 transition-colors duration-200 mb-4"
+          className="mx-auto mb-4 flex text-gray-500 transition-colors duration-200 hover:text-gray-700"
           aria-label={textoBotao ? textoBotao : "Fechar modal"}
         >
           <BotaoAlt>{textoBotao}</BotaoAlt>

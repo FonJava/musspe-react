@@ -42,7 +42,7 @@ export default function Apresentacao({
       <img
         src={apreesq}
         alt="Decoração esquerda"
-        className="absolute w-[150px] md:w-[200px] bottom-0"
+        className="absolute bottom-0 w-[150px] md:w-[200px]"
         draggable="false"
       />
       <img
@@ -51,12 +51,12 @@ export default function Apresentacao({
         className="absolute right-0 w-[150px] md:w-[200px]"
         draggable="false"
       />
-      <div className="flex flex-col space-y-2 px-3 py-6 mb-[-150px] md:mb-[-120px] hidden md:flex ">
+      <div className="mb-[-150px] flex hidden flex-col space-y-2 px-3 py-6 md:mb-[-120px] md:flex">
         <a
           href="https://www.instagram.com/museudesolospe/?hl=pt-br"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-brand-dark hover:text-brand-orange transition-colors duration-200"
+          className="text-brand-dark transition-colors duration-200 hover:text-brand-orange"
         >
           <FaInstagram size={20} />
         </a>
@@ -64,7 +64,7 @@ export default function Apresentacao({
           href="https://www.youtube.com/@museudesolospe"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-brand-dark hover:text-brand-orange transition-colors duration-200"
+          className="text-brand-dark transition-colors duration-200 hover:text-brand-orange"
         >
           <FaYoutube size={20} />
         </a>
@@ -72,7 +72,7 @@ export default function Apresentacao({
           href="https://www.tiktok.com/@museudesolospe"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-brand-dark hover:text-brand-orange transition-colors duration-200"
+          className="text-brand-dark transition-colors duration-200 hover:text-brand-orange"
         >
           <FaTiktok size={20} />
         </a>
@@ -80,31 +80,31 @@ export default function Apresentacao({
           href="https://www.facebook.com/museudesolospe/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-brand-dark hover:text-brand-orange transition-colors duration-200"
+          className="text-brand-dark transition-colors duration-200 hover:text-brand-orange"
         >
           <FaFacebook size={20} />
         </a>
       </div>
-      <div className="flex flex-col md:flex-row justify-center items-center w-[300px] sm:w-[400px] md:w-[600px] lg:w-[900px] mx-auto pt-8">
+      <div className="mx-auto flex w-[300px] flex-col items-center justify-center pt-8 sm:w-[400px] md:w-[600px] md:flex-row lg:w-[900px]">
         <img
           src={imagem}
           alt={titulo}
           draggable="false"
-          className={`mt-[-30px] pt-2 object-contain md:order-2 ${ajusteBottom}`}
+          className={`mt-[-30px] object-contain pt-2 md:order-2 ${ajusteBottom}`}
           style={{
             width: `${currentSize}px`,
             height: `${currentSize}px`,
           }}
         />
         <div
-          className="md:order-1 mt-[-40px] md:mt-[-20px] pb-16 sm:pb-6"
+          className="mt-[-40px] pb-16 sm:pb-6 md:order-1 md:mt-[-20px]"
           style={{ maxWidth: `${currentTextWidth}px` }}
         >
-          <h2 className="font-barlow-extrabold text-[28px] sm:text-[40px] md:text-[30px] lg:text-[40px] leading-tight">
+          <h2 className="font-barlow-extrabold text-[28px] leading-tight sm:text-[40px] md:text-[30px] lg:text-[40px]">
             {titulo}
           </h2>
           <p
-            className="font-barlow text-[18px] sm:text-[20px] md:text-[18px] lg:text-[20px] pb-3"
+            className="pb-3 font-barlow text-[18px] sm:text-[20px] md:text-[18px] lg:text-[20px]"
             style={{ maxWidth: `${currentParagraphWidth}px` }}
           >
             {descricao}
