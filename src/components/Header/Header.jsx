@@ -11,8 +11,8 @@ export default function Header({ activePage, setActivePage }) {
   };
 
   return (
-    <header className="bg-brand-dark shadow-md relative z-50">
-      <div className="w-full mx-auto flex items-center justify-between p-4 max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-5xl">
+    <header className="relative z-50 bg-brand-dark shadow-md">
+      <div className="mx-auto flex w-full max-w-2xl items-center justify-between p-4 md:max-w-3xl lg:max-w-4xl xl:max-w-5xl">
         {/* Logo */}
         <Link
           to="/musspe-react/"
@@ -22,22 +22,22 @@ export default function Header({ activePage, setActivePage }) {
           <img
             src={logo}
             alt="Logo Musspe"
-            className="h-10 w-auto mr-2"
+            className="mr-2 h-10 w-auto"
             draggable="false"
           />
-          <h1 className="text-2xl font-barlow-black text-brand-bege">MUSSPE</h1>
+          <h1 className="font-barlow-black text-2xl text-brand-bege">MUSSPE</h1>
         </Link>
 
         {/* Botão do menu mobile */}
         <button
-          className="md:hidden w-6 h-6 bg-no-repeat bg-center focus:outline-none bg-[url('data:image/svg+xml;charset=utf8,%3Csvg%20viewBox=%270%200%2030%2030%27%20xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cpath%20stroke=%27rgba(255,220,210,1)%27%20stroke-width=%272%27%20stroke-linecap=%27round%27%20stroke-miterlimit=%2710%27%20d=%27M4%207h22M4%2015h22M4%2023h22%27/%3E%3C/svg%3E')] border border-brand-laranja rounded px-7 py-5 bg-[length:1.8rem_1.8rem]"
+          className="h-6 w-6 rounded border border-brand-laranja bg-[url('data:image/svg+xml;charset=utf8,%3Csvg%20viewBox=%270%200%2030%2030%27%20xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cpath%20stroke=%27rgba(255,220,210,1)%27%20stroke-width=%272%27%20stroke-linecap=%27round%27%20stroke-miterlimit=%2710%27%20d=%27M4%207h22M4%2015h22M4%2023h22%27/%3E%3C/svg%3E')] bg-[length:1.8rem_1.8rem] bg-center bg-no-repeat px-7 py-5 focus:outline-none md:hidden"
           onClick={toggleMobileMenu}
           aria-label="Abrir menu de navegação"
         ></button>
 
         {/* Navegação desktop */}
         <nav className="hidden md:block">
-          <ul className="flex space-x-5 text-md text-white font-barlow-semibold">
+          <ul className="text-md flex space-x-5 font-barlow-semibold text-white">
             <li>
               <Link
                 to="/musspe-react/"
@@ -46,7 +46,7 @@ export default function Header({ activePage, setActivePage }) {
               >
                 <span className="relative z-10">Início</span>
                 <div
-                  className={`absolute top-3/4 left-0 right-0 h-1 bg-brand-tangerina rounded-full transition-all duration-300 ease-out ${
+                  className={`absolute left-0 right-0 top-3/4 h-1 rounded-full bg-brand-tangerina transition-all duration-300 ease-out ${
                     activePage === "home"
                       ? "scale-x-100 opacity-100"
                       : "scale-x-0 opacity-0"
@@ -62,7 +62,7 @@ export default function Header({ activePage, setActivePage }) {
               >
                 <span className="relative z-10">Notícias</span>
                 <div
-                  className={`absolute top-3/4 left-0 right-0 h-1 bg-brand-tangerina rounded-full transition-all duration-300 ease-out ${
+                  className={`absolute left-0 right-0 top-3/4 h-1 rounded-full bg-brand-tangerina transition-all duration-300 ease-out ${
                     activePage === "noticias"
                       ? "scale-x-100 opacity-100"
                       : "scale-x-0 opacity-0"
@@ -78,7 +78,7 @@ export default function Header({ activePage, setActivePage }) {
               >
                 <span className="relative z-10">Acervo</span>
                 <div
-                  className={`absolute top-3/4 left-0 right-0 h-1 bg-brand-tangerina rounded-full transition-all duration-300 ease-out ${
+                  className={`absolute left-0 right-0 top-3/4 h-1 rounded-full bg-brand-tangerina transition-all duration-300 ease-out ${
                     activePage === "acervo"
                       ? "scale-x-100 opacity-100"
                       : "scale-x-0 opacity-0"
@@ -94,7 +94,7 @@ export default function Header({ activePage, setActivePage }) {
               >
                 <span className="relative z-10">Jogos</span>
                 <div
-                  className={`absolute top-3/4 left-0 right-0 h-1 bg-brand-tangerina rounded-full transition-all duration-300 ease-out ${
+                  className={`absolute left-0 right-0 top-3/4 h-1 rounded-full bg-brand-tangerina transition-all duration-300 ease-out ${
                     activePage === "jogos"
                       ? "scale-x-100 opacity-100"
                       : "scale-x-0 opacity-0"
@@ -110,7 +110,7 @@ export default function Header({ activePage, setActivePage }) {
               >
                 <span className="relative z-10">Colaboradores</span>
                 <div
-                  className={`absolute top-3/4 left-0 right-0 h-1 bg-brand-tangerina rounded-full transition-all duration-300 ease-out ${
+                  className={`absolute left-0 right-0 top-3/4 h-1 rounded-full bg-brand-tangerina transition-all duration-300 ease-out ${
                     activePage === "colaboradores"
                       ? "scale-x-100 opacity-100"
                       : "scale-x-0 opacity-0"
@@ -123,8 +123,8 @@ export default function Header({ activePage, setActivePage }) {
                 to="/musspe-react/visita"
                 className={
                   activePage === "visita"
-                    ? "text-white bg-brand-laranja rounded-full px-1.5 py-1 transition-colors duration-200 ease-out focus:outline-none border-2 border-transparent"
-                    : "text-brand-laranja border-2 border-brand-laranja rounded-full px-1.5 py-1 transition-colors duration-200 ease-out focus:outline-none"
+                    ? "rounded-full border-2 border-transparent bg-brand-laranja px-1.5 py-1 text-white transition-colors duration-200 ease-out focus:outline-none"
+                    : "rounded-full border-2 border-brand-laranja px-1.5 py-1 text-brand-laranja transition-colors duration-200 ease-out focus:outline-none"
                 }
                 onClick={() => setActivePage("visita")}
               >
@@ -138,7 +138,7 @@ export default function Header({ activePage, setActivePage }) {
       {/* Navegação mobile*/}
 
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-brand-dark shadow-2xl transform transition-transform duration-300 ease-in-out z-40 ${
+        className={`fixed right-0 top-0 z-40 h-full w-64 transform bg-brand-dark shadow-2xl transition-transform duration-300 ease-in-out ${
           isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
         } md:hidden`}
         style={
@@ -154,7 +154,7 @@ export default function Header({ activePage, setActivePage }) {
             aria-label="Fechar menu de navegação"
           >
             <svg
-              className="w-6 h-6"
+              className="h-6 w-6"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -170,7 +170,7 @@ export default function Header({ activePage, setActivePage }) {
             </svg>
           </button>
         </div>
-        <ul className="flex flex-col p-4 space-y-4 text-white font-barlow-semibold">
+        <ul className="flex flex-col space-y-4 p-4 font-barlow-semibold text-white">
           <li>
             <Link
               to="/musspe-react/"
@@ -182,7 +182,7 @@ export default function Header({ activePage, setActivePage }) {
             >
               <span className="relative z-10">Início</span>
               <div
-                className={`absolute top-3/4 left-0 right-0 h-1 bg-brand-tangerina rounded-full transition-all duration-300 ease-out ${
+                className={`absolute left-0 right-0 top-3/4 h-1 rounded-full bg-brand-tangerina transition-all duration-300 ease-out ${
                   activePage === "home"
                     ? "scale-x-100 opacity-100"
                     : "scale-x-0 opacity-0"
@@ -201,7 +201,7 @@ export default function Header({ activePage, setActivePage }) {
             >
               <span className="relative z-10">Notícias</span>
               <div
-                className={`absolute top-3/4 left-0 right-0 h-1 bg-brand-tangerina rounded-full transition-all duration-300 ease-out ${
+                className={`absolute left-0 right-0 top-3/4 h-1 rounded-full bg-brand-tangerina transition-all duration-300 ease-out ${
                   activePage === "noticias"
                     ? "scale-x-100 opacity-100"
                     : "scale-x-0 opacity-0"
@@ -220,7 +220,7 @@ export default function Header({ activePage, setActivePage }) {
             >
               <span className="relative z-10">Acervo</span>
               <div
-                className={`absolute top-3/4 left-0 right-0 h-1 bg-brand-tangerina rounded-full transition-all duration-300 ease-out ${
+                className={`absolute left-0 right-0 top-3/4 h-1 rounded-full bg-brand-tangerina transition-all duration-300 ease-out ${
                   activePage === "acervo"
                     ? "scale-x-100 opacity-100"
                     : "scale-x-0 opacity-0"
@@ -239,7 +239,7 @@ export default function Header({ activePage, setActivePage }) {
             >
               <span className="relative z-10">Jogos</span>
               <div
-                className={`absolute top-3/4 left-0 right-0 h-1 bg-brand-tangerina rounded-full transition-all duration-300 ease-out ${
+                className={`absolute left-0 right-0 top-3/4 h-1 rounded-full bg-brand-tangerina transition-all duration-300 ease-out ${
                   activePage === "jogos"
                     ? "scale-x-100 opacity-100"
                     : "scale-x-0 opacity-0"
@@ -258,7 +258,7 @@ export default function Header({ activePage, setActivePage }) {
             >
               <span className="relative z-10">Colaboradores</span>
               <div
-                className={`absolute top-3/4 left-0 right-0 h-1 bg-brand-tangerina rounded-full transition-all duration-300 ease-out ${
+                className={`absolute left-0 right-0 top-3/4 h-1 rounded-full bg-brand-tangerina transition-all duration-300 ease-out ${
                   activePage === "colaboradores"
                     ? "scale-x-100 opacity-100"
                     : "scale-x-0 opacity-0"
@@ -271,8 +271,8 @@ export default function Header({ activePage, setActivePage }) {
               to="/musspe-react/visita"
               className={`relative inline-block ${
                 activePage === "visita"
-                  ? "text-white bg-brand-laranja rounded-full px-1.5 py-0 transition-colors duration-200 ease-out border-2 border-transparent"
-                  : "text-brand-laranja border-2 border-brand-laranja rounded-full px-1.5 py-0 transition-colors duration-200 ease-out"
+                  ? "rounded-full border-2 border-transparent bg-brand-laranja px-1.5 py-0 text-white transition-colors duration-200 ease-out"
+                  : "rounded-full border-2 border-brand-laranja px-1.5 py-0 text-brand-laranja transition-colors duration-200 ease-out"
               }`}
               onClick={() => {
                 setActivePage("visita");
@@ -291,7 +291,7 @@ export default function Header({ activePage, setActivePage }) {
               href="https://www.instagram.com/museudesolospe/?hl=pt-br"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-brand-bege hover:text-brand-laranja transition-colors duration-200"
+              className="text-brand-bege transition-colors duration-200 hover:text-brand-laranja"
             >
               <FaInstagram size={24} />
             </a>
@@ -299,7 +299,7 @@ export default function Header({ activePage, setActivePage }) {
               href="https://www.youtube.com/@museudesolospe"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-brand-bege hover:text-brand-laranja transition-colors duration-200"
+              className="text-brand-bege transition-colors duration-200 hover:text-brand-laranja"
             >
               <FaYoutube size={24} />
             </a>
@@ -307,7 +307,7 @@ export default function Header({ activePage, setActivePage }) {
               href="https://www.tiktok.com/@museudesolospe"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-brand-bege hover:text-brand-laranja transition-colors duration-200"
+              className="text-brand-bege transition-colors duration-200 hover:text-brand-laranja"
             >
               <FaTiktok size={24} />
             </a>
@@ -315,7 +315,7 @@ export default function Header({ activePage, setActivePage }) {
               href="https://www.facebook.com/museudesolospe/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-brand-bege hover:text-brand-laranja transition-colors duration-200"
+              className="text-brand-bege transition-colors duration-200 hover:text-brand-laranja"
             >
               <FaFacebook size={24} />
             </a>
@@ -327,7 +327,7 @@ export default function Header({ activePage, setActivePage }) {
       {isMobileMenuOpen && (
         <div
           onClick={toggleMobileMenu}
-          className="fixed inset-0 bg-opacity-100 z-30 md:hidden"
+          className="fixed inset-0 z-30 bg-opacity-100 md:hidden"
         ></div>
       )}
     </header>

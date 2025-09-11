@@ -298,7 +298,7 @@ const MapaInterativo = () => {
   return (
     <>
       <div
-        className="w-[95%] h-[500px] rounded-lg border-4 border-brand-roxo overflow-hidden mx-auto"
+        className="mx-auto h-[500px] w-[95%] overflow-hidden rounded-lg border-4 border-brand-roxo"
         style={{ minHeight: "500px", maxWidth: "95%" }}
       >
         <MapContainer
@@ -306,7 +306,7 @@ const MapaInterativo = () => {
           zoom={7.45}
           minZoom={5}
           scrollWheelZoom={true}
-          className="w-full h-full"
+          className="h-full w-full"
           style={{ height: "100%", width: "100%" }}
         >
           <MapBounds />
@@ -332,15 +332,15 @@ const MapaInterativo = () => {
         <>
           {/* Modal Content */}
           <div
-            className="fixed inset-0 z-[9999] flex items-center justify-center p-4 modal-content bg-black bg-opacity-50"
+            className="modal-content fixed inset-0 z-[9999] flex items-center justify-center bg-black bg-opacity-50 p-4"
             onClick={closeModal}
           >
             <div
-              className="bg-white rounded-lg max-w-4xl max-h-[90vh] w-full overflow-hidden shadow-xl"
+              className="max-h-[90vh] w-full max-w-4xl overflow-hidden rounded-lg bg-white shadow-xl"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Header */}
-              <div className="flex justify-between items-center p-4 border-b border-gray-200">
+              <div className="flex items-center justify-between border-b border-gray-200 p-4">
                 <h3 className="text-lg font-semibold text-gray-900">
                   {currentProfile
                     ? `Perfil de Solo - ${currentProfile}`
@@ -348,16 +348,16 @@ const MapaInterativo = () => {
                 </h3>
                 <button
                   onClick={closeModal}
-                  className="text-gray-400 hover:text-gray-600 text-2xl font-bold"
+                  className="text-2xl font-bold text-gray-400 hover:text-gray-600"
                   aria-label="Fechar modal"
                 >
                   ×
                 </button>
               </div>
-              <div className="p-4 overflow-y-auto max-h-[calc(90vh-120px)]">
+              <div className="max-h-[calc(90vh-120px)] overflow-y-auto p-4">
                 {loading ? (
                   <div className="flex items-center justify-center py-8">
-                    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-brand-roxo"></div>
+                    <div className="h-8 w-8 animate-spin rounded-full border-b-2 border-brand-roxo"></div>
                     <span className="ml-2">Carregando documento...</span>
                   </div>
                 ) : (

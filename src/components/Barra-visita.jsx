@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 
 export default function BarraVisita() {
   return (
-    <section className="bg-cover bg-center bg-brand-orange bg-[url('/musspe-react/imagens/venha-conhecer-fundo.png')]">
-      <h1 className="text-3xl md:text-4xl font-barlow-extrabold text-center pt-8 pb-4 text-brand-bege">
+    <section className="bg-brand-orange bg-[url('/musspe-react/imagens/venha-conhecer-fundo.png')] bg-cover bg-center">
+      <h1 className="pb-4 pt-8 text-center font-barlow-extrabold text-3xl text-brand-bege md:text-4xl">
         Agende uma visita e venha conhecer os
         <br />
         solos pernambucanos!

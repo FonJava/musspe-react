@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 export default function ContainerJogo({
   titulo,
@@ -23,11 +23,11 @@ export default function ContainerJogo({
 
   return (
     <>
-      <div 
-        className="bg-brand-roxo mx-auto w-[88%] sm:w-[90%] lg:w-[800px] h-[170px] sm:h-auto md:h-auto lg:h-auto mt-[2px] mb-[32px] rounded-[20px] p-[15px] sm:p-[20px] lg:p-[25px] hover:scale-105 transition-all duration-300 cursor-pointer group overflow-hidden"
+      <div
+        className="group mx-auto mb-[32px] mt-[2px] h-[170px] w-[88%] cursor-pointer overflow-hidden rounded-[20px] bg-brand-roxo p-[15px] transition-all duration-300 hover:scale-105 sm:h-auto sm:w-[90%] sm:p-[20px] md:h-auto lg:h-auto lg:w-[800px] lg:p-[25px]"
         onClick={handleClick}
       >
-        <div className="flex items-center gap-[15px] sm:gap-[20px] h-full">
+        <div className="flex h-full items-center gap-[15px] sm:gap-[20px]">
           <div>
             <img
               className={`${imgWidth} ${imgHeight} rounded-[8px] object-cover`}
@@ -36,12 +36,12 @@ export default function ContainerJogo({
               draggable="false"
             />
           </div>
-          
+
           <div className="flex-1">
-            <h3 className="font-barlow-extrabold text-brand-bege text-[18px] sm:text-[26px] lg:text-[26px] mb-[4px] sm:mb-[6px] lg:mb-[8px] leading-tight">
+            <h3 className="mb-[4px] font-barlow-extrabold text-[18px] leading-tight text-brand-bege sm:mb-[6px] sm:text-[26px] lg:mb-[8px] lg:text-[26px]">
               {titulo} {ano}
             </h3>
-            <p className="font-barlow-normal text-brand-bege text-[12px] sm:text-[20px] md:text-[20px] lg:text-[20px] mt-4">
+            <p className="font-barlow-normal mt-4 text-[12px] text-brand-bege sm:text-[20px] md:text-[20px] lg:text-[20px]">
               Desenvolvido por: {desenvolvedores}
             </p>
           </div>
@@ -49,26 +49,26 @@ export default function ContainerJogo({
       </div>
 
       {isModalOpen && (
-        <div 
-          className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80"
           onClick={closeModal}
         >
-          <div 
-            className="relative w-[90%] max-w-6xl h-[80%] bg-white rounded-lg overflow-hidden"
+          <div
+            className="relative h-[80%] w-[90%] max-w-6xl overflow-hidden rounded-lg bg-white"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Botão Voltar */}
             <button
               onClick={closeModal}
-              className="absolute top-4 right-5 text-black-400 hover:text-gray-600 text-lg font-normal z-10 transition-colors"
+              className="text-black-400 absolute right-5 top-4 z-10 text-lg font-normal transition-colors hover:text-gray-600"
             >
               Voltar →
             </button>
-            
+
             {/* Iframe */}
             <iframe
               src={link}
-              className="w-full h-full border-none"
+              className="h-full w-full border-none"
               title={titulo}
             />
           </div>

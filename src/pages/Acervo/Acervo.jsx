@@ -42,13 +42,13 @@ export default function Acervo() {
         ajusteBottom="mb-[20px] md:mb-[0px]"
       >
         <Botao onClick={scrollToColecao}>
-          <FaArrowDown className="inline mr-2" />
+          <FaArrowDown className="mr-2 inline" />
           Conheça nosso acervo!
         </Botao>
       </Apresentacao>
       <section
         id="colecao-section"
-        className="bg-brand-dark min-h-[400px] relative"
+        className="relative min-h-[400px] bg-brand-dark"
       >
         <img
           src={imgesq}
@@ -59,7 +59,7 @@ export default function Acervo() {
         <img
           src={estrelaEsq}
           alt="Estrela Esquerda"
-          className="absolute left-[8%] bottom-[300px] w-14 md:w-16 hidden lg:block"
+          className="absolute bottom-[300px] left-[8%] hidden w-14 md:w-16 lg:block"
           draggable="false"
         />
         <div className="flex flex-col items-center justify-center py-10">
@@ -68,17 +68,17 @@ export default function Acervo() {
               src={imgColec}
               alt="Ícone da Nossa Coleção"
               draggable="false"
-              className="w-[25px] mr-2"
+              className="mr-2 w-[25px]"
             />
-            <h2 className="text-brand-bege font-barlow-extrabold text-3xl">
+            <h2 className="font-barlow-extrabold text-3xl text-brand-bege">
               Nossa coleção
             </h2>
           </div>
-          <p className="text-brand-bege font-barlow mt-6 w-[300px] sm:w-[400px] md:w-[515px] text-[17px]">
+          <p className="mt-6 w-[300px] font-barlow text-[17px] text-brand-bege sm:w-[400px] md:w-[515px]">
             Explore nossa coleção abrangente, que inclui uma variedade de solos,
             rochas, minerais e fósseis. Confira o nosso acervo abaixo!
           </p>
-          <div className="bg-brand-roxo flex flex-col md:flex-row items-center gap-8 p-5 mt-6 rounded-[10px] min-w-[300px] sm:min-w-[380px] md:min-w-[300px] mb-6">
+          <div className="mb-6 mt-6 flex min-w-[300px] flex-col items-center gap-8 rounded-[10px] bg-brand-roxo p-5 sm:min-w-[380px] md:min-w-[300px] md:flex-row">
             <div className="relative">
               <img
                 src={caixaSolos}
@@ -129,21 +129,21 @@ export default function Acervo() {
         <img
           src={estrelaDir}
           alt="Estrela Direita"
-          className="absolute right-[8%] bottom-[150px] w-14 md:w-16 hidden lg:block"
+          className="absolute bottom-[150px] right-[8%] hidden w-14 md:w-16 lg:block"
           draggable="false"
         />
         <img
           src={imgdir}
           alt="Imagem Direita"
-          className="absolute top-0 right-0 w-14 md:w-16"
+          className="absolute right-0 top-0 w-14 md:w-16"
           draggable="false"
         />
       </section>
-      <section className="bg-brand-bege min-h-[600px] flex items-center flex-col pt-4">
-        <h2 className="text-2xl sm:text-3xl font-barlow-extrabold text-brand-dark mt-4 mb-8 md:mb-6">
+      <section className="flex min-h-[600px] flex-col items-center bg-brand-bege pt-4">
+        <h2 className="mb-8 mt-4 font-barlow-extrabold text-2xl text-brand-dark sm:text-3xl md:mb-6">
           Mapa Interativo - Perfis de Solo
         </h2>
-        <div className="w-full px-4 md:pt-2 pb-6 md:pb-8">
+        <div className="w-full px-4 pb-6 md:pb-8 md:pt-2">
           <MapaInterativo />
         </div>
       </section>
@@ -158,10 +158,10 @@ export default function Acervo() {
         <div className="mx-5">
           <div className="flex flex-col items-center md:grid md:grid-cols-2">
             <div className="space-y-2">
-              <h3 className="font-barlow-bold text-xl text-black mb-2">
+              <h3 className="mb-2 font-barlow-bold text-xl text-black">
                 Zona da Mata
               </h3>
-              <p className="text-gray-600 font-barlow">
+              <p className="font-barlow text-gray-600">
                 1. ARGISSOLO VERMELHO-AMARELO (Distrófico típico)
                 <br />
                 2. ARGISSOLO AMARELO (Distrocoeso típico)
@@ -187,10 +187,10 @@ export default function Acervo() {
                 12. GLEISSOLO HÁPLICO Ta (Eutrófico Típico)
                 <br />
               </p>
-              <h3 className="font-barlow-bold text-xl text-black mb-2">
+              <h3 className="mb-2 font-barlow-bold text-xl text-black">
                 Agreste
               </h3>
-              <p className="text-gray-600 font-barlow">
+              <p className="font-barlow text-gray-600">
                 1. NEOSSOLO REGOLÍTICO (Distrófico típico)
                 <br />
                 2. PLANOSSOLO HÁPLICO (Eutrófico solódico)
@@ -205,7 +205,7 @@ export default function Acervo() {
             </div>
 
             <div className="space-y-2 sm:ml-6">
-              <p className="text-gray-600 font-barlow">
+              <p className="font-barlow text-gray-600">
                 6.ARGISSOLO AMARELO (Distrófico abrúptico)
                 <br />
                 7. PLANOSSOLO NÁTRICO (Sálico típico)
@@ -220,10 +220,10 @@ export default function Acervo() {
                 <br />
               </p>
 
-              <h3 className="font-barlow-bold text-xl text-black mt-4 mb-2">
+              <h3 className="mb-2 mt-4 font-barlow-bold text-xl text-black">
                 Sertão
               </h3>
-              <p className="text-gray-600 font-barlow">
+              <p className="font-barlow text-gray-600">
                 1. ARGISSOLO AMARELO (Eutrófico abrúptico plintossólico)
                 <br />
                 2. PLANOSSOLO NÁTRICO (Sálico típico)
@@ -263,10 +263,10 @@ export default function Acervo() {
         <div className="mx-5">
           <div className="flex flex-col items-center md:grid md:grid-cols-2">
             <div className="space-y-2">
-              <h3 className="font-barlow-bold text-xl text-black mb-2">
+              <h3 className="mb-2 font-barlow-bold text-xl text-black">
                 Rochas Magmáticas
               </h3>
-              <p className="text-gray-600 font-barlow">
+              <p className="font-barlow text-gray-600">
                 1. Gabro <br />
                 2. Granodiorito
                 <br />
@@ -284,10 +284,10 @@ export default function Acervo() {
                 <br />
                 9. Basalto
               </p>
-              <h3 className="font-barlow-bold text-xl text-black mb-2">
+              <h3 className="mb-2 font-barlow-bold text-xl text-black">
                 Rochas Metamórficas
               </h3>
-              <p className="text-gray-600 font-barlow">
+              <p className="font-barlow text-gray-600">
                 1. Mármore Bandado <br />
                 2. Ardósia
                 <br />
@@ -308,10 +308,10 @@ export default function Acervo() {
             </div>
 
             <div className="space-y-2 sm:ml-6 md:mt-[-299px]">
-              <h3 className="font-barlow-bold text-xl text-black mt-4 mb-2">
+              <h3 className="mb-2 mt-4 font-barlow-bold text-xl text-black">
                 Rochas Sedimentares
               </h3>
-              <p className="text-gray-600 font-barlow">
+              <p className="font-barlow text-gray-600">
                 1. Evaporito <br />
                 2. Calcário
                 <br />
@@ -339,12 +339,12 @@ export default function Acervo() {
         larguraModal="w-[70%] md:w-[800px]"
       >
         <div className="mx-5">
-          <div className="flex flex-col items-center md:grid md:grid-cols-2 md:ml-[120px]">
+          <div className="flex flex-col items-center md:ml-[120px] md:grid md:grid-cols-2">
             <div className="space-y-2">
-              <h3 className="font-barlow-bold text-xl text-black mb-2 md:mt-[-224px]">
+              <h3 className="mb-2 font-barlow-bold text-xl text-black md:mt-[-224px]">
                 Elementos Nativos
               </h3>
-              <p className="text-gray-600 font-barlow">
+              <p className="font-barlow text-gray-600">
                 1. Antimônio <br />
                 2. Diamante <br />
                 3. Enxofre/Galena <br />
@@ -354,10 +354,10 @@ export default function Acervo() {
                 7. Ouro
               </p>
 
-              <h3 className="font-barlow-bold text-xl text-black mb-2">
+              <h3 className="mb-2 font-barlow-bold text-xl text-black">
                 Sulfetos
               </h3>
-              <p className="text-gray-600 font-barlow">
+              <p className="font-barlow text-gray-600">
                 1. Calcopirita <br />
                 2. Realgar <br />
                 3. Bornita <br />
@@ -370,10 +370,10 @@ export default function Acervo() {
                 10. Pirita 4
               </p>
 
-              <h3 className="font-barlow-bold text-xl text-black mb-2">
+              <h3 className="mb-2 font-barlow-bold text-xl text-black">
                 Óxidos e Hidróxidos
               </h3>
-              <p className="text-gray-600 font-barlow">
+              <p className="font-barlow text-gray-600">
                 1. Pirolusita 1 <br />
                 2. Pirolusita 2 <br />
                 3. Martita <br />
@@ -393,19 +393,19 @@ export default function Acervo() {
                 17. Gibbsita
               </p>
 
-              <h3 className="font-barlow-bold text-xl text-black mb-2">
+              <h3 className="mb-2 font-barlow-bold text-xl text-black">
                 Halogenetos
               </h3>
-              <p className="text-gray-600 font-barlow">
+              <p className="font-barlow text-gray-600">
                 1. Fluorita 1 <br />
                 2. Fluorita 2 <br />
                 3. Halita
               </p>
 
-              <h3 className="font-barlow-bold text-xl text-black mb-2">
+              <h3 className="mb-2 font-barlow-bold text-xl text-black">
                 Carbonatos
               </h3>
-              <p className="text-gray-600 font-barlow">
+              <p className="font-barlow text-gray-600">
                 1. Calcita 1 <br />
                 2. Calcita 2 <br />
                 3. Calcita 3 <br />
@@ -427,10 +427,10 @@ export default function Acervo() {
                 19. Calcita com Dique
               </p>
 
-              <h3 className="font-barlow-bold text-xl text-black mb-2">
+              <h3 className="mb-2 font-barlow-bold text-xl text-black">
                 Fosfatos
               </h3>
-              <p className="text-gray-600 font-barlow">
+              <p className="font-barlow text-gray-600">
                 1. Apatita 1 <br />
                 2. Apatita 2 <br />
                 3. Apatita 3 <br />
@@ -439,22 +439,22 @@ export default function Acervo() {
                 6. Trifilita/Litofilita
               </p>
 
-              <h3 className="font-barlow-bold text-xl text-black mb-2">
+              <h3 className="mb-2 font-barlow-bold text-xl text-black">
                 Cromatos
               </h3>
-              <p className="text-gray-600 font-barlow">1. Crocoita</p>
+              <p className="font-barlow text-gray-600">1. Crocoita</p>
 
-              <h3 className="font-barlow-bold text-xl text-black mb-2">
+              <h3 className="mb-2 font-barlow-bold text-xl text-black">
                 Vanadatos
               </h3>
-              <p className="text-gray-600 font-barlow">1. Vanadinita</p>
+              <p className="font-barlow text-gray-600">1. Vanadinita</p>
             </div>
 
-            <div className="space-y-2 ml-[15px] md:ml-6">
-              <h3 className="font-barlow-bold text-xl text-black mb-2">
+            <div className="ml-[15px] space-y-2 md:ml-6">
+              <h3 className="mb-2 font-barlow-bold text-xl text-black">
                 Sulfatos
               </h3>
-              <p className="text-gray-600 font-barlow">
+              <p className="font-barlow text-gray-600">
                 1. Gipsita 1 <br />
                 2. Gipsita 2 <br />
                 3. Gipsita 3 <br />
@@ -467,21 +467,21 @@ export default function Acervo() {
                 10. Celestita
               </p>
 
-              <h3 className="font-barlow-bold text-xl text-black mb-2">
+              <h3 className="mb-2 font-barlow-bold text-xl text-black">
                 Tungstatos
               </h3>
-              <p className="text-gray-600 font-barlow">
+              <p className="font-barlow text-gray-600">
                 1. Scheelita <br />
                 2. Wolframita
               </p>
 
-              <h3 className="font-barlow-bold text-xl text-black mb-2">
+              <h3 className="mb-2 font-barlow-bold text-xl text-black">
                 Silicatos
               </h3>
-              <h4 className="font-barlow-semibold text-lg text-black mb-1">
+              <h4 className="mb-1 font-barlow-semibold text-lg text-black">
                 Neossilicatos
               </h4>
-              <p className="text-gray-600 font-barlow">
+              <p className="font-barlow text-gray-600">
                 1. Granada 1 <br />
                 2. Granada 2 <br />
                 3. Topázio <br />
@@ -493,18 +493,18 @@ export default function Acervo() {
                 9. Granada 3
               </p>
 
-              <h4 className="font-barlow-semibold text-lg text-black mb-1">
+              <h4 className="mb-1 font-barlow-semibold text-lg text-black">
                 Sorossilicatos
               </h4>
-              <p className="text-gray-600 font-barlow">
+              <p className="font-barlow text-gray-600">
                 1. Epidoto <br />
                 2. Epidoto/Calcita/Pirita
               </p>
 
-              <h4 className="font-barlow-semibold text-lg text-black mb-1">
+              <h4 className="mb-1 font-barlow-semibold text-lg text-black">
                 Ciclossilicatos
               </h4>
-              <p className="text-gray-600 font-barlow">
+              <p className="font-barlow text-gray-600">
                 1. Turmalina 1 <br />
                 2. Turmalina 2 <br />
                 3. Turmalina 3 <br />
@@ -513,19 +513,19 @@ export default function Acervo() {
                 6. Turmalina 4
               </p>
 
-              <h4 className="font-barlow-semibold text-lg text-black mb-1">
+              <h4 className="mb-1 font-barlow-semibold text-lg text-black">
                 Inossilicatos
               </h4>
-              <p className="text-gray-600 font-barlow">
+              <p className="font-barlow text-gray-600">
                 1. Espodumênio <br />
                 2. Espodumênio 2 <br />
                 3. Tremolita
               </p>
 
-              <h4 className="font-barlow-semibold text-lg text-black mb-1">
+              <h4 className="mb-1 font-barlow-semibold text-lg text-black">
                 Filossilicatos
               </h4>
-              <p className="text-gray-600 font-barlow">
+              <p className="font-barlow text-gray-600">
                 1. Muscovita <br />
                 2. Lepidolita 1 <br />
                 3. Lepidolita 2 <br />
@@ -540,10 +540,10 @@ export default function Acervo() {
                 12. Caulinita
               </p>
 
-              <h4 className="font-barlow-semibold text-lg text-black mb-1">
+              <h4 className="mb-1 font-barlow-semibold text-lg text-black">
                 Tectossilicatos
               </h4>
-              <p className="text-gray-600 font-barlow">
+              <p className="font-barlow text-gray-600">
                 1. Quartzo 1 <br />
                 2. Quartzo 2 <br />
                 3. Estilbita <br />
@@ -563,10 +563,10 @@ export default function Acervo() {
                 17. Microclina (Amazonita)
               </p>
 
-              <h3 className="font-barlow-bold text-xl text-black mb-2 mt-4">
+              <h3 className="mb-2 mt-4 font-barlow-bold text-xl text-black">
                 Frações de Minerais Maiores
               </h3>
-              <p className="text-gray-600 font-barlow">
+              <p className="font-barlow text-gray-600">
                 1. Turmalina <br />
                 2. Cianita em Pegmatito <br />
                 3. Quartzo <br />

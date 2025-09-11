@@ -224,7 +224,7 @@ function BolsistasTab() {
       return colaboradores;
     }
     return colaboradores.filter(
-      (colaborador) => colaborador.categoria === filtroAtivo
+      (colaborador) => colaborador.categoria === filtroAtivo,
     );
   };
 
@@ -238,12 +238,12 @@ function BolsistasTab() {
   return (
     <div>
       <div className="mb-6">
-        <div className="flex flex-wrap gap-1 sm:gap-2 justify-end">
+        <div className="flex flex-wrap justify-end gap-1 sm:gap-2">
           {filtros.map((filtro) => (
             <button
               key={filtro.id}
               onClick={() => setFiltroAtivo(filtro.id)}
-              className={`px-2 py-1 rounded-[25px] font-barlow text-xs sm:text-sm transition-colors duration-300 border-2 sm:border-4 border-brand-laranja text-white ${
+              className={`rounded-[25px] border-2 border-brand-laranja px-2 py-1 font-barlow text-xs text-white transition-colors duration-300 sm:border-4 sm:text-sm ${
                 filtroAtivo === filtro.id
                   ? "bg-brand-laranja"
                   : "bg-transparent"
@@ -254,7 +254,7 @@ function BolsistasTab() {
                   src={filtro.icone}
                   alt=""
                   aria-hidden="true"
-                  className="w-[15px] sm:w-[20px] inline-block mr-1 sm:mr-2"
+                  className="mr-1 inline-block w-[15px] sm:mr-2 sm:w-[20px]"
                 />
               )}
               {filtro.nome}
@@ -262,23 +262,23 @@ function BolsistasTab() {
           ))}
         </div>
       </div>
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-5">
+      <div className="grid grid-cols-2 gap-5 sm:grid-cols-3">
         {filtrarColaboradores().map((colaborador) => (
           <div
             key={colaborador.id}
-            className="flex flex-col items-center relative"
+            className="relative flex flex-col items-center"
           >
             <img
               src={colaborador.imagem}
               alt={`Colaborador ${colaborador.id}`}
-              className="w-full h-auto rounded-lg"
+              className="h-auto w-full rounded-lg"
             />
             <Link
               to={colaborador.lattes}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <span className="absolute bottom-[6px] right-[7px] sm:bottom-[12px] md:bottom-[15px] sm:right-[10px] md:right-[12px]">
+              <span className="absolute bottom-[6px] right-[7px] sm:bottom-[12px] sm:right-[10px] md:bottom-[15px] md:right-[12px]">
                 <Botao
                   tamanhoFonte="text-xs sm:text-base md:text-lg"
                   paddingX="px-2 sm:px-4"
@@ -297,23 +297,23 @@ function BolsistasTab() {
 function VoluntariosTab() {
   return (
     <div>
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-5">
+      <div className="grid grid-cols-2 gap-5 sm:grid-cols-3">
         {voluntarios.map((voluntario) => (
           <div
             key={voluntario.id}
-            className="flex flex-col items-center relative"
+            className="relative flex flex-col items-center"
           >
             <img
               src={voluntario.imagem}
               alt={`Voluntário ${voluntario.id}`}
-              className="w-full h-auto rounded-lg"
+              className="h-auto w-full rounded-lg"
             />
             <Link
               to={voluntario.lattes}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <span className="absolute bottom-[7px] right-[7px] sm:bottom-[12px] md:bottom-[15px] sm:right-[10px] md:right-[12px]">
+              <span className="absolute bottom-[7px] right-[7px] sm:bottom-[12px] sm:right-[10px] md:bottom-[15px] md:right-[12px]">
                 <Botao
                   tamanhoFonte="text-xs sm:text-base md:text-lg"
                   paddingX="px-2 sm:px-4"
@@ -331,7 +331,7 @@ function VoluntariosTab() {
 
 function ApoiadoresTab() {
   return (
-    <div className="py-5 px-3">
+    <div className="px-3 py-5">
       <img
         className="mb-4"
         src={realizacao}
@@ -346,7 +346,7 @@ function ApoiadoresTab() {
 export default function Colaboradores() {
   const scrollToColaboradores = () => {
     const colaboradoresSection = document.getElementById(
-      "colaboradores-section"
+      "colaboradores-section",
     );
     if (colaboradoresSection) {
       colaboradoresSection.scrollIntoView({
@@ -392,17 +392,17 @@ export default function Colaboradores() {
           paddingY="md:py-[1.5px] lg:py-[2.5px]"
           onClick={scrollToColaboradores}
         >
-          <FaArrowDown className="inline mr-2" />
+          <FaArrowDown className="mr-2 inline" />
           Conheça nossa equipe
         </Botao>
       </Apresentacao>
       <section
         id="colaboradores-section"
-        className="bg-brand-dark flex flex-col items-center py-12"
+        className="flex flex-col items-center bg-brand-dark py-12"
       >
-        <div className="flex items-center mb-14">
-          <img src={colabIcon} className="w-6 mr-2" draggable="false" />
-          <h2 className="text-brand-bege font-barlow-extrabold text-3xl">
+        <div className="mb-14 flex items-center">
+          <img src={colabIcon} className="mr-2 w-6" draggable="false" />
+          <h2 className="font-barlow-extrabold text-3xl text-brand-bege">
             Nossos colaboradores
           </h2>
         </div>
@@ -412,17 +412,17 @@ export default function Colaboradores() {
               <span
                 key={index}
                 onClick={() => setActiveTab(index)}
-                className={`text-white font-barlow-semibold text-sm sm:text-xl rounded-[15px] pb-7 p-2 sm:p-4 sm:pb-7 cursor-pointer transition-colors duration-300 ml-1 ${
+                className={`ml-1 cursor-pointer rounded-[15px] p-2 pb-7 font-barlow-semibold text-sm text-white transition-colors duration-300 sm:p-4 sm:pb-7 sm:text-xl ${
                   activeTab === index
-                    ? "bg-brand-roxo border-transparent border-[3px] border-b-0"
-                    : "border-brand-laranja border-[3px] border-b-0"
+                    ? "border-[3px] border-b-0 border-transparent bg-brand-roxo"
+                    : "border-[3px] border-b-0 border-brand-laranja"
                 }`}
               >
                 {tab.name}
               </span>
             ))}
           </div>
-          <div className="bg-brand-roxo mt-2 w-[310px] sm:w-[600px] md:w-[750px] rounded-[25px] p-4">
+          <div className="mt-2 w-[310px] rounded-[25px] bg-brand-roxo p-4 sm:w-[600px] md:w-[750px]">
             {renderTabContent()}
           </div>
         </div>

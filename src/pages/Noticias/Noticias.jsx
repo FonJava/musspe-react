@@ -53,13 +53,13 @@ export default function Noticias() {
           paddingY="md:py-[1.5px] lg:py-[2.5px]"
           onClick={scrollToNoticias}
         >
-          <FaArrowDown className="inline mr-2" />
+          <FaArrowDown className="mr-2 inline" />
           Fique por dentro!
         </Botao>
       </Apresentacao>
       <section
         id="noticias-section"
-        className="bg-brand-dark py-[80px] min-h-[700px]"
+        className="min-h-[700px] bg-brand-dark py-[80px]"
       >
         <ContainerNoticia
           titulo={

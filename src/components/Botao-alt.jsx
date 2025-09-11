@@ -11,7 +11,7 @@ const BotaoAlt = ({
 }) => (
   <button
     onClick={onClick}
-    className={`inline-block bg-transparent border-2 border-[#CC7042] text-[#CC7042] ${tamanhoFonte} font-barlow-medium ${paddingX} ${paddingY} ${marginY} rounded-full hover:bg-[#CC7042] hover:text-white hover:border-[#CC7042] transition-colors duration-200`}
+    className={`inline-block border-2 border-[#CC7042] bg-transparent text-[#CC7042] ${tamanhoFonte} font-barlow-medium ${paddingX} ${paddingY} ${marginY} rounded-full transition-colors duration-200 hover:border-[#CC7042] hover:bg-[#CC7042] hover:text-white`}
     {...rest}
   >
     {children}

@@ -3,11 +3,11 @@ import { FaInstagram, FaFacebook, FaYoutube, FaTiktok } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bottom-0 w-full min-h-[270px] bg-brand-dark font-barlow text-brand-bege text-[16px] pb-8">
-      <div className=" max-w-[560px] mx-auto">
-        <div className="grid grid-cols-2 gap-y-6 justify-items-center sm:flex sm:justify-between mx-auto py-12">
+    <footer className="bottom-0 min-h-[270px] w-full bg-brand-dark pb-8 font-barlow text-[16px] text-brand-bege">
+      <div className="mx-auto max-w-[560px]">
+        <div className="mx-auto grid grid-cols-2 justify-items-center gap-y-6 py-12 sm:flex sm:justify-between">
           <div className="flex flex-col">
-            <h2 className="font-barlow-bold text-[20px] pb-2">Páginas</h2>
+            <h2 className="pb-2 font-barlow-bold text-[20px]">Páginas</h2>
             <Link to="/musspe-react/" className="hover:underline">
               Início
             </Link>
@@ -28,26 +28,26 @@ export default function Footer() {
             </Link>
           </div>
           <div className="flex flex-col">
-            <h2 className="font-barlow-bold text-[20px] pb-2">Endereço</h2>
-            <p className="font-barlow-italic max-w-[133px]">
+            <h2 className="pb-2 font-barlow-bold text-[20px]">Endereço</h2>
+            <p className="max-w-[133px] font-barlow-italic">
               Rua Dom Manoel de Medeiros, s/n, Dois Irmãos, Prédio Professor
               Mateus Rosas Ribeiro - UFRPE
             </p>
           </div>
           <div className="flex flex-col">
-            <h2 className="font-barlow-bold text-[20px] pb-2">Contatos</h2>
+            <h2 className="pb-2 font-barlow-bold text-[20px]">Contatos</h2>
             <p>
               (81) 9 9604 - 3576
               <br /> musspe@ufrpe.br
               <br /> @museudesolospe
             </p>
           </div>
-          <div className="flex flex-col space-y-2 mt-2">
+          <div className="mt-2 flex flex-col space-y-2">
             <a
               href="https://www.instagram.com/museudesolospe/?hl=pt-br"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-brand-bege hover:text-brand-laranja transition-colors duration-200"
+              className="text-brand-bege transition-colors duration-200 hover:text-brand-laranja"
             >
               <FaInstagram size={20} />
             </a>
@@ -55,7 +55,7 @@ export default function Footer() {
               href="https://www.youtube.com/@museudesolospe"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-brand-bege hover:text-brand-laranja transition-colors duration-200"
+              className="text-brand-bege transition-colors duration-200 hover:text-brand-laranja"
             >
               <FaYoutube size={20} />
             </a>
@@ -63,7 +63,7 @@ export default function Footer() {
               href="https://www.tiktok.com/@museudesolospe"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-brand-bege hover:text-brand-laranja transition-colors duration-200"
+              className="text-brand-bege transition-colors duration-200 hover:text-brand-laranja"
             >
               <FaTiktok size={20} />
             </a>
@@ -71,13 +71,13 @@ export default function Footer() {
               href="https://www.facebook.com/museudesolospe/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-brand-bege hover:text-brand-laranja transition-colors duration-200"
+              className="text-brand-bege transition-colors duration-200 hover:text-brand-laranja"
             >
               <FaFacebook size={20} />
             </a>
           </div>
         </div>
-        <div className="pt-6 text-end mx-14 sm:mx-0 sm:pt-0">
+        <div className="mx-14 pt-6 text-end sm:mx-0 sm:pt-0">
           <p className="font-barlow-medium-italic text-[15px]">
             Design por Tiago Finizola, implementação por Anthony Guerra e
             Gabriel Leão, e ilustrações por Laura Lins.
