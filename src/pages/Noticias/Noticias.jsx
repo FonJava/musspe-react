@@ -17,6 +17,9 @@ import n5Img2 from "/imagens/noticias/n1/n5-2.jpeg";
 import n5Img3 from "/imagens/noticias/n1/n5-3.jpeg";
 import n5Img4 from "/imagens/noticias/n1/n5-4.jpeg";
 import n5Img5 from "/imagens/noticias/n1/n5-5.jpeg";
+import expogeo from "/imagens/noticias/n8/expogeo.png";
+import aniversario from "/imagens/noticias/n7/musspe-19-anos.png";
+import emcena from "/imagens/noticias/n6/emcena.png";
 
 export default function Noticias() {
   const scrollToNoticias = () => {
@@ -61,6 +64,57 @@ export default function Noticias() {
         id="noticias-section"
         className="min-h-[700px] bg-brand-dark py-[80px]"
       >
+      <ContainerNoticia
+          titulo={
+            "Museu de Solos de Pernambuco confirma presença na II EXPOGEO"
+          }
+          resumo={
+            "Na II EXPOGEO, você vai viver experiências únicas: O Museu de Solos de Pernambuco (MUSSPE) estará presente trazendo ciência, conhecimento e interação para todos. O Projeto MASSAPÊ vai mostrar que o solo também pode ser divertido, educativo e surpreendente. Oficinas criativas e interativas para aprender com as mãos e descobrir que a ciência pode virar arte! E tem muito mais! Vamos mostrar como os solos estão conectados aos Objetivos de Desenvolvimento Sustentável (ODS)."
+          }
+          data={"23/09/2025"}
+          botao="Saiba mais"
+          imagem={expogeo}
+          link={
+            "https://www.instagram.com/expogeo.ufrpe/p/DO9TDmREXAs/?img_index=1"
+          }
+          imgWidth="w-[90%] sm:w-[300px]"
+          imgHeight="h-[90%] sm:h-[360px]"
+          ajusteMt={"mt-[40px] md:mt-0"}
+        />
+        <ContainerNoticia
+          titulo={
+            "Museu de Solos de Pernambuco completa 19 anos de história"
+          }
+          resumo={
+            "São 19 anos de história, aprendizado e serviços prestados aos diferentes públicos que visitam o MUSSPE! Hoje, 04 de setembro, o Museu de Solos de Pernambuco Professor Mateus Rosas Ribeiro completa 19 anos! A data faz referência ao aniversário do Professor Mateus Rosas Ribeiro, um dos fundadores do museu, a quem a instituição presta homenagem ao receber seu nome. A equipe do museu agradece a todos que caminharam conosco até aqui e reafirma: o Museu de Solos de Pernambuco estará sempre de portas abertas para você."
+          }
+          data={"04/09/2025"}
+          botao="Confira agora"
+          imagem={aniversario}
+          link={
+            "https://www.instagram.com/museudesolospe/p/DOL0F8zjQMy/?hl=pt-br&img_index=1"
+          }
+          imgWidth="w-[90%] sm:w-[300px]"
+          imgHeight="h-[90%] sm:h-[360px]"
+          ajusteMt={"mt-[40px] md:mt-0"}
+        />
+        <ContainerNoticia
+          titulo={
+            "Equipe do Museu de Solos de Pernambuco apresenta oficina Mãos na Terra"
+          }
+          resumo={
+            "No dia 11/08, ocorreu a apresentação da oficina 'Mãos na Terra', conduzida por Adriana Alves, bolsista de Pedagogia do MUSSPE, projeto voltado para atividades educativas e sensoriais com crianças. Em seguida, tivemos a palestra com Débora do NACES, que abordou mediação inclusiva, destacando estratégias para acolher e conduzir visitas de pessoas com TEA, em um momento de aprendizado com toda a equipe do MUSSPE. Foi um dia de troca, vivências e aprendizado!"
+          }
+          data={"12/08/2025"}
+          botao="Saiba mais"
+          imagem={emcena}
+          link={
+            "https://www.instagram.com/museudesolospe/reel/DNRIRCMB-AX"
+          }
+          imgWidth="w-[90%] sm:w-[300px]"
+          imgHeight="h-[90%] sm:h-[360px]"
+          ajusteMt={"mt-[40px] md:mt-0"}
+        />
         <ContainerNoticia
           titulo={
             "MUSSPE inicia levantamento de pontos de coleta de macromonolitos em Fernando de Noronha"
