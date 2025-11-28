@@ -19,12 +19,12 @@ function AppWrapper() {
 
   useEffect(() => {
     const pathToPage = {
-      "/musspe-react/": "home",
-      "/musspe-react/noticias": "noticias",
-      "/musspe-react/acervo": "acervo",
-      "/musspe-react/jogos": "jogos",
-      "/musspe-react/colaboradores": "colaboradores",
-      "/musspe-react/visita": "visita",
+      "/": "home",
+      "/noticias": "noticias",
+      "/acervo": "acervo",
+      "/jogos": "jogos",
+      "/colaboradores": "colaboradores",
+      "/visita": "visita",
     };
     const page = pathToPage[location.pathname] || "notfound";
     setActivePage(page);
@@ -35,17 +35,12 @@ function AppWrapper() {
       <Header activePage={activePage} setActivePage={setActivePage} />
       <main>
         <Routes>
-          <Route path="/musspe-react/" element={<Home />} />
-          <Route path="/musspe-react/noticias" element={<Noticias />} />
-
-          <Route path="/musspe-react/acervo" element={<Acervo />} />
-          <Route path="/musspe-react/jogos" element={<Jogos />} />
-          <Route
-            path="/musspe-react/colaboradores"
-            element={<Colaboradores />}
-          />
-          <Route path="/musspe-react/visita" element={<Visita />} />
-
+          <Route path="/" element={<Home />} />
+          <Route path="/noticias" element={<Noticias />} />
+          <Route path="/acervo" element={<Acervo />} />
+          <Route path="/jogos" element={<Jogos />} />
+          <Route path="/colaboradores" element={<Colaboradores />} />
+          <Route path="/visita" element={<Visita />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

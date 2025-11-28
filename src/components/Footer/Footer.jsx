@@ -8,22 +8,22 @@ export default function Footer() {
         <div className="mx-auto grid grid-cols-2 justify-items-center gap-y-6 py-12 sm:flex sm:justify-between">
           <div className="flex flex-col">
             <h2 className="pb-2 font-barlow-bold text-[20px]">Páginas</h2>
-            <Link to="/musspe-react/" className="hover:underline">
+            <Link to="/" className="hover:underline">
               Início
             </Link>
-            <Link to="/musspe-react/noticias" className="hover:underline">
+            <Link to="/noticias" className="hover:underline">
               Noticias
             </Link>
-            <Link to="/musspe-react/acervo" className="hover:underline">
+            <Link to="/acervo" className="hover:underline">
               Acervo
             </Link>
-            <Link to="/musspe-react/jogos" className="hover:underline">
+            <Link to="/jogos" className="hover:underline">
               Jogos
             </Link>
-            <Link to="/musspe-react/colaboradores" className="hover:underline">
+            <Link to="/colaboradores" className="hover:underline">
               Colaboradores
             </Link>
-            <Link to="/musspe-react/visita" className="hover:underline">
+            <Link to="/visita" className="hover:underline">
               Agende uma visita
             </Link>
           </div>
