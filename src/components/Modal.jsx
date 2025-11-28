@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { IoMdClose } from "react-icons/io";
 import BotaoAlt from "./Botao-alt";
 
 const Modal = ({

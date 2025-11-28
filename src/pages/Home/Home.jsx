@@ -216,6 +216,8 @@ export default function Home() {
                 <div className="mb-6 flex-shrink-0 overflow-hidden rounded-3xl">
                   <video
                     src={videoVisita}
+                    alt="Vídeo visitas guiadas"
+                    aria-label="Vídeo visitas guiadas"
                     controls
                     preload="none"
                     className="block h-[530px] w-[340px] flex-shrink-0 sm:h-[600px] sm:w-[340px] md:h-[340px] md:w-[190px] lg:h-[340px] lg:w-[190px] xl:h-[340px] xl:w-[190px]"

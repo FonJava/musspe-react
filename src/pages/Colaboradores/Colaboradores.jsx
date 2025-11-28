@@ -401,7 +401,12 @@ export default function Colaboradores() {
         className="flex flex-col items-center bg-brand-dark py-12"
       >
         <div className="mb-14 flex items-center">
-          <img src={colabIcon} className="mr-2 w-6" draggable="false" />
+          <img
+            src={colabIcon}
+            className="mr-2 w-6"
+            draggable="false"
+            alt="Icone de colaboradores"
+          />
           <h2 className="font-barlow-extrabold text-3xl text-brand-bege">
             Nossos colaboradores
           </h2>
