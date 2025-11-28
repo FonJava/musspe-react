@@ -13,7 +13,9 @@ import estrelaDir from "/imagens/estrela-direita.png";
 import caixaSolos from "/imagens/caixa-solos.png";
 import caixaRochas from "/imagens/caixa-rochas.png";
 import caixaMinerais from "/imagens/caixa-minerais.png";
+import imagemMono from "/imagens/imagem-mono.png";
 import MapaInterativo from "../../components/MapaInterativo";
+import apreesq from "/imagens/apresentacao-esquerda.png";
 
 export default function Acervo() {
   const [isSolosModalOpen, setIsSolosModalOpen] = useState(false);
@@ -46,6 +48,42 @@ export default function Acervo() {
           Conheça nosso acervo!
         </Botao>
       </Apresentacao>
+      <section className="bg-brand-orange bg-[url('/musspe-react/imagens/fundo-mono.png')] bg-cover bg-center">
+        <img
+          src={apreesq}
+          alt="Decoração esquerda"
+          className="relative top-[-1px] mb-[-120px] w-[150px] [transform:rotateX(180deg)] md:w-[200px]"
+          draggable="false"
+        />
+        <div className="mx-auto w-[300px] pb-10 sm:w-[640px] md:w-[750px] lg:w-[1000px]">
+          <div className="flex flex-col items-center md:flex-row">
+            <div className="order-1 flex w-[300px] flex-col p-[20px] sm:w-[420px] sm:text-center md:order-1 md:w-[45%] md:text-left">
+              <h1 className="mx-auto p-[20px] font-barlow-extrabold text-3xl text-brand-dark sm:w-[90%] sm:pl-0 sm:text-4xl md:mx-0 md:mt-0 md:w-[400px] md:text-3xl lg:text-4xl">
+                "Macromonolito"
+              </h1>
+              <p className="text-justify font-barlow text-[16px] text-brand-dark sm:text-[18px] md:text-[17px] lg:text-[18px]">
+                Um macromonolito de solo é uma seção vertical do solo, coletada
+                em campo de forma a manter intactas as características naturais
+                do perfil, como: estrutura, organização dos horizontes, cor,
+                transições, porosidade, raízes e concreções. Esses perfis
+                mostram a composição, a estratificação e a estrutura do solo de
+                maneira muito semelhante à visualização do solo em uma
+                trincheira em campo. A maioria dos perfis é coletada em uma
+                coluna com 30 cm de largura e até 1,50 m de profundidade. Eles
+                são conservados por impregnação com laca diluída.
+              </p>
+            </div>
+            <div className="order-2 flex w-[350px] flex-col items-center p-[20px] sm:w-[420px] md:order-2 md:mt-0 md:w-[55%]">
+              <img
+                className="h-[200px] w-[400px] sm:h-[300px] sm:w-[500px] md:mt-[70px] lg:mt-0 lg:h-[400px] lg:w-[600px]"
+                src={imagemMono}
+                alt="Imagem do Macromonolito"
+                draggable="false"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
       <section
         id="colecao-section"
         className="relative min-h-[400px] bg-brand-dark"
