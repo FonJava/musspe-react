@@ -60,7 +60,7 @@ const FormularioVisita = () => {
     payload.append("Motivo da visita", formData.motivo);
 
     try {
-      const response = await fetch("https://formspree.io/f/mgvlakdg", {
+      const response = await fetch("https://formspree.io/f/xgvwgoel", {
         method: "POST",
         body: payload,
         headers: { Accept: "application/json" },
