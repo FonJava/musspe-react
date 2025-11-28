@@ -1,11 +1,30 @@
+/* Customização do calendário flatpickr */
+.flatpickr-calendar {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.flatpickr-day.today {
+  background-color: #663540;
+  color: #fff;
+  border: none;
+}
+
+.flatpickr-day.selected {
+  background-color: #ff8f00;
+  color: #fff;
+  border: none;
+}
+
+.flatpickr-day:hover {
+  background-color: #cc7042;
+  color: #fff;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-* {
-  margin: 0;
-  padding: 0;
-}
 
 @font-face {
   font-family: "Barlow Condensed";
@@ -50,4 +69,80 @@
 @font-face {
   font-family: "Barlow Condensed Medium Italic";
   src: url("/fonts/BarlowCondensed-MediumItalic.woff") format("woff");
+}
+
+/* Estilos específicos para o Leaflet */
+.leaflet-container {
+  height: 400px;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.leaflet-tile-container {
+  pointer-events: auto;
+}
+
+/* Força o z-index do Leaflet para baixo */
+.leaflet-control-container {
+  z-index: 2 !important;
+}
+
+.leaflet-popup-pane {
+  z-index: 3 !important;
+}
+
+/* Ícone personalizado do mapa */
+.custom-icon-mapa {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.custom-icon-mapa svg {
+  drop-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Garantir que o modal apareça por cima de tudo */
+.modal-overlay {
+  z-index: 9998 !important;
+}
+
+.modal-content {
+  z-index: 9999 !important;
+}
+
+/* Espaçamento melhorado para o conteúdo do modal */
+.prose p {
+  margin-bottom: 12px !important;
+  margin-top: 8px !important;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  margin-top: 16px !important;
+  margin-bottom: 12px !important;
+}
+
+.prose ul,
+.prose ol {
+  margin-top: 8px !important;
+  margin-bottom: 12px !important;
+}
+
+.prose li {
+  margin-bottom: 4px !important;
+}
+
+.prose strong,
+.prose b {
+  margin: 2px 0 !important;
+}
+
+.prose table {
+  margin: 16px 0 !important;
 }
