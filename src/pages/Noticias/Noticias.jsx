@@ -20,6 +20,7 @@ import n5Img5 from "/imagens/noticias/n1/n5-5.jpeg";
 import expogeo from "/imagens/noticias/n8/expogeo.png";
 import aniversario from "/imagens/noticias/n7/musspe-19-anos.png";
 import emcena from "/imagens/noticias/n6/emcena.png";
+import miniCurso from "/imagens/noticias/n9/mini-curso.png";
 
 export default function Noticias() {
   const scrollToNoticias = () => {
@@ -64,6 +65,23 @@ export default function Noticias() {
         id="noticias-section"
         className="min-h-[700px] bg-brand-dark py-[80px]"
       >
+      <ContainerNoticia
+          titulo={
+            "Ciência, aprendizado e solo fértil para o conhecimento!"
+          }
+          resumo={
+            "No dia 29 de outubro, o Museu de Solos de Pernambuco recebeu o minicurso ministrado pela Dra. Clarissa Buarque Vieira e pelo Dr. Gabriel Henrique M. C. Silva, com o tema “Estoque de Carbono nos Solos de Referência de Pernambuco: Conceitos e Avaliação de Dados”, realizado durante a Semana de Engenharia Florestal (SEF 2025). Foram 8 horas de imersão científica, reunindo teoria e muita troca de experiências sobre a importância do carbono no solo."
+          }
+          data={"31/10/2025"}
+          botao="Saiba mais"
+          imagem={miniCurso}
+          link={
+            "https://www.instagram.com/p/DQepKCSjZlX/?img_index=1"
+          }
+          imgWidth="w-[90%] sm:w-[300px]"
+          imgHeight="h-[90%] sm:h-[360px]"
+          ajusteMt={"mt-[40px] md:mt-0"}
+        />
       <ContainerNoticia
           titulo={
             "Museu de Solos de Pernambuco confirma presença na II EXPOGEO"
