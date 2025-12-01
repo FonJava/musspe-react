@@ -67,16 +67,16 @@ export default function Noticias() {
       >
       <ContainerNoticia
           titulo={
-            "Ciência, aprendizado e solo fértil para o conhecimento!"
+            "Minicurso Especial no Museu de Solos de Pernambuco! São apenas 25 vagas !"
           }
           resumo={
-            "No dia 29 de outubro, o Museu de Solos de Pernambuco recebeu o minicurso ministrado pela Dra. Clarissa Buarque Vieira e pelo Dr. Gabriel Henrique M. C. Silva, com o tema “Estoque de Carbono nos Solos de Referência de Pernambuco: Conceitos e Avaliação de Dados”, realizado durante a Semana de Engenharia Florestal (SEF 2025). Foram 8 horas de imersão científica, reunindo teoria e muita troca de experiências sobre a importância do carbono no solo."
+            "No dia 04 de dezembro, das 8h às 12h, acontecerá no prédio da Pós-Graduação em Ciência do Solo da UFRPE um minicurso voltado para a compreensão dos principais conceitos, fundamentos e métodos de avaliação do estoque de carbono nos solos. Ministrado pela Dra. Clarissa Buarque Vieira e pelo Dr. Gabriel Henrique M. C. Silva, o encontro inclui uma palestra introdutória e uma visita técnica ao Museu de Solos de Pernambuco, permitindo conectar teoria e prática de forma aprofundada."
           }
-          data={"31/10/2025"}
-          botao="Saiba mais"
+          data={"01/12/2025"}
+          botao="Garanta já sua vaga!"
           imagem={miniCurso}
           link={
-            "https://www.instagram.com/p/DQepKCSjZlX/?img_index=1"
+            "https://docs.google.com/forms/d/e/1FAIpQLScaxGO-OcwhYtZB06YWPllf1QyqWe8r0ZLr4exm99w1EUcoQQ/viewform"
           }
           imgWidth="w-[90%] sm:w-[300px]"
           imgHeight="h-[90%] sm:h-[360px]"
