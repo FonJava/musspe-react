@@ -232,7 +232,7 @@ const FormularioVisita = () => {
         isOpen={modalOpen}
         onClose={() => {
           setModalOpen(false);
-          navigate("/musspe-react/");
+          navigate("/");
         }}
         title=""
         larguraModal="w-[90%] md:w-[600px]"

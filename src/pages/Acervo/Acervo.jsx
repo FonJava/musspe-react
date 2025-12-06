@@ -48,7 +48,7 @@ export default function Acervo() {
           Conheça nosso acervo!
         </Botao>
       </Apresentacao>
-      <section className="bg-brand-orange bg-[url('/musspe-react/imagens/fundo-mono.png')] bg-cover bg-center">
+      <section className="bg-brand-orange bg-[url('/imagens/fundo-mono.png')] bg-cover bg-center">
         <img
           src={apreesq}
           alt="Decoração esquerda"

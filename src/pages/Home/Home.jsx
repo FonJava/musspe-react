@@ -57,7 +57,7 @@ export default function Home() {
         titulo="Conheça nossos solos, rochas e minerais!"
         descricao="O Museu de Solos de Pernambuco Professor Mateus Rosas Ribeiro tem temática única no estado!"
       >
-        <Link to="/musspe-react/visita">
+        <Link to="/visita">
           <Botao
             tamanhoFonte="text-[18px] sm:text-[20px] py-[2.5px] md:text-[16px] lg:text-[20px]"
             paddingY="md:py-[1.5px] lg:py-[2.5px]"
@@ -96,7 +96,7 @@ export default function Home() {
           >
             VAMOS ACOMPANHAR AS NOTÍCIAS?
             <br />
-            <Link to="/musspe-react/noticias">
+            <Link to="/noticias">
               <Botao
                 marginY="my-1 sm:my-2"
                 paddingY="py-1 sm:py-1.5"
@@ -167,7 +167,7 @@ export default function Home() {
               CNPq, visando uma exposição permanente dos solos de referência do
               estado.
             </p>
-            <Link to="/musspe-react/acervo">
+            <Link to="/acervo">
               <Botao marginY="my-3 md:my-0">Confira nosso acervo</Botao>
             </Link>
           </div>
@@ -229,7 +229,7 @@ export default function Home() {
                 </div>
 
                 <div className="mb-8 flex-shrink-0 md:mb-20">
-                  <Link to="/musspe-react/visita">
+                  <Link to="/visita">
                     <Botao>Agende uma visita</Botao>
                   </Link>
                 </div>
@@ -265,7 +265,7 @@ export default function Home() {
             showArrows={true}
           />
           <div>
-            <Link to="/musspe-react/colaboradores">
+            <Link to="/colaboradores">
               <Botao>Conheça nossos colaboradores</Botao>
             </Link>
           </div>
