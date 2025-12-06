@@ -70,9 +70,9 @@ export default function Noticias() {
             "Minicurso Especial no Museu de Solos de Pernambuco! São apenas 25 vagas !"
           }
           resumo={
-            "No dia 04 de dezembro, das 8h às 12h, acontecerá no prédio da Pós-Graduação em Ciência do Solo da UFRPE um minicurso voltado para a compreensão dos principais conceitos, fundamentos e métodos de avaliação do estoque de carbono nos solos. Ministrado pela Dra. Clarissa Buarque Vieira e pelo Dr. Gabriel Henrique M. C. Silva, o encontro inclui uma palestra introdutória e uma visita técnica ao Museu de Solos de Pernambuco, permitindo conectar teoria e prática de forma aprofundada."
+            "No dia 04 de dezembro, das 8h às 12h, ocorreu no prédio da Pós-Graduação em Ciência do Solo da UFRPE um minicurso voltado para a compreensão dos principais conceitos, fundamentos e métodos de avaliação do estoque de carbono nos solos. Ministrado pela Dra. Clarissa Buarque Vieira e pelo Dr. Gabriel Henrique M. C. Silva, o encontro incluiu uma palestra introdutória e uma visita técnica ao Museu de Solos de Pernambuco, permitindo conectar teoria e prática de forma aprofundada."
           }
-          data={"01/12/2025"}
+          data={"04/12/2025"}
           botao="Garanta já sua vaga!"
           imagem={miniCurso}
           link={
