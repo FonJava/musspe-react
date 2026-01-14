@@ -20,6 +20,7 @@ import n5Img5 from "/imagens/noticias/n1/n5-5.jpeg";
 import expogeo from "/imagens/noticias/n8/expogeo.png";
 import aniversario from "/imagens/noticias/n7/musspe-19-anos.png";
 import emcena from "/imagens/noticias/n6/emcena.png";
+import miniCurso from "/imagens/noticias/n9/mini-curso.png";
 
 export default function Noticias() {
   const scrollToNoticias = () => {
@@ -64,6 +65,23 @@ export default function Noticias() {
         id="noticias-section"
         className="min-h-[700px] bg-brand-dark py-[80px]"
       >
+      <ContainerNoticia
+          titulo={
+            "Minicurso Especial no Museu de Solos de Pernambuco! São apenas 25 vagas !"
+          }
+          resumo={
+            "No dia 04 de dezembro, das 8h às 12h, ocorreu no prédio da Pós-Graduação em Ciência do Solo da UFRPE um minicurso voltado para a compreensão dos principais conceitos, fundamentos e métodos de avaliação do estoque de carbono nos solos. Ministrado pela Dra. Clarissa Buarque Vieira e pelo Dr. Gabriel Henrique M. C. Silva, o encontro incluiu uma palestra introdutória e uma visita técnica ao Museu de Solos de Pernambuco, permitindo conectar teoria e prática de forma aprofundada."
+          }
+          data={"04/12/2025"}
+          botao="Garanta já sua vaga!"
+          imagem={miniCurso}
+          link={
+            "https://docs.google.com/forms/d/e/1FAIpQLScaxGO-OcwhYtZB06YWPllf1QyqWe8r0ZLr4exm99w1EUcoQQ/viewform"
+          }
+          imgWidth="w-[90%] sm:w-[300px]"
+          imgHeight="h-[90%] sm:h-[360px]"
+          ajusteMt={"mt-[40px] md:mt-0"}
+        />
       <ContainerNoticia
           titulo={
             "Museu de Solos de Pernambuco confirma presença na II EXPOGEO"
