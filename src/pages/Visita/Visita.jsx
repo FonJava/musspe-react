@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   FaClock,
   FaInstagram,
@@ -11,10 +12,48 @@ import visitaDesktop from "/imagens/imagem-visitas.png";
 import visitaMobile from "/imagens/imagem-visitas2.png";
 import FormularioVisita from "../../components/FormularioVisita";
 import imagemMaps from "/imagens/imagen-mapa.png";
+import Modal from "../../components/Modal";
 
 export default function Visita() {
+  const [showModal, setShowModal] = useState(true);
+
   return (
     <>
+      <Modal
+        isOpen={showModal}
+        onClose={() => setShowModal(false)}
+        title="Aviso Importante"
+        larguraModal="w-[90%] md:w-[600px]"
+        textoBotao="Entendi"
+      >
+        <div className="text-center font-barlow-italic text-lg text-brand-dark">
+          <div className="mb-4 flex items-center justify-center gap-2">
+            <FaClock size={24} className="text-brand-laranja" />
+            <h3 className="font-barlow-bold text-2xl text-brand-laranja">
+              Horário Temporário
+            </h3>
+          </div>
+          <p className="mb-4 leading-relaxed">
+            Informamos que até o dia{" "}
+            <span className="font-barlow-bold text-brand-laranja">
+              6 de março
+            </span>
+            , nosso horário de visitação estará limitado:
+          </p>
+          <div className="mx-auto mb-4 w-fit rounded-lg bg-brand-bege px-6 py-4">
+            <p className="font-barlow-bold text-xl text-brand-dark">
+              Segunda, Terça e Quinta
+            </p>
+            <p className="font-barlow-bold text-2xl text-brand-laranja">
+              8h às 13h
+            </p>
+          </div>
+          <p className="text-base">
+            Agradecemos a compreensão e esperamos sua visita!
+          </p>
+        </div>
+      </Modal>
+
       <section className="mt-[-73px] bg-brand-dark">
         <div className="absolute left-4 top-[100px] z-10 hidden flex-col space-y-2 md:flex">
           <a
@@ -74,7 +113,7 @@ export default function Visita() {
             <span className="my-4 flex gap-2">
               <FaClock size={16} className="mt-1.5 text-brand-laranja" />
               <p className="flex items-center gap-2">
-                Segunda a sexta (13h às 17h)
+                Segunda, terça e quinta (8h às 13h)
               </p>
             </span>
 

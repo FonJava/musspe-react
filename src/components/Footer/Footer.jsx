@@ -83,7 +83,7 @@ export default function Footer() {
             Gabriel Leão, e ilustrações por Laura Lins.
           </p>
           <p className="font-barlow-italic text-[13px]">
-            © 2025 Museu de Solos de Pernambuco. Todos os direitos reservados.
+            © 2026 Museu de Solos de Pernambuco. Todos os direitos reservados.
           </p>
         </div>
       </div>

@@ -107,12 +107,12 @@ const FormularioVisita = () => {
         </h2>
         <div className="mb-[60px] mt-2 grid w-[300px] grid-cols-2 rounded-3xl bg-brand-roxo px-[10px] py-[15px] sm:w-[450px] md:w-[670px] md:px-[20px] md:py-[35px]">
           {[
-            "13h às 14h30",
-            "14h30 às 16h",
-            "13h30 às 15h",
-            "15h às 16h30",
-            "14h às 15h30",
-            "15h30 às 17h",
+            "8h às 9h30",
+            "9h30 às 11h",
+            "11h às 12h30",
+            "8h30 às 10h",
+            "10h às 11h30",
+            "11h30 às 13h",
           ].map((time) => (
             <button
               key={time}
