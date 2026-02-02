@@ -21,6 +21,10 @@ import expogeo from "/imagens/noticias/n8/expogeo.png";
 import aniversario from "/imagens/noticias/n7/musspe-19-anos.png";
 import emcena from "/imagens/noticias/n6/emcena.png";
 import miniCurso from "/imagens/noticias/n9/mini-curso.png";
+import capaCurso from "/imagens/noticias/n10/capa-curso.png";
+import eduAmbi from "/imagens/noticias/n10/edu-ambi.png";
+import eduPatri from "/imagens/noticias/n10/edu-patri.png";
+import fichaTec from "/imagens/noticias/n10/ficha-tec.png";
 
 export default function Noticias() {
   const scrollToNoticias = () => {
@@ -41,6 +45,7 @@ export default function Noticias() {
     "https://wordwall.net/play/89885/602/883",
   ];
   const n5Imagens = [n5Img1, n5Img2, n5Img3, n5Img4, n5Img5];
+  const n10Imagens = [capaCurso, eduPatri, eduAmbi, fichaTec];
 
   return (
     <>
@@ -65,6 +70,22 @@ export default function Noticias() {
         id="noticias-section"
         className="min-h-[700px] bg-brand-dark py-[80px]"
       >
+      <ContainerNoticia
+          titulo={
+            "MUSSPE oferece curso de práticas e princípios básicos da educação patrimonial e ambiental"
+          }
+          data={"13/01/2026"}
+          resumo={
+            "O Museu de Solos de Pernambuco (MUSSPE) está com inscrições abertas para o Curso de Práticas e Princípios Básicos da Educação Patrimonial e Ambiental. A formação, que acontece em formato híbrido, oferece 35 vagas e carga horária total de 30 horas. O curso será ministrado por Átila Tolentino, formador em Educação Patrimonial, mestre e doutor em Sociologia, e por Elinildo Marinho, formador em Educação Ambiental, museólogo, turismólogo e mestre em Ciência da Informação. A formação é dividida em dois módulos: Módulo 1 e Módulo 2, voltados à Educação Patrimonial e Educação Ambiental, respectivamente. O curso, que acontece de 20 a 30 de janeiro, busca fortalecer práticas educativas voltadas à valorização do patrimônio cultural e ambiental, contribuindo para a formação de educadores e demais interessados."
+          }
+          link={"https://docs.google.com/forms/d/e/1FAIpQLSdi3u65Q0GKRs4l4PwlZ1SYSfRFOX94SZaw0KxdWsf32BZmMg/viewform"}
+          botao="Garanta já sua vaga!"
+          carrossel={true}
+          carrosselImages={n10Imagens}
+          carrosselWidth="w-[90%] sm:w-[360px]"
+          carrosselHeight="h-[90%] sm:h-[450px]"
+          ajusteMt={"mt-[20px] md:mt-[-10px]"}
+        />
       <ContainerNoticia
           titulo={
             "Minicurso Especial no Museu de Solos de Pernambuco! São apenas 25 vagas !"
