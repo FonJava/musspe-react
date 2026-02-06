@@ -27,6 +27,7 @@ import eduAmbi from "/imagens/noticias/n10/edu-ambi.png";
 import eduPatri from "/imagens/noticias/n10/edu-patri.png";
 import fichaTec from "/imagens/noticias/n10/ficha-tec.png";
 import selecaoImg from "/imagens/selecao2026.png";
+import seguidoresInsta from "/imagens/noticias/n11/seguidores.png";
 
 export default function Noticias() {
   const scrollToNoticias = () => {
@@ -72,6 +73,23 @@ export default function Noticias() {
         id="noticias-section"
         className="min-h-[700px] bg-brand-dark py-[80px]"
       >
+      <ContainerNoticia
+          titulo={
+            "O MUSSPE chega a 4.000 seguidores no Instagram!"
+          }
+          resumo={
+            "O MUSSPE só cresce porque existe uma comunidade que acredita na ciência, na educação e na importância do solo para a vida. Obrigada a cada pessoa que acompanha, compartilha, comenta e fortalece nosso trabalho todos os dias. Seguimos juntos levando conhecimento, curiosidades e ações educativas para cada vez mais pessoas!"
+          }
+          data={"06/02/2025"}
+          botao="Saiba mais"
+          imagem={seguidoresInsta}
+          link={
+            "https://www.instagram.com/museudesolospe/"
+          }
+          imgWidth="w-[90%] sm:w-[270px]"
+          imgHeight="h-[90%] sm:h-[340px]"
+          ajusteMt={"mt-[40px] md:mt-0"}
+        />
         <ContainerNoticiaDuplo
           titulo={"PROCESSO SELETIVO 2026 – NOVOS BOLSISTAS MUSSPE!"}
           resumo={
