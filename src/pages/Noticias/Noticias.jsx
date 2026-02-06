@@ -85,6 +85,8 @@ export default function Noticias() {
           botao="Ver Edital"
           link2="https://docs.google.com/forms/d/e/1FAIpQLSfCiW-FLvUNUEDnvxFFYXnnfIa8G7OiL4tfwLO2HWMxJqQCiA/viewform"
           botao2="Inscrever-se"
+          disabled2={true}
+          data={"02/02/2026"}
         />
         <ContainerNoticia
           titulo={
@@ -98,6 +100,7 @@ export default function Noticias() {
             "https://docs.google.com/forms/d/e/1FAIpQLSdi3u65Q0GKRs4l4PwlZ1SYSfRFOX94SZaw0KxdWsf32BZmMg/viewform"
           }
           botao="Garanta já sua vaga!"
+          disabled={true}
           carrossel={true}
           carrosselImages={n10Imagens}
           carrosselWidth="w-[90%] sm:w-[360px]"
@@ -114,6 +117,7 @@ export default function Noticias() {
           data={"04/12/2025"}
           botao="Garanta já sua vaga!"
           imagem={miniCurso}
+          disabled={true}
           link={
             "https://docs.google.com/forms/d/e/1FAIpQLScaxGO-OcwhYtZB06YWPllf1QyqWe8r0ZLr4exm99w1EUcoQQ/viewform"
           }

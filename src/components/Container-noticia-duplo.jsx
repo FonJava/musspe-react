@@ -1,5 +1,4 @@
 import { FaInstagram, FaFacebook, FaYoutube, FaTiktok } from "react-icons/fa";
-import { Link } from "react-router-dom";
 import Botao from "./Botao";
 import Carrossel from "./Carrossel";
 
@@ -22,6 +21,8 @@ export default function ContainerNoticiaDuplo({
   carrosselTemLink = false,
   ajusteMt,
   ajusteMb,
+  disabled = false,
+  disabled2 = false,
 }) {
   return (
     <div className="mx-auto mb-[30px] mt-[10px] flex min-h-[200px] w-[90%] flex-col rounded-[20px] bg-brand-roxo lg:w-[800px]">
@@ -96,16 +97,24 @@ export default function ContainerNoticiaDuplo({
         </a>
       </div>
       <div className="mx-auto mb-[50px] mt-[-90px] flex flex-col items-center justify-center gap-4 sm:flex-row">
-        <Link to={link} target="_blank" rel="noopener noreferrer">
-          <Botao tamanhoFonte="text-[25px]" paddingX="px-[30px]">
+        <a href={link} target="_blank" rel="noopener noreferrer">
+          <Botao
+            tamanhoFonte="text-[25px]"
+            paddingX="px-[30px]"
+            disabled={disabled}
+          >
             {botao}
           </Botao>
-        </Link>
-        <Link to={link2} target="_blank" rel="noopener noreferrer">
-          <Botao tamanhoFonte="text-[25px]" paddingX="px-[30px]">
+        </a>
+        <a href={link2} target="_blank" rel="noopener noreferrer">
+          <Botao
+            tamanhoFonte="text-[25px]"
+            paddingX="px-[30px]"
+            disabled={disabled2}
+          >
             {botao2}
           </Botao>
-        </Link>
+        </a>
       </div>
     </div>
   );

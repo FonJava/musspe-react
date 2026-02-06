@@ -20,6 +20,7 @@ export default function ContainerNoticia({
   carrosselTemLink = false,
   ajusteMt,
   ajusteMb,
+  disabled = false,
 }) {
   return (
     <div className="mx-auto mb-[30px] mt-[10px] flex min-h-[200px] w-[90%] flex-col rounded-[20px] bg-brand-roxo lg:w-[800px]">
@@ -95,7 +96,7 @@ export default function ContainerNoticia({
       </div>
       <div className="mx-auto mb-[50px] mt-[-90px]">
         <Link to={link}>
-          <Botao tamanhoFonte="text-[25px]" paddingX="px-[30px]">
+          <Botao tamanhoFonte="text-[25px]" paddingX="px-[30px]" disabled={disabled}>
             {botao}
           </Botao>
         </Link>
