@@ -4,6 +4,7 @@ import mzinho from "/imagens/mzinho-alt.png";
 import Botao from "../../components/Botao";
 import { FaArrowDown } from "react-icons/fa";
 import ContainerNoticia from "../../components/Container-noticia";
+import ContainerNoticiaDuplo from "../../components/Container-noticia-duplo";
 import imgN4 from "/imagens/noticias/n2/3k-imagem.jfif";
 import n1Img1 from "/imagens/noticias/n5/nor4.jpeg";
 import n1Img2 from "/imagens/noticias/n5/nor1.jpeg";
@@ -25,6 +26,7 @@ import capaCurso from "/imagens/noticias/n10/capa-curso.png";
 import eduAmbi from "/imagens/noticias/n10/edu-ambi.png";
 import eduPatri from "/imagens/noticias/n10/edu-patri.png";
 import fichaTec from "/imagens/noticias/n10/ficha-tec.png";
+import selecaoImg from "/imagens/selecao2026.png";
 
 export default function Noticias() {
   const scrollToNoticias = () => {
@@ -70,7 +72,23 @@ export default function Noticias() {
         id="noticias-section"
         className="min-h-[700px] bg-brand-dark py-[80px]"
       >
-      <ContainerNoticia
+        <ContainerNoticiaDuplo
+          titulo={"PROCESSO SELETIVO 2026 – NOVOS BOLSISTAS MUSSPE!"}
+          resumo={
+            "O Museu de Solos de Pernambuco (MUSSPE) abriu seleção para bolsistas de cooperação técnica. A iniciativa oferece aos selecionados a oportunidade de vivenciar na prática a rotina de um espaço dedicado à ciência e à educação, promovendo aprendizado enriquecedor, desenvolvimento acadêmico e profissional, além de experiência relevante para o currículo. O edital e o formulário de inscrição serão disponibilizados no dia 02 de fevereiro, a partir das 12h. Mais informações podem ser obtidas pelo e-mail musspe@ufrpe.br."
+          }
+          imagem={selecaoImg}
+          imgWidth="w-[90%] sm:w-[300px]"
+          imgHeight="h-[90%] sm:h-[360px]"
+          ajusteMt={"mt-[20px] md:mt-[-10px]"}
+          link="/edital-2026/Edital Bolsistas 2026_260202_122440.pdf"
+          botao="Ver Edital"
+          link2="https://docs.google.com/forms/d/e/1FAIpQLSfCiW-FLvUNUEDnvxFFYXnnfIa8G7OiL4tfwLO2HWMxJqQCiA/viewform"
+          botao2="Inscrever-se"
+          disabled2={true}
+          data={"02/02/2026"}
+        />
+        <ContainerNoticia
           titulo={
             "MUSSPE oferece curso de práticas e princípios básicos da educação patrimonial e ambiental"
           }
@@ -78,15 +96,18 @@ export default function Noticias() {
           resumo={
             "O Museu de Solos de Pernambuco (MUSSPE) está com inscrições abertas para o Curso de Práticas e Princípios Básicos da Educação Patrimonial e Ambiental. A formação, que acontece em formato híbrido, oferece 35 vagas e carga horária total de 30 horas. O curso será ministrado por Átila Tolentino, formador em Educação Patrimonial, mestre e doutor em Sociologia, e por Elinildo Marinho, formador em Educação Ambiental, museólogo, turismólogo e mestre em Ciência da Informação. A formação é dividida em dois módulos: Módulo 1 e Módulo 2, voltados à Educação Patrimonial e Educação Ambiental, respectivamente. O curso, que acontece de 20 a 30 de janeiro, busca fortalecer práticas educativas voltadas à valorização do patrimônio cultural e ambiental, contribuindo para a formação de educadores e demais interessados."
           }
-          link={"https://docs.google.com/forms/d/e/1FAIpQLSdi3u65Q0GKRs4l4PwlZ1SYSfRFOX94SZaw0KxdWsf32BZmMg/viewform"}
+          link={
+            "https://docs.google.com/forms/d/e/1FAIpQLSdi3u65Q0GKRs4l4PwlZ1SYSfRFOX94SZaw0KxdWsf32BZmMg/viewform"
+          }
           botao="Garanta já sua vaga!"
+          disabled={true}
           carrossel={true}
           carrosselImages={n10Imagens}
           carrosselWidth="w-[90%] sm:w-[360px]"
           carrosselHeight="h-[90%] sm:h-[450px]"
           ajusteMt={"mt-[20px] md:mt-[-10px]"}
         />
-      <ContainerNoticia
+        <ContainerNoticia
           titulo={
             "Minicurso Especial no Museu de Solos de Pernambuco! São apenas 25 vagas !"
           }
@@ -96,6 +117,7 @@ export default function Noticias() {
           data={"04/12/2025"}
           botao="Garanta já sua vaga!"
           imagem={miniCurso}
+          disabled={true}
           link={
             "https://docs.google.com/forms/d/e/1FAIpQLScaxGO-OcwhYtZB06YWPllf1QyqWe8r0ZLr4exm99w1EUcoQQ/viewform"
           }
@@ -103,7 +125,7 @@ export default function Noticias() {
           imgHeight="h-[90%] sm:h-[360px]"
           ajusteMt={"mt-[40px] md:mt-0"}
         />
-      <ContainerNoticia
+        <ContainerNoticia
           titulo={
             "Museu de Solos de Pernambuco confirma presença na II EXPOGEO"
           }
@@ -121,9 +143,7 @@ export default function Noticias() {
           ajusteMt={"mt-[40px] md:mt-0"}
         />
         <ContainerNoticia
-          titulo={
-            "Museu de Solos de Pernambuco completa 19 anos de história"
-          }
+          titulo={"Museu de Solos de Pernambuco completa 19 anos de história"}
           resumo={
             "São 19 anos de história, aprendizado e serviços prestados aos diferentes públicos que visitam o MUSSPE! Hoje, 04 de setembro, o Museu de Solos de Pernambuco Professor Mateus Rosas Ribeiro completa 19 anos! A data faz referência ao aniversário do Professor Mateus Rosas Ribeiro, um dos fundadores do museu, a quem a instituição presta homenagem ao receber seu nome. A equipe do museu agradece a todos que caminharam conosco até aqui e reafirma: o Museu de Solos de Pernambuco estará sempre de portas abertas para você."
           }
@@ -147,9 +167,7 @@ export default function Noticias() {
           data={"12/08/2025"}
           botao="Saiba mais"
           imagem={emcena}
-          link={
-            "https://www.instagram.com/museudesolospe/reel/DNRIRCMB-AX"
-          }
+          link={"https://www.instagram.com/museudesolospe/reel/DNRIRCMB-AX"}
           imgWidth="w-[90%] sm:w-[300px]"
           imgHeight="h-[90%] sm:h-[360px]"
           ajusteMt={"mt-[40px] md:mt-0"}
