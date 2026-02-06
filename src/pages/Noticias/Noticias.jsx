@@ -80,7 +80,7 @@ export default function Noticias() {
           resumo={
             "O MUSSPE só cresce porque existe uma comunidade que acredita na ciência, na educação e na importância do solo para a vida. Obrigada a cada pessoa que acompanha, compartilha, comenta e fortalece nosso trabalho todos os dias. Seguimos juntos levando conhecimento, curiosidades e ações educativas para cada vez mais pessoas!"
           }
-          data={"06/02/2025"}
+          data={"06/02/2026"}
           botao="Saiba mais"
           imagem={seguidoresInsta}
           link={
