@@ -28,6 +28,8 @@ import eduPatri from "/imagens/noticias/n10/edu-patri.png";
 import fichaTec from "/imagens/noticias/n10/ficha-tec.png";
 import selecaoImg from "/imagens/selecao2026.png";
 import seguidoresInsta from "/imagens/noticias/n11/seguidores.png";
+import resultadoProcesso from "/imagens/noticias/n12/resultadoProc.png";
+import tabelaResultado from "/imagens/noticias/n12/tabelaResultado.png";
 
 export default function Noticias() {
   const scrollToNoticias = () => {
@@ -49,6 +51,7 @@ export default function Noticias() {
   ];
   const n5Imagens = [n5Img1, n5Img2, n5Img3, n5Img4, n5Img5];
   const n10Imagens = [capaCurso, eduPatri, eduAmbi, fichaTec];
+  const n12Imagens = [resultadoProcesso, tabelaResultado];
 
   return (
     <>
@@ -73,6 +76,24 @@ export default function Noticias() {
         id="noticias-section"
         className="min-h-[700px] bg-brand-dark py-[80px]"
       >
+         <ContainerNoticia
+          titulo={
+            "Resultado do Processo Seletivo MUSSPE 2026"
+          }
+          resumo={
+            "Recebemos muitas inscrições e somos muito gratos a todos que demonstraram interesse em fazer parte do Museu de Solos de Pernambuco. Parabenizamos os bolsistas selecionados e desejamos um caminho de muito aprendizado, trocas e crescimento. Obrigada a todos que participaram!"
+          }
+          data={"09/02/2026"}
+          link={
+            "https://www.instagram.com/p/DUizq0UDXzO/?img_index=1"
+          }
+          carrossel={true}
+          carrosselImages={n12Imagens}
+          carrosselWidth="w-[90%] sm:w-[320px]"
+          carrosselHeight="h-[90%] sm:h-[420px]"
+          ajusteMt={"md:mt-[-70px]"}
+          ajusteMb={"mb-[-40px]"}
+        />
       <ContainerNoticia
           titulo={
             "O MUSSPE chega a 4.000 seguidores no Instagram!"
@@ -80,7 +101,7 @@ export default function Noticias() {
           resumo={
             "O MUSSPE só cresce porque existe uma comunidade que acredita na ciência, na educação e na importância do solo para a vida. Obrigada a cada pessoa que acompanha, compartilha, comenta e fortalece nosso trabalho todos os dias. Seguimos juntos levando conhecimento, curiosidades e ações educativas para cada vez mais pessoas!"
           }
-          data={"06/02/2025"}
+          data={"06/02/2026"}
           botao="Saiba mais"
           imagem={seguidoresInsta}
           link={
