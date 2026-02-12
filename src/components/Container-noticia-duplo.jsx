@@ -19,8 +19,8 @@ export default function ContainerNoticiaDuplo({
   carrosselWidth = "w-[300px]",
   carrosselHeight = "h-[300px]",
   carrosselTemLink = false,
-  ajusteMt,
-  ajusteMb,
+  ajusteMt = "",
+  ajusteMb = "",
   disabled = false,
   disabled2 = false,
 }) {
