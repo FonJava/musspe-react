@@ -1,9 +1,8 @@
 import { FaInstagram, FaFacebook, FaYoutube, FaTiktok } from "react-icons/fa";
-import { Link } from "react-router-dom";
 import Botao from "./Botao";
 import Carrossel from "./Carrossel";
 
-export default function ContainerNoticia({
+export default function ContainerNoticiaDuplo({
   data,
   titulo,
   resumo,
@@ -12,15 +11,18 @@ export default function ContainerNoticia({
   imgWidth = "w-[250px]",
   link,
   botao = "Saiba mais",
+  link2,
+  botao2 = "Outro botão",
   carrossel = false,
   carrosselImages = [],
   carrosselLinks = [],
   carrosselWidth = "w-[300px]",
   carrosselHeight = "h-[300px]",
   carrosselTemLink = false,
-  ajusteMt,
-  ajusteMb,
+  ajusteMt = "",
+  ajusteMb = "",
   disabled = false,
+  disabled2 = false,
 }) {
   return (
     <div className="mx-auto mb-[30px] mt-[10px] flex min-h-[200px] w-[90%] flex-col rounded-[20px] bg-brand-roxo lg:w-[800px]">
@@ -94,12 +96,25 @@ export default function ContainerNoticia({
           <FaFacebook size={20} />
         </a>
       </div>
-      <div className="mx-auto mb-[50px] mt-[-90px]">
-        <Link to={link}>
-          <Botao tamanhoFonte="text-[25px]" paddingX="px-[30px]" disabled={disabled}>
+      <div className="mx-auto mb-[50px] mt-[-90px] flex flex-col items-center justify-center gap-4 sm:flex-row">
+        <a href={link} target="_blank" rel="noopener noreferrer">
+          <Botao
+            tamanhoFonte="text-[25px]"
+            paddingX="px-[30px]"
+            disabled={disabled}
+          >
             {botao}
           </Botao>
-        </Link>
+        </a>
+        <a href={link2} target="_blank" rel="noopener noreferrer">
+          <Botao
+            tamanhoFonte="text-[25px]"
+            paddingX="px-[30px]"
+            disabled={disabled2}
+          >
+            {botao2}
+          </Botao>
+        </a>
       </div>
     </div>
   );
