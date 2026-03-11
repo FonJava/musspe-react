@@ -217,7 +217,7 @@ const colaboradores = [
     id: 12,
     imagem: marina,
     lattes: "https://lattes.cnpq.br/3387445713971761",
-    categoria: "educação",
+    categoria: "educacao",
   },
   {
     id: 13,
@@ -229,7 +229,7 @@ const colaboradores = [
     id: 14,
     imagem: messias,
     lattes: "https://lattes.cnpq.br/9075688414280187",
-    categoria: "educação",
+    categoria: "educacao",
   },
   {
     id: 15,
