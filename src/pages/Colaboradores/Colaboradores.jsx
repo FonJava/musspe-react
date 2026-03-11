@@ -36,6 +36,11 @@ import eloyse from "/imagens/colaboradores/eloyse.png";
 import marcelo from "/imagens/colaboradores/marcelo.png";
 import prof from "/imagens/colaboradores/prof.png";
 import tiago from "/imagens/colaboradores/tiago.png";
+import messias from "/imagens/colaboradores/messias.png";
+import wes from "/imagens/colaboradores/wes.png";
+import marina from "/imagens/colaboradores/marina.png";
+import clayton from "/imagens/colaboradores/clayton.png";
+
 import Botao from "../../components/Botao";
 import iconeCoord from "/imagens/filtro-coordenacao-icon.png";
 import iconeEdu from "/imagens/filtro-educacao-icon.png";
@@ -180,39 +185,63 @@ const colaboradores = [
   },
   {
     id: 7,
+    imagem: clayton,
+    lattes: "https://lattes.cnpq.br/4663761129370979",
+    categoria: "educacao",
+  },
+  {
+    id: 8,
     imagem: isadora,
     lattes: "https://lattes.cnpq.br/5301475110301032",
     categoria: "educacao",
   },
   {
-    id: 8,
+    id: 9,
     imagem: lizandra,
     lattes: "http://lattes.cnpq.br/8260475667541184",
     categoria: "educacao",
   },
   {
-    id: 9,
+    id: 10,
     imagem: eloyse,
     lattes: "http://lattes.cnpq.br/9000206461335481",
     categoria: "comunicacao",
   },
   {
-    id: 10,
+    id: 11,
     imagem: marcelo,
     lattes: "http://lattes.cnpq.br/1718364944595251",
     categoria: "educacao",
   },
   {
-    id: 11,
+    id: 12,
+    imagem: marina,
+    lattes: "https://lattes.cnpq.br/3387445713971761",
+    categoria: "educação",
+  },
+  {
+    id: 13,
     imagem: prof,
     lattes: "http://lattes.cnpq.br/7832462604842279",
     categoria: "coordenacao",
   },
   {
-    id: 12,
+    id: 14,
+    imagem: messias,
+    lattes: "https://lattes.cnpq.br/9075688414280187",
+    categoria: "educação",
+  },
+  {
+    id: 15,
     imagem: tiago,
     lattes: "http://lattes.cnpq.br/3104295042201171",
     categoria: "comunicacao",
+  },
+  {
+    id: 16,
+    imagem: wes,
+    lattes: "https://lattes.cnpq.br/7266914270335560",
+    categoria: "educacao",
   },
 ];
 
