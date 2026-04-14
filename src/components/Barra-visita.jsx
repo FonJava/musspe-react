@@ -12,7 +12,7 @@ export default function BarraVisita() {
         solos pernambucanos!
       </h1>
       <div className="flex justify-center pb-6">
-        <Link to="visita.html">
+        <Link to="/visita">
           <Botao tamanhoFonte="text-2xl" paddingY="py-1">
             Agende uma visita
           </Botao>
