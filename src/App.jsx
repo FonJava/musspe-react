@@ -30,6 +30,10 @@ function AppWrapper() {
     setActivePage(page);
   }, [location.pathname]);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
   return (
     <>
       <Header activePage={activePage} setActivePage={setActivePage} />
