@@ -10,6 +10,7 @@ const FormularioVisita = () => {
   const navigate = useNavigate();
   const [selectedDate, setSelectedDate] = useState("");
   const [selectedTime, setSelectedTime] = useState("");
+  const [hoveredTime, setHoveredTime] = useState("");
   const [formData, setFormData] = useState({
     nome: "",
     telefone: "",
@@ -18,6 +19,7 @@ const FormularioVisita = () => {
   });
   const [submitEnabled, setSubmitEnabled] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
+  const activeTime = hoveredTime || selectedTime;
 
   useEffect(() => {
     flatpickr("#date", {
@@ -43,6 +45,14 @@ const FormularioVisita = () => {
     setSelectedTime(time);
   };
 
+  const getTimeDescription = (time) => {
+    if (time === "Manhã") {
+      return "As visitas têm duração de até 1h e 30min. Horários disponíveis das 8h às 13h.";
+    }
+
+    return "As visitas têm duração de até 1h e 30min. Horários disponíveis das 13h30 às 17h.";
+  };
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -61,7 +71,7 @@ const FormularioVisita = () => {
 
     try {
       const response = await fetch("https://formspree.io/f/xgvwgoel", {
-        method: "POST",
+        /* teste: xgvwqyeb musspe: xgvwgoel */ method: "POST",
         body: payload,
         headers: { Accept: "application/json" },
       });
@@ -103,30 +113,30 @@ const FormularioVisita = () => {
           required
         />
         <h2 className="font-barlow-medium text-lg text-brand-dark">
-          Selecione um horário
+          Selecione um turno
         </h2>
-        <div className="mb-[60px] mt-2 grid w-[300px] grid-cols-2 rounded-3xl bg-brand-roxo px-[10px] py-[15px] sm:w-[450px] md:w-[670px] md:px-[20px] md:py-[35px]">
-          {[
-            "8h às 9h30",
-            "9h30 às 11h",
-            "11h às 12h30",
-            "8h30 às 10h",
-            "10h às 11h30",
-            "11h30 às 13h",
-          ].map((time) => (
+        <div className="mb-[60px] mt-3 grid w-[300px] grid-cols-2 gap-3 rounded-3xl bg-brand-roxo px-[10px] py-[15px] sm:w-[450px] md:w-[670px] md:px-[20px] md:py-[35px]">
+          {["Manhã", "Tarde"].map((time) => (
             <button
               key={time}
               type="button"
+              onMouseEnter={() => setHoveredTime(time)}
+              onMouseLeave={() => setHoveredTime("")}
               className={
-                selectedTime === time
-                  ? "mx-1 my-2 w-[130px] rounded-2xl bg-brand-laranja px-2 py-2 font-barlow text-xl text-white transition-colors duration-300 sm:w-[200px] md:w-[300px] md:py-3 md:text-2xl"
-                  : "mx-1 my-2 w-[130px] rounded-2xl bg-white px-2 py-2 font-barlow text-xl transition-colors duration-300 sm:w-[200px] md:w-[300px] md:py-3 md:text-2xl"
+                activeTime === time
+                  ? "duration-900 mx-1 my-2 flex min-h-[110px] w-[130px] flex-col items-center justify-center rounded-2xl bg-brand-laranja px-2 py-2 text-white transition-all sm:w-[200px] md:w-[300px] md:py-3"
+                  : "duration-900 mx-1 my-2 flex min-h-[72px] w-[130px] flex-col items-center justify-center rounded-2xl bg-white px-2 py-2 transition-all sm:w-[200px] md:w-[300px] md:py-3"
               }
               onClick={() => handleTimeClick(time)}
               aria-pressed={selectedTime === time}
               aria-label={`Selecionar horário ${time}`}
             >
-              {time}
+              <span className="font-barlow text-xl md:text-2xl">{time}</span>
+              {activeTime === time && (
+                <span className="mt-2 max-w-[260px] text-center font-barlow text-xs leading-tight md:text-sm">
+                  {getTimeDescription(time)}
+                </span>
+              )}
             </button>
           ))}
         </div>
