@@ -124,12 +124,12 @@ const FormularioVisita = () => {
               onMouseLeave={() => setHoveredTime("")}
               className={
                 activeTime === time
-                  ? "duration-900 mx-1 my-2 flex min-h-[110px] w-[130px] flex-col items-center justify-center rounded-2xl bg-brand-laranja px-2 py-2 text-white transition-all sm:w-[200px] md:w-[300px] md:py-3"
-                  : "duration-900 mx-1 my-2 flex min-h-[72px] w-[130px] flex-col items-center justify-center rounded-2xl bg-white px-2 py-2 transition-all sm:w-[200px] md:w-[300px] md:py-3"
+                  ? "mx-1 my-2 flex min-h-[110px] w-[130px] flex-col items-center justify-center rounded-2xl bg-brand-laranja px-2 py-2 text-white transition-all duration-300 sm:w-[200px] md:w-[300px] md:py-3"
+                  : "mx-1 my-2 flex min-h-[72px] w-[130px] flex-col items-center justify-center rounded-2xl bg-white px-2 py-2 transition-all duration-300 sm:w-[200px] md:w-[300px] md:py-3"
               }
               onClick={() => handleTimeClick(time)}
               aria-pressed={selectedTime === time}
-              aria-label={`Selecionar horário ${time}`}
+              aria-label={`Selecionar turno ${time}`}
             >
               <span className="font-barlow text-xl md:text-2xl">{time}</span>
               {activeTime === time && (

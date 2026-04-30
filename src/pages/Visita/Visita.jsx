@@ -74,7 +74,7 @@ export default function Visita() {
             <span className="my-4 flex gap-2">
               <FaClock size={16} className="mt-1.5 text-brand-laranja" />
               <p className="flex items-center gap-2">
-                Segunda, Terça e Quinta (8h às 13h)
+                Segunda, Terça e Quinta (manhã e tarde)
               </p>
             </span>
 
