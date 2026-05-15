@@ -1,7 +1,8 @@
+import React from "react";
 import { Link } from "react-router-dom";
 import { FaInstagram, FaFacebook, FaYoutube, FaTiktok } from "react-icons/fa";
 
-export default function Footer() {
+export default function Footer({ visits = 0 }) {
   return (
     <footer className="bottom-0 min-h-[270px] w-full bg-brand-dark pb-8 font-barlow text-[16px] text-brand-bege">
       <div className="mx-auto max-w-[560px]">
@@ -78,6 +79,9 @@ export default function Footer() {
           </div>
         </div>
         <div className="mx-14 pt-6 text-end sm:mx-0 sm:pt-0">
+          <p className="mb-2 font-barlow-italic text-[14px]">
+            Visitas do site: {visits}
+          </p>
           <p className="font-barlow-medium-italic text-[15px]">
             Design por Tiago Finizola, implementação por Anthony Guerra e
             Gabriel Leão, e ilustrações por Laura Lins.
