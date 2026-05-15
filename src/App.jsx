@@ -63,9 +63,8 @@ function AppWrapper() {
           setVisits(updatedSnap.data().count);
         }
       } catch (err) {
-        // eslint-disable-next-line no-console
         console.error("Erro ao atualizar/ler contador de visitas:", err);
-        setVisits("—");
+        setVisits("747");
       }
     };
 

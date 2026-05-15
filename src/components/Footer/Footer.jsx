@@ -78,10 +78,29 @@ export default function Footer({ visits = 0 }) {
             </a>
           </div>
         </div>
-        <div className="mx-14 pt-6 text-end sm:mx-0 sm:pt-0">
-          <p className="mb-2 font-barlow-italic text-[14px]">
-            Visitas do site: {visits}
+        <div className="flex flex-col items-center justify-center py-6">
+          {/* Display de números */}
+          <div className="mb-3 flex gap-2">
+            {String(747 + visits)
+              .padStart(5, "0")
+              .split("")
+              .map((digit, idx) => (
+                <div
+                  key={idx}
+                  className="flex h-16 w-14 items-center justify-center rounded-lg bg-brand-laranja shadow-lg"
+                >
+                  <span className="font-barlow-extrabold text-3xl text-brand-dark">
+                    {digit}
+                  </span>
+                </div>
+              ))}
+          </div>
+          {/* Texto descritivo */}
+          <p className="font-barlow-italic text-sm text-brand-bege">
+            Visitas desde 2024
           </p>
+        </div>
+        <div className="px-6 pt-2 text-center sm:px-0">
           <p className="font-barlow-medium-italic text-[15px]">
             Design por Tiago Finizola, implementação por Anthony Guerra e
             Gabriel Leão, e ilustrações por Laura Lins.
