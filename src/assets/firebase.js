@@ -10,13 +10,13 @@ const firebaseConfig = {
   messagingSenderId: "697727595550",
   appId: "1:697727595550:web:3ed7a2b5f906c632aa6a0f",
 };
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
 
-// Sign in anonymously so Firestore rules that require auth can pass.
-signInAnonymously(auth).catch((err) => {
-  console.error("Erro ao autenticar anonimamente:", err);
-});
+const app = initializeApp(firebaseConfig);
 
 export const db = getFirestore(app);
-export { auth };
+
+export const auth = getAuth(app);
+
+export const authReady = signInAnonymously(auth).catch((err) => {
+  console.error("Erro ao autenticar anonimamente:", err);
+});

@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
-import { doc, getDoc, setDoc, updateDoc, increment } from "firebase/firestore";
-import { db } from "./assets/firebase";
+import { doc, getDoc, setDoc, increment } from "firebase/firestore";
+
+import { db, authReady } from "./assets/firebase";
+
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+
 import Home from "./pages/Home/Home";
 import Noticias from "./pages/Noticias/Noticias";
 import Acervo from "./pages/Acervo/Acervo";
@@ -14,6 +17,7 @@ import NotFound from "./pages/NotFound/NotFound";
 
 function AppWrapper() {
   const location = useLocation();
+
   const [activePage, setActivePage] = useState("home");
   const [visits, setVisits] = useState(0);
 
@@ -26,7 +30,9 @@ function AppWrapper() {
       "/colaboradores": "colaboradores",
       "/visita": "visita",
     };
+
     const page = pathToPage[location.pathname] || "notfound";
+
     setActivePage(page);
   }, [location.pathname]);
 
@@ -37,6 +43,8 @@ function AppWrapper() {
   useEffect(() => {
     const countVisit = async () => {
       try {
+        await authReady;
+
         const alreadyVisited = sessionStorage.getItem("visited");
 
         const ref = doc(db, "metrics", "visits");
@@ -44,17 +52,15 @@ function AppWrapper() {
         if (!alreadyVisited) {
           sessionStorage.setItem("visited", "true");
 
-          const snap = await getDoc(ref);
-
-          if (snap.exists()) {
-            await updateDoc(ref, {
+          await setDoc(
+            ref,
+            {
               count: increment(1),
-            });
-          } else {
-            await setDoc(ref, {
-              count: 1,
-            });
-          }
+            },
+            {
+              merge: true,
+            },
+          );
         }
 
         const updatedSnap = await getDoc(ref);
@@ -64,7 +70,8 @@ function AppWrapper() {
         }
       } catch (err) {
         console.error("Erro ao atualizar/ler contador de visitas:", err);
-        setVisits("747");
+
+        setVisits("—");
       }
     };
 
@@ -74,6 +81,7 @@ function AppWrapper() {
   return (
     <>
       <Header activePage={activePage} setActivePage={setActivePage} />
+
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -85,6 +93,7 @@ function AppWrapper() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
+
       <Footer visits={visits} />
     </>
   );
