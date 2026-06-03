@@ -12,6 +12,7 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "firebase": "^12.13.0",
     "flatpickr": "^4.6.13",
     "leaflet": "^1.9.4",
     "mammoth": "^1.10.0",

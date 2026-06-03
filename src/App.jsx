@@ -1,21 +1,25 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { doc, getDoc, setDoc, increment } from "firebase/firestore";
+
+import { db, authReady } from "./assets/firebase";
+
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+
 import Home from "./pages/Home/Home";
 import Noticias from "./pages/Noticias/Noticias";
 import Acervo from "./pages/Acervo/Acervo";
 import Colaboradores from "./pages/Colaboradores/Colaboradores";
 import Jogos from "./pages/Jogos/Jogos";
 import Visita from "./pages/Visita/Visita";
-/*
-
- */
 import NotFound from "./pages/NotFound/NotFound";
 
 function AppWrapper() {
   const location = useLocation();
+
   const [activePage, setActivePage] = useState("home");
+  const [visits, setVisits] = useState(0);
 
   useEffect(() => {
     const pathToPage = {
@@ -26,7 +30,9 @@ function AppWrapper() {
       "/colaboradores": "colaboradores",
       "/visita": "visita",
     };
+
     const page = pathToPage[location.pathname] || "notfound";
+
     setActivePage(page);
   }, [location.pathname]);
 
@@ -34,9 +40,48 @@ function AppWrapper() {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
+  useEffect(() => {
+    const countVisit = async () => {
+      try {
+        await authReady;
+
+        const alreadyVisited = sessionStorage.getItem("visited");
+
+        const ref = doc(db, "metrics", "visits");
+
+        if (!alreadyVisited) {
+          sessionStorage.setItem("visited", "true");
+
+          await setDoc(
+            ref,
+            {
+              count: increment(1),
+            },
+            {
+              merge: true,
+            },
+          );
+        }
+
+        const updatedSnap = await getDoc(ref);
+
+        if (updatedSnap.exists()) {
+          setVisits(updatedSnap.data().count);
+        }
+      } catch (err) {
+        console.error("Erro ao atualizar/ler contador de visitas:", err);
+
+        setVisits(0);
+      }
+    };
+
+    countVisit();
+  }, []);
+
   return (
     <>
       <Header activePage={activePage} setActivePage={setActivePage} />
+
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -48,7 +93,8 @@ function AppWrapper() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
-      <Footer />
+
+      <Footer visits={visits} />
     </>
   );
 }

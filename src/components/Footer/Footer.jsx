@@ -1,7 +1,8 @@
+import React from "react";
 import { Link } from "react-router-dom";
 import { FaInstagram, FaFacebook, FaYoutube, FaTiktok } from "react-icons/fa";
 
-export default function Footer() {
+export default function Footer({ visits = 0 }) {
   return (
     <footer className="bottom-0 min-h-[270px] w-full bg-brand-dark pb-8 font-barlow text-[16px] text-brand-bege">
       <div className="mx-auto max-w-[560px]">
@@ -77,7 +78,29 @@ export default function Footer() {
             </a>
           </div>
         </div>
-        <div className="mx-14 pt-6 text-end sm:mx-0 sm:pt-0">
+        <div className="flex flex-col items-center justify-center py-6">
+          {/* Display de números */}
+          <div className="mb-3 flex gap-2">
+            {String(747 + visits)
+              .padStart(5, "0")
+              .split("")
+              .map((digit, idx) => (
+                <div
+                  key={idx}
+                  className="flex h-16 w-14 items-center justify-center rounded-lg bg-brand-laranja shadow-lg"
+                >
+                  <span className="font-barlow-extrabold text-3xl text-brand-dark">
+                    {digit}
+                  </span>
+                </div>
+              ))}
+          </div>
+          {/* Texto descritivo */}
+          <p className="font-barlow-italic text-sm text-brand-bege">
+            Visitas desde 2024
+          </p>
+        </div>
+        <div className="px-6 pt-2 text-center sm:px-0">
           <p className="font-barlow-medium-italic text-[15px]">
             Design por Tiago Finizola, implementação por Anthony Guerra e
             Gabriel Leão, e ilustrações por Laura Lins.
