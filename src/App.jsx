@@ -71,7 +71,7 @@ function AppWrapper() {
       } catch (err) {
         console.error("Erro ao atualizar/ler contador de visitas:", err);
 
-        setVisits("—");
+        setVisits(0);
       }
     };
 
