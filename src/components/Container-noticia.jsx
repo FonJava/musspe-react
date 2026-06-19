@@ -18,8 +18,8 @@ export default function ContainerNoticia({
   carrosselWidth = "w-[300px]",
   carrosselHeight = "h-[300px]",
   carrosselTemLink = false,
-  ajusteMt,
-  ajusteMb,
+  ajusteMt = "",
+  ajusteMb = "",
   disabled = false,
 }) {
   return (
