@@ -8,7 +8,7 @@ import BarraVisita from "../../components/Barra-visita";
 import ana from "/imagens/voluntarios/ana.png";
 import caroline from "/imagens/voluntarios/caroline.png";
 import santos from "/imagens/voluntarios/santos.png";
-import clarissa from "/imagens/voluntarios/clarissa.png";
+import clarissa from "/imagens/colaboradores/clarissa.png";
 import clistenes from "/imagens/voluntarios/clistenes.png";
 import cybelle from "/imagens/voluntarios/cybelle.png";
 import fernando from "/imagens/voluntarios/fernando.png";
@@ -24,18 +24,13 @@ import paula from "/imagens/voluntarios/paula.png";
 import sheila from "/imagens/voluntarios/sheila.png";
 import william from "/imagens/voluntarios/william.png";
 import ygor from "/imagens/voluntarios/ygor.png";
-import adriana from "/imagens/colaboradores/adriana.png";
 import anthony from "/imagens/colaboradores/anthony.png";
-import antonio from "/imagens/colaboradores/antonio.png";
 import gabi from "/imagens/colaboradores/gabi.png";
 import geovana from "/imagens/colaboradores/geovana.png";
 import gil from "/imagens/colaboradores/gil.png";
-import isadora from "/imagens/colaboradores/isadora.png";
-import lizandra from "/imagens/colaboradores/lizandra.png";
-import eloyse from "/imagens/colaboradores/eloyse.png";
 import marcelo from "/imagens/colaboradores/marcelo.png";
 import prof from "/imagens/colaboradores/prof.png";
-import tiago from "/imagens/colaboradores/tiago.png";
+import tiago from "/imagens/voluntarios/tiago.png";
 import messias from "/imagens/colaboradores/messias.png";
 import wes from "/imagens/colaboradores/wes.png";
 import marina from "/imagens/colaboradores/marina.png";
@@ -66,73 +61,73 @@ const voluntarios = [
   },
   {
     id: 4,
-    imagem: clarissa,
-    lattes: "https://lattes.cnpq.br/2620267739353261",
-  },
-  {
-    id: 5,
     imagem: clistenes,
     lattes: "http://lattes.cnpq.br/2562022438053334",
   },
   {
-    id: 6,
+    id: 5,
     imagem: cybelle,
     lattes: "http://lattes.cnpq.br/2845272964420272",
   },
   {
-    id: 7,
+    id: 6,
     imagem: fernando,
     lattes: "http://lattes.cnpq.br/4818569008052606",
   },
   {
-    id: 8,
+    id: 7,
     imagem: flavio,
     lattes: "http://lattes.cnpq.br/7835564748504772",
   },
   {
-    id: 9,
+    id: 8,
     imagem: gabriel,
     lattes: "http://lattes.cnpq.br/0023008602888331",
   },
   {
-    id: 10,
+    id: 9,
     imagem: glevia,
     lattes: "http://lattes.cnpq.br/1630682584288719",
   },
   {
-    id: 11,
+    id: 10,
     imagem: jean,
     lattes: "http://lattes.cnpq.br/5698373233632800",
   },
   {
-    id: 12,
+    id: 11,
     imagem: jessica,
     lattes: "http://lattes.cnpq.br/1141310989027732",
   },
   {
-    id: 13,
+    id: 12,
     imagem: julia,
     lattes: "http://lattes.cnpq.br/0784718955904957",
   },
   {
-    id: 14,
+    id: 13,
     imagem: luis,
     lattes: "http://lattes.cnpq.br/3309448267226921",
   },
   {
-    id: 15,
+    id: 14,
     imagem: luiz,
     lattes: "http://lattes.cnpq.br/2614964367896670",
   },
   {
-    id: 16,
+    id: 15,
     imagem: paula,
     lattes: "http://lattes.cnpq.br/1779598476646308",
   },
   {
-    id: 17,
+    id: 16,
     imagem: sheila,
     lattes: "http://lattes.cnpq.br/4097700872675583",
+  },
+  {
+    id: 17,
+    imagem: tiago,
+    lattes: "http://lattes.cnpq.br/3104295042201171",
   },
   {
     id: 18,
@@ -149,96 +144,66 @@ const voluntarios = [
 const colaboradores = [
   {
     id: 1,
-    imagem: adriana,
-    lattes: "https://lattes.cnpq.br/9141816854544077",
-    categoria: "educacao",
-  },
-  {
-    id: 2,
     imagem: anthony,
     lattes: "http://lattes.cnpq.br/6495787794910741",
     categoria: "comunicacao",
   },
   {
+    id: 2,
+    imagem: clarissa,
+    lattes: "https://lattes.cnpq.br/2620267739353261",
+    categoria: "coordenacao",
+  },
+  {
     id: 3,
-    imagem: antonio,
-    lattes: "http://lattes.cnpq.br/1492501799980114",
-    categoria: "educacao",
+    imagem: gabi,
+    lattes: "https://lattes.cnpq.br/2076332146794589",
+    categoria: "comunicacao",
   },
   {
     id: 4,
-    imagem: gabi,
-    lattes: "https://lattes.cnpq.br/2076332146794589",
-    categoria: "educacao",
-  },
-  {
-    id: 5,
     imagem: geovana,
     lattes: "https://lattes.cnpq.br/4227537453498441",
     categoria: "comunicacao",
   },
   {
-    id: 6,
+    id: 5,
     imagem: gil,
     lattes: "http://lattes.cnpq.br/4348590137271886",
     categoria: "educacao",
   },
   {
-    id: 7,
+    id: 6,
     imagem: clayton,
     lattes: "https://lattes.cnpq.br/4663761129370979",
     categoria: "educacao",
   },
   {
-    id: 8,
-    imagem: isadora,
-    lattes: "https://lattes.cnpq.br/5301475110301032",
-    categoria: "educacao",
-  },
-  {
-    id: 9,
-    imagem: lizandra,
-    lattes: "http://lattes.cnpq.br/8260475667541184",
-    categoria: "educacao",
-  },
-  {
-    id: 10,
-    imagem: eloyse,
-    lattes: "http://lattes.cnpq.br/9000206461335481",
-    categoria: "comunicacao",
-  },
-  {
-    id: 11,
+    id: 7,
     imagem: marcelo,
     lattes: "http://lattes.cnpq.br/1718364944595251",
     categoria: "educacao",
   },
   {
-    id: 12,
+    id: 8,
     imagem: marina,
     lattes: "https://lattes.cnpq.br/3387445713971761",
     categoria: "educacao",
   },
   {
-    id: 13,
+    id: 9,
     imagem: prof,
     lattes: "http://lattes.cnpq.br/7832462604842279",
     categoria: "coordenacao",
   },
   {
-    id: 14,
+    id: 10,
     imagem: messias,
     lattes: "https://lattes.cnpq.br/9075688414280187",
     categoria: "educacao",
   },
   {
-    id: 15,
-    imagem: tiago,
-    lattes: "http://lattes.cnpq.br/3104295042201171",
-    categoria: "comunicacao",
-  },
-  {
-    id: 16,
+    id: 11,
     imagem: wes,
     lattes: "https://lattes.cnpq.br/7266914270335560",
     categoria: "educacao",
@@ -388,7 +353,7 @@ export default function Colaboradores() {
   const [activeTab, setActiveTab] = useState(0);
 
   const tabs = [
-    { name: "Bolsistas" },
+    { name: "Equipe" },
     { name: "Voluntários(as)" },
     { name: "Apoiadores(as)" },
   ];
