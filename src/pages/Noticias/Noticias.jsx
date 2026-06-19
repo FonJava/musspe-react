@@ -30,6 +30,7 @@ import selecaoImg from "/imagens/selecao2026.png";
 import seguidoresInsta from "/imagens/noticias/n11/seguidores.png";
 import resultadoProcesso from "/imagens/noticias/n12/resultadoProc.png";
 import tabelaResultado from "/imagens/noticias/n12/tabelaResultado.png";
+import noticiajepex from "/imagens/noticias/n13/noticiajepex.PNG";
 
 export default function Noticias() {
   const scrollToNoticias = () => {
@@ -76,17 +77,29 @@ export default function Noticias() {
         id="noticias-section"
         className="min-h-[700px] bg-brand-dark py-[80px]"
       >
-         <ContainerNoticia
+        <ContainerNoticia
           titulo={
-            "Resultado do Processo Seletivo MUSSPE 2026"
+            "Trabalho do MUSSPE é premiado com Menção Honrosa no CONEX/JEPEX"
           }
+          resumo={
+            "O MUSSPE e sua equipe foram contemplados com o prêmio de menção honrosa pelo trabalho “Exposição Itinerante e Mediação Científica: Ações de Extensão do MUSSPE para a Popularização do Solo em Pernambuco” apresentado pelo bolsista FACEPE José Clayton Silva na XXIV Jornada de Ensino, Pesquisa e Extensão (JEPEX). O trabalho concorreu na área Temática de Meio Ambiente no XXII Congresso de Extensão (CONEX). Parabéns aos autores e a todos os envolvidos no trabalho! O MUSSPE agradece a colaboração e dedicação de toda a equipe!"
+          }
+          data={"19/06/2026"}
+          imagem={noticiajepex}
+          link={
+            "https://www.instagram.com/p/DZxQYYbOidJ/?igsh=am5iYmdjMTZqbDc="
+          }
+          imgWidth="w-[90%] sm:w-[300px]"
+          imgHeight="h-[90%] sm:h-[360px]"
+          ajusteMt={"mt-[40px] md:mt-0"}
+        />
+        <ContainerNoticia
+          titulo={"Resultado do Processo Seletivo MUSSPE 2026"}
           resumo={
             "Recebemos muitas inscrições e somos muito gratos a todos que demonstraram interesse em fazer parte do Museu de Solos de Pernambuco. Parabenizamos os bolsistas selecionados e desejamos um caminho de muito aprendizado, trocas e crescimento. Obrigada a todos que participaram!"
           }
           data={"09/02/2026"}
-          link={
-            "https://www.instagram.com/p/DUizq0UDXzO/?img_index=1"
-          }
+          link={"https://www.instagram.com/p/DUizq0UDXzO/?img_index=1"}
           carrossel={true}
           carrosselImages={n12Imagens}
           carrosselWidth="w-[90%] sm:w-[320px]"
@@ -94,19 +107,15 @@ export default function Noticias() {
           ajusteMt={"md:mt-[-70px]"}
           ajusteMb={"mb-[-40px]"}
         />
-      <ContainerNoticia
-          titulo={
-            "O MUSSPE chega a 4.000 seguidores no Instagram!"
-          }
+        <ContainerNoticia
+          titulo={"O MUSSPE chega a 4.000 seguidores no Instagram!"}
           resumo={
             "O MUSSPE só cresce porque existe uma comunidade que acredita na ciência, na educação e na importância do solo para a vida. Obrigada a cada pessoa que acompanha, compartilha, comenta e fortalece nosso trabalho todos os dias. Seguimos juntos levando conhecimento, curiosidades e ações educativas para cada vez mais pessoas!"
           }
           data={"06/02/2026"}
           botao="Saiba mais"
           imagem={seguidoresInsta}
-          link={
-            "https://www.instagram.com/museudesolospe/"
-          }
+          link={"https://www.instagram.com/museudesolospe/"}
           imgWidth="w-[90%] sm:w-[270px]"
           imgHeight="h-[90%] sm:h-[340px]"
           ajusteMt={"mt-[40px] md:mt-0"}
