@@ -40,7 +40,7 @@ import Botao from "../../components/Botao";
 import iconeCoord from "/imagens/filtro-coordenacao-icon.png";
 import iconeEdu from "/imagens/filtro-educacao-icon.png";
 import iconeCom from "/imagens/filtro-comunicacao-icon.png";
-import colaboradoresImg from "/imagens/colaboradores-imagem.png";
+import colaboradoresImg from "/imagens/colaboradores-imagem.webp";
 import { FaArrowDown } from "react-icons/fa";
 
 const voluntarios = [
