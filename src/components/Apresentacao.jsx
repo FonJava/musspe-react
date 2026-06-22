@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import apreesq from "/imagens/apresentacao-esquerda.png";
-import apredir from "/imagens/apresentacao-direita.png";
+import apreesq from "/imagens/apresentacao-esquerda.webp";
+import apredir from "/imagens/apresentacao-direita.webp";
 import { FaInstagram, FaYoutube, FaTiktok, FaFacebook } from "react-icons/fa";
 
 export default function Apresentacao({

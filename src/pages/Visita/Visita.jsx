@@ -7,8 +7,8 @@ import {
   FaMapMarkerAlt,
 } from "react-icons/fa";
 
-import visitaDesktop from "/imagens/imagem-visitas.png";
-import visitaMobile from "/imagens/imagem-visitas2.png";
+import visitaDesktop from "/imagens/imagem-visitas.webp";
+import visitaMobile from "/imagens/imagem-visitas2.webp";
 import FormularioVisita from "../../components/FormularioVisita";
 import imagemMaps from "/imagens/imagen-mapa.png";
 

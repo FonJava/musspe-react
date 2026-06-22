@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense, lazy } from "react";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { doc, getDoc, setDoc, increment } from "firebase/firestore";
 
@@ -6,14 +6,15 @@ import { db, authReady } from "./assets/firebase";
 
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+import Spinner from "./components/Spinner/Spinner";
 
-import Home from "./pages/Home/Home";
-import Noticias from "./pages/Noticias/Noticias";
-import Acervo from "./pages/Acervo/Acervo";
-import Colaboradores from "./pages/Colaboradores/Colaboradores";
-import Jogos from "./pages/Jogos/Jogos";
-import Visita from "./pages/Visita/Visita";
-import NotFound from "./pages/NotFound/NotFound";
+const Home = lazy(() => import("./pages/Home/Home"));
+const Noticias = lazy(() => import("./pages/Noticias/Noticias"));
+const Acervo = lazy(() => import("./pages/Acervo/Acervo"));
+const Colaboradores = lazy(() => import("./pages/Colaboradores/Colaboradores"));
+const Jogos = lazy(() => import("./pages/Jogos/Jogos"));
+const Visita = lazy(() => import("./pages/Visita/Visita"));
+const NotFound = lazy(() => import("./pages/NotFound/NotFound"));
 
 function AppWrapper() {
   const location = useLocation();
@@ -83,15 +84,17 @@ function AppWrapper() {
       <Header activePage={activePage} setActivePage={setActivePage} />
 
       <main>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/noticias" element={<Noticias />} />
-          <Route path="/acervo" element={<Acervo />} />
-          <Route path="/jogos" element={<Jogos />} />
-          <Route path="/colaboradores" element={<Colaboradores />} />
-          <Route path="/visita" element={<Visita />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <Suspense fallback={<Spinner />}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/noticias" element={<Noticias />} />
+            <Route path="/acervo" element={<Acervo />} />
+            <Route path="/jogos" element={<Jogos />} />
+            <Route path="/colaboradores" element={<Colaboradores />} />
+            <Route path="/visita" element={<Visita />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
       </main>
 
       <Footer visits={visits} />

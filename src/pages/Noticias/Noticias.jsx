@@ -1,6 +1,6 @@
 import Apresentacao from "../../components/Apresentacao";
 import BarraVisita from "../../components/Barra-visita";
-import mzinho from "/imagens/mzinho-alt.png";
+import mzinho from "/imagens/mzinho-alt.webp";
 import Botao from "../../components/Botao";
 import { FaArrowDown } from "react-icons/fa";
 import ContainerNoticia from "../../components/Container-noticia";
@@ -30,7 +30,7 @@ import selecaoImg from "/imagens/selecao2026.png";
 import seguidoresInsta from "/imagens/noticias/n11/seguidores.png";
 import resultadoProcesso from "/imagens/noticias/n12/resultadoProc.png";
 import tabelaResultado from "/imagens/noticias/n12/tabelaResultado.png";
-import noticiajepex from "/imagens/noticias/n13/noticiajepex.PNG";
+import noticiajepex from "/imagens/noticias/n13/noticiajepex.webp";
 
 export default function Noticias() {
   const scrollToNoticias = () => {

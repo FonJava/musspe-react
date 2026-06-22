@@ -3,7 +3,7 @@ import Apresentacao from "../../components/Apresentacao";
 import Botao from "../../components/Botao";
 import Modal from "../../components/Modal";
 import { FaArrowDown } from "react-icons/fa";
-import acervoImg from "/imagens/acervo-inicio-imagens.png";
+import acervoImg from "/imagens/acervo-inicio-imagens.webp";
 import BarraVisita from "../../components/Barra-visita";
 import imgesq from "/imagens/sobre-nos-esquerda.png";
 import imgdir from "/imagens/sobre-nos-direita.png";
@@ -13,9 +13,9 @@ import estrelaDir from "/imagens/estrela-direita.png";
 import caixaSolos from "/imagens/caixa-solos.png";
 import caixaRochas from "/imagens/caixa-rochas.png";
 import caixaMinerais from "/imagens/caixa-minerais.png";
-import imagemMono from "/imagens/imagem-mono.png";
+import imagemMono from "/imagens/imagem-mono.webp";
 import MapaInterativo from "../../components/MapaInterativo";
-import apreesq from "/imagens/apresentacao-esquerda.png";
+import apreesq from "/imagens/apresentacao-esquerda.webp";
 
 export default function Acervo() {
   const [isSolosModalOpen, setIsSolosModalOpen] = useState(false);

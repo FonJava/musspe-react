@@ -1,6 +1,6 @@
 import Apresentacao from "../../components/Apresentacao";
 import BarraVisita from "../../components/Barra-visita";
-import mzinhoJogos from "/imagens/mzinho-jogo.png";
+import mzinhoJogos from "/imagens/mzinho-jogo.webp";
 import Botao from "../../components/Botao";
 import { FaArrowDown } from "react-icons/fa";
 import ContainerJogo from "../../components/Container-jogo";
