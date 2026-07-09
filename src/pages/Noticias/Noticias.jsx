@@ -56,7 +56,7 @@ export default function Noticias() {
   const n5Imagens = [n5Img1, n5Img2, n5Img3, n5Img4, n5Img5];
   const n10Imagens = [capaCurso, eduPatri, eduAmbi, fichaTec];
   const n12Imagens = [resultadoProcesso, tabelaResultado];
-  const n14Imagens = [imgFacepe1,imgFacepe2,imgFacepe3]
+  const n14Imagens = [imgFacepe1, imgFacepe2, imgFacepe3];
 
   return (
     <>
