@@ -81,7 +81,7 @@ export default function Noticias() {
         id="noticias-section"
         className="min-h-[700px] bg-brand-dark py-[80px]"
       >
-      <ContainerNoticia
+        <ContainerNoticia
           titulo={"O MUSSPE está na nova edição da revista FACEPE!"}
           resumo={
             'É com grande satisfação que compartilhamos que o artigo de opinião "MUSSPE: Ciência, Memória e Educação em Solos" foi publicado na 17ª edição da Revista Inovação & Desenvolvimento da FACEPE. A publicação reforça o papel do MUSSPE como um espaço de divulgação científica, educação e valorização do conhecimento sobre os solos, destacando a importância da integração entre ciência, memória e sociedade. Esse reconhecimento representa mais um passo na missão do museu de tornar a ciência do solo cada vez mais acessível, despertando o interesse da comunidade e fortalecendo a educação científica em Pernambuco. Parabenizamos todos os autores e colaboradores que contribuíram para essa conquista. Que este seja mais um incentivo para continuarmos promovendo conhecimento, inovação e impacto social por meio da ciência.'
@@ -89,7 +89,7 @@ export default function Noticias() {
           data={"26/06/2026"}
           link={"https://www.facepe.br/wp-content/uploads/2026/07/Revista_InovaEDesenvolvimento_ed17_compressed.pdf"}
           carrossel={true}
-          botao = "Acesse a revista!"
+          botao="Acesse a revista!"
           carrosselImages={n14Imagens}
           carrosselWidth="w-[90%] sm:w-[360px]"
           carrosselHeight="h-[90%] sm:h-[450px]"
