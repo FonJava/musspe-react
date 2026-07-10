@@ -227,7 +227,7 @@ const FormularioVisita = () => {
           <button
             className="mr-10 cursor-pointer rounded-3xl bg-brand-laranja px-7 py-4 font-barlow-medium text-2xl text-white hover:bg-brand-orange disabled:cursor-not-allowed disabled:bg-gray-300 disabled:text-gray-400"
             type="submit"
-            disabled={!submitEnabled}
+            disabled
           >
             Confirmar agendamento
           </button>

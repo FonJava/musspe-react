@@ -31,9 +31,9 @@ import seguidoresInsta from "/imagens/noticias/n11/seguidores.png";
 import resultadoProcesso from "/imagens/noticias/n12/resultadoProc.png";
 import tabelaResultado from "/imagens/noticias/n12/tabelaResultado.png";
 import noticiajepex from "/imagens/noticias/n13/noticiajepex.webp";
-import imgFacepe1 from "/imagens/noticias/n14/facepe1.png";
-import imgFacepe2 from "/imagens/noticias/n14/facepe2.png";
-import imgFacepe3 from "/imagens/noticias/n14/facepe3.png";
+import imgFacepe1 from "/imagens/noticias/n14/facepe1.jpg";
+import imgFacepe2 from "/imagens/noticias/n14/facepe2.jpg";
+import imgFacepe3 from "/imagens/noticias/n14/facepe3.jpg";
 
 export default function Noticias() {
   const scrollToNoticias = () => {
@@ -87,7 +87,9 @@ export default function Noticias() {
             'É com grande satisfação que compartilhamos que o artigo de opinião "MUSSPE: Ciência, Memória e Educação em Solos" foi publicado na 17ª edição da Revista Inovação & Desenvolvimento da FACEPE. A publicação reforça o papel do MUSSPE como um espaço de divulgação científica, educação e valorização do conhecimento sobre os solos, destacando a importância da integração entre ciência, memória e sociedade. Esse reconhecimento representa mais um passo na missão do museu de tornar a ciência do solo cada vez mais acessível, despertando o interesse da comunidade e fortalecendo a educação científica em Pernambuco. Parabenizamos todos os autores e colaboradores que contribuíram para essa conquista. Que este seja mais um incentivo para continuarmos promovendo conhecimento, inovação e impacto social por meio da ciência.'
           }
           data={"26/06/2026"}
-          link={"https://www.facepe.br/wp-content/uploads/2026/07/Revista_InovaEDesenvolvimento_ed17_compressed.pdf"}
+          link={
+            "https://www.facepe.br/wp-content/uploads/2026/07/Revista_InovaEDesenvolvimento_ed17_compressed.pdf"
+          }
           carrossel={true}
           botao="Acesse a revista!"
           carrosselImages={n14Imagens}

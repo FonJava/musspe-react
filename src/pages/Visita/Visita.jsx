@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import {
   FaClock,
   FaInstagram,
@@ -5,16 +6,42 @@ import {
   FaTiktok,
   FaFacebook,
   FaMapMarkerAlt,
+  FaExclamationTriangle,
 } from "react-icons/fa";
 
 import visitaDesktop from "/imagens/imagem-visitas.webp";
 import visitaMobile from "/imagens/imagem-visitas2.webp";
 import FormularioVisita from "../../components/FormularioVisita";
 import imagemMaps from "/imagens/imagen-mapa.png";
+import Modal from "../../components/Modal";
 
 export default function Visita() {
+  const [alertModalOpen, setAlertModalOpen] = useState(false);
+
+  useEffect(() => {
+    setAlertModalOpen(true);
+  }, []);
+
   return (
     <>
+      <Modal
+        isOpen={alertModalOpen}
+        onClose={() => setAlertModalOpen(false)}
+        title="Visitas suspensas temporariamente"
+        larguraModal="w-[90%] md:w-[700px]"
+        textoBotao="Entendi"
+      >
+        <div className="flex flex-col items-center gap-4 text-brand-dark">
+          <div className="flex h-16 w-16 items-center justify-center rounded-full bg-brand-laranja/10 text-brand-laranja">
+            <FaExclamationTriangle size={30} />
+          </div>
+          <p className="max-w-[520px] text-center font-barlow text-lg leading-relaxed text-brand-dark sm:text-xl">
+            O MUSSPE está passando por reformas, por isso as visitas do museu
+            estão suspensas por tempo indefinido.
+          </p>
+        </div>
+      </Modal>
+
       <section className="mt-[-73px] bg-brand-dark">
         <div className="absolute left-4 top-[100px] z-10 hidden flex-col space-y-2 md:flex">
           <a

@@ -53,7 +53,7 @@ const Modal = ({
         }`}
       >
         <div className="flex items-center justify-between p-6">
-          <h2 className="mx-auto mt-4 font-barlow-bold text-[27px] text-black sm:text-3xl">
+          <h2 className="mx-auto mt-4 w-full text-center font-barlow-bold text-[27px] text-black sm:text-3xl">
             {title}
           </h2>
         </div>
