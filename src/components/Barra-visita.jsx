@@ -13,7 +13,11 @@ export default function BarraVisita() {
       </h1>
       <div className="flex justify-center pb-6">
         <Link to="/visita">
-          <Botao tamanhoFonte="text-2xl" paddingY="py-1">
+          <Botao
+            tamanhoFonte="text-2xl"
+            paddingY="py-1"
+            ariaLabel="Agendar visita ao MUSSPE"
+          >
             Agende uma visita
           </Botao>
         </Link>

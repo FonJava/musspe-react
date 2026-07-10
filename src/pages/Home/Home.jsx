@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import Botao from "../../components/Botao";
 import Carrossel from "../../components/Carrossel";
@@ -36,6 +36,12 @@ import guia2 from "/imagens/senhorinha.png";
 import videoVisita from "/imagens/jingle.mp4";
 
 export default function Home() {
+  const noticiasRef = useRef(null);
+  const sobreNosRef = useRef(null);
+  const visitasGuiadasRef = useRef(null);
+  const historiaRef = useRef(null);
+  const principiosRef = useRef(null);
+
   const carrosselImages = [
     carrossel1,
     carrossel2,
@@ -52,6 +58,29 @@ export default function Home() {
     <>
       {/* apresentação */}
       <Apresentacao
+        /*  audioguiaTexto="Página inicial do Museu de Solos de Pernambuco. Conheça a apresentação do museu, acompanhe as últimas notícias, saiba mais sobre nós e descubra as visitas guiadas, a história e os princípios do projeto."
+        audioguiaSecoes={[
+          {
+            ref: noticiasRef,
+            prefixo: "Seção de notícias:",
+          },
+          {
+            ref: sobreNosRef,
+            prefixo: "Seção sobre nós:",
+          },
+          {
+            ref: visitasGuiadasRef,
+            prefixo: "Seção visitas guiadas:",
+          },
+          {
+            ref: historiaRef,
+            prefixo: "Seção nossa história:",
+          },
+          {
+            ref: principiosRef,
+            prefixo: "Seção nossos princípios:",
+          },
+        ]} */
         imagem={mateuszinho}
         larguraTexto={250}
         titulo="Conheça nossos solos, rochas e minerais!"
@@ -61,13 +90,18 @@ export default function Home() {
           <Botao
             tamanhoFonte="text-[18px] sm:text-[20px] py-[2.5px] md:text-[16px] lg:text-[20px]"
             paddingY="md:py-[1.5px] lg:py-[2.5px]"
+            ariaLabel="Agendar visita ao MUSSPE"
+            className="mb-16 md:mb-0"
           >
             Agende uma visita
           </Botao>
         </Link>
       </Apresentacao>
       {/* início-noticias*/}
-      <section className="relative h-[200px] bg-[#FFDCD2] sm:h-[300px]">
+      <section
+        ref={noticiasRef}
+        className="relative h-[200px] bg-[#FFDCD2] sm:h-[300px]"
+      >
         <img
           src={apreesq}
           alt="Decoração esquerda"
@@ -101,6 +135,7 @@ export default function Home() {
                 marginY="my-1 sm:my-2"
                 paddingY="py-1 sm:py-1.5"
                 tamanhoFonte="text-[10px] sm:text-[18px] lg:text-[20px]"
+                ariaLabel="Acessar a página de notícias do MUSSPE"
               >
                 Confira agora
               </Botao>
@@ -122,7 +157,10 @@ export default function Home() {
         </div>
       </section>
       {/* sobre-nós */}
-      <section className="relative h-[860px] bg-[#471A24] py-4 text-[#FFDCD2] md:h-auto">
+      <section
+        ref={sobreNosRef}
+        className="relative h-[860px] bg-[#471A24] py-4 text-[#FFDCD2] md:h-auto"
+      >
         <img
           src={imgesq}
           alt="Decoração esquerda"
@@ -168,14 +206,22 @@ export default function Home() {
               estado.
             </p>
             <Link to="/acervo">
-              <Botao marginY="my-3 md:my-0">Confira nosso acervo</Botao>
+              <Botao
+                marginY="my-3 md:my-0"
+                ariaLabel="Ir para a página do acervo do MUSSPE"
+              >
+                Confira nosso acervo
+              </Botao>
             </Link>
           </div>
         </div>
       </section>
 
       {/* Visitas guiadas */}
-      <section className="relative overflow-hidden bg-[#FFDCD2] text-[#471A24] sm:h-[840px] md:h-[565px]">
+      <section
+        ref={visitasGuiadasRef}
+        className="relative overflow-hidden bg-[#FFDCD2] text-[#471A24] sm:h-[840px] md:h-[565px]"
+      >
         <div className="absolute mt-64 flex sm:mt-48 md:mt-48 lg:mt-48 xl:mt-48">
           <img
             src={backgroundImg}
@@ -230,7 +276,9 @@ export default function Home() {
 
                 <div className="mb-8 flex-shrink-0 md:mb-20">
                   <Link to="/visita">
-                    <Botao>Agende uma visita</Botao>
+                    <Botao ariaLabel="Agendar visita guiada ao MUSSPE">
+                      Agende uma visita
+                    </Botao>
                   </Link>
                 </div>
               </div>
@@ -248,7 +296,10 @@ export default function Home() {
       </section>
 
       {/* Nossa história */}
-      <section className="h-[515px] bg-[#471A24] sm:h-[565px]">
+      <section
+        ref={historiaRef}
+        className="h-[515px] bg-[#471A24] sm:h-[565px]"
+      >
         <div className="flex flex-col items-center">
           <div className="flex items-center gap-3 py-6 font-barlow-extrabold text-4xl text-[#FFDCD2]">
             <img
@@ -266,14 +317,19 @@ export default function Home() {
           />
           <div>
             <Link to="/colaboradores">
-              <Botao>Conheça nossos colaboradores</Botao>
+              <Botao ariaLabel="Conhecer a página de colaboradores do MUSSPE">
+                Conheça nossos colaboradores
+              </Botao>
             </Link>
           </div>
         </div>
       </section>
 
       {/* nossos princípios */}
-      <section className="relative bg-[#FFDCD2] py-4 text-[#471A24] sm:h-[1880px] md:h-[610px] lg:h-[650px]">
+      <section
+        ref={principiosRef}
+        className="relative bg-[#FFDCD2] py-4 text-[#471A24] sm:h-[1880px] md:h-[610px] lg:h-[650px]"
+      >
         <img
           src={imgprincipiosesq}
           alt="Decoração esquerda"

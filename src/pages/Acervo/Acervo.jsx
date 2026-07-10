@@ -43,7 +43,11 @@ export default function Acervo() {
         larguraTexto={310}
         ajusteBottom="mb-[20px] md:mb-[0px]"
       >
-        <Botao onClick={scrollToColecao}>
+        <Botao
+          onClick={scrollToColecao}
+          ariaLabel="Ir para a seção de coleção do acervo"
+          className="mb-16 md:mb-0"
+        >
           <FaArrowDown className="mr-2 inline" />
           Conheça nosso acervo!
         </Botao>
@@ -127,6 +131,7 @@ export default function Acervo() {
                 <Botao
                   tamanhoFonte="text-lg md:text-base"
                   onClick={() => setIsSolosModalOpen(true)}
+                  ariaLabel="Ver lista de solos"
                 >
                   Ver lista
                 </Botao>
@@ -142,6 +147,7 @@ export default function Acervo() {
                 <Botao
                   tamanhoFonte="text-lg md:text-base"
                   onClick={() => setIsRochasModalOpen(true)}
+                  ariaLabel="Ver lista de rochas"
                 >
                   Ver lista
                 </Botao>
@@ -157,6 +163,7 @@ export default function Acervo() {
                 <Botao
                   tamanhoFonte="text-lg md:text-base"
                   onClick={() => setIsMineraisModalOpen(true)}
+                  ariaLabel="Ver lista de minerais"
                 >
                   Ver lista
                 </Botao>

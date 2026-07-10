@@ -96,7 +96,12 @@ export default function ContainerNoticia({
       </div>
       <div className="mx-auto mb-[50px] mt-[-90px]">
         <Link to={link}>
-          <Botao tamanhoFonte="text-[25px]" paddingX="px-[30px]" disabled={disabled}>
+          <Botao
+            tamanhoFonte="text-[25px]"
+            paddingX="px-[30px]"
+            disabled={disabled}
+            ariaLabel={botao}
+          >
             {botao}
           </Botao>
         </Link>

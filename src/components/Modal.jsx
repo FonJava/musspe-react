@@ -58,13 +58,13 @@ const Modal = ({
           </h2>
         </div>
         <div className="mt-[-14px] p-6">{children}</div>
-        <button
+        <BotaoAlt
           onClick={onClose}
-          className="mx-auto mb-4 flex text-gray-500 transition-colors duration-200 hover:text-gray-700"
-          aria-label={textoBotao ? textoBotao : "Fechar modal"}
+          ariaLabel={textoBotao ? textoBotao : "Fechar modal"}
+          className="mx-auto mb-4 flex"
         >
-          <BotaoAlt>{textoBotao}</BotaoAlt>
-        </button>
+          {textoBotao}
+        </BotaoAlt>
       </div>
     </div>
   );

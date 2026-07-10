@@ -14,6 +14,7 @@ import visitaMobile from "/imagens/imagem-visitas2.webp";
 import FormularioVisita from "../../components/FormularioVisita";
 import imagemMaps from "/imagens/imagen-mapa.png";
 import Modal from "../../components/Modal";
+import BotaoAudioguia from "../../components/Botao-audioguia";
 
 export default function Visita() {
   const [alertModalOpen, setAlertModalOpen] = useState(false);
@@ -93,6 +94,12 @@ export default function Visita() {
         />
       </section>
       <section className="bg-brand-bege">
+        <div className="flex justify-end px-4 pt-8 md:pt-4">
+          <BotaoAudioguia
+            audioguiaTexto="Visita guiada ao museu de solos de Pernambuco. Conheça a história dos solos, rochas e minerais do estado."
+            positionClassName="relative"
+          />
+        </div>
         <div className="mx-auto items-center pl-2 pt-[70px] font-barlow-italic text-lg sm:text-xl md:flex md:w-[670px] md:pl-0 md:pt-[100px]">
           <div className="text-start md:w-[415px]">
             <h2 className="mt-[-25px] font-barlow-bold text-3xl text-brand-dark lg:mt-0">
@@ -119,7 +126,7 @@ export default function Visita() {
           <a href="https://maps.app.goo.gl/DzJmnuAaG8ijhjwm6">
             <img
               src={imagemMaps}
-              className="mt-4 w-[280px] sm:mx-auto md:mt-0"
+              className="mb-10 mt-4 w-[280px] sm:mx-auto md:mt-0"
               alt="Localização no Google Maps"
             />
           </a>

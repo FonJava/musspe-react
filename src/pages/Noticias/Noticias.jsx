@@ -72,6 +72,8 @@ export default function Noticias() {
           tamanhoFonte="text-[18px] sm:text-[20px] py-[2.5px] md:text-[16px] lg:text-[20px]"
           paddingY="md:py-[1.5px] lg:py-[2.5px]"
           onClick={scrollToNoticias}
+          ariaLabel="Ir para a seção de notícias do MUSSPE"
+          className="mb-16 md:mb-0"
         >
           <FaArrowDown className="mr-2 inline" />
           Fique por dentro!
