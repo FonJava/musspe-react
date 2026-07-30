@@ -108,6 +108,36 @@ export default function Jogos() {
         />
 
         <ContainerJogo
+          titulo={"Caça-Palavras: Identificação de Rochas Sedimentares"}
+          ano={"(2026)"}
+          desenvolvedores={
+            "Gabriel R. C. Leão e Glêvia K. Lima (MUSSPE/UFRPE/UAST)"
+          }
+          imagem={caçaPalavras}
+          link={"https://wordwall.net/play/115306/010/879"}
+        />
+
+        <ContainerJogo
+          titulo={"Caça-Palavras: Identificação de Rochas Metamórficas"}
+          ano={"(2026)"}
+          desenvolvedores={
+            "Gabriel R. C. Leão e Glêvia K. Lima (MUSSPE/UFRPE/UAST)"
+          }
+          imagem={caçaPalavras}
+          link={"https://wordwall.net/play/115305/500/495"}
+        />
+
+        <ContainerJogo
+          titulo={"Caça-Palavras: Identificação de Rochas Ígneas"}
+          ano={"(2026)"}
+          desenvolvedores={
+            "Gabriel R. C. Leão e Glêvia K. Lima (MUSSPE/UFRPE/UAST)"
+          }
+          imagem={caçaPalavras}
+          link={"https://wordwall.net/play/115305/170/386"}
+        />
+
+        <ContainerJogo
           titulo={"Classificação em grupos: Tipos de rochas"}
           ano={"(2024)"}
           desenvolvedores={
@@ -125,6 +155,16 @@ export default function Jogos() {
           }
           imagem={questionario}
           link={"https://wordwall.net/play/93957/780/121"}
+        />
+
+        <ContainerJogo
+          titulo={"Questionário: Intemperismo"}
+          ano={"(2026)"}
+          desenvolvedores={
+            "Gabriel R. C. Leão e Glêvia K. Lima (MUSSPE/UFRPE/UAST)"
+          }
+          imagem={questionario}
+          link={"https://wordwall.net/play/115310/310/497"}
         />
       </section>
       <BarraVisita />
