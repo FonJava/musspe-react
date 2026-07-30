@@ -96,7 +96,7 @@ export default function Visita() {
       <section className="bg-brand-bege">
         <div className="flex justify-end px-4 pt-8 md:pt-4">
           <BotaoAudioguia
-            audioguiaTexto="Visita guiada ao museu de solos de Pernambuco. Conheça a história dos solos, rochas e minerais do estado."
+            audioguiaTexto="Infelizmente nosso museu está em reforma e as visitas estão temporariamente suspensas! Estamos tornando nosso espaço mais acolhedor, acessível, inclusivo e moderno para receber vocês."
             positionClassName="relative"
           />
         </div>

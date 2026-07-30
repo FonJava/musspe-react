@@ -10,7 +10,7 @@ function speak(text, lang = "pt-BR", onEnd) {
 
   const utterance = new SpeechSynthesisUtterance(text);
   utterance.lang = lang;
-  utterance.rate = 2;
+  utterance.rate = 1.8;
   utterance.pitch = 1;
   utterance.onend = onEnd;
   utterance.onerror = onEnd;

@@ -1,4 +1,3 @@
-import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import Botao from "../../components/Botao";
 import Carrossel from "../../components/Carrossel";
@@ -36,12 +35,6 @@ import guia2 from "/imagens/senhorinha.png";
 import videoVisita from "/imagens/jingle.mp4";
 
 export default function Home() {
-  const noticiasRef = useRef(null);
-  const sobreNosRef = useRef(null);
-  const visitasGuiadasRef = useRef(null);
-  const historiaRef = useRef(null);
-  const principiosRef = useRef(null);
-
   const carrosselImages = [
     carrossel1,
     carrossel2,
@@ -58,29 +51,10 @@ export default function Home() {
     <>
       {/* apresentação */}
       <Apresentacao
-        /*  audioguiaTexto="Página inicial do Museu de Solos de Pernambuco. Conheça a apresentação do museu, acompanhe as últimas notícias, saiba mais sobre nós e descubra as visitas guiadas, a história e os princípios do projeto."
-        audioguiaSecoes={[
-          {
-            ref: noticiasRef,
-            prefixo: "Seção de notícias:",
-          },
-          {
-            ref: sobreNosRef,
-            prefixo: "Seção sobre nós:",
-          },
-          {
-            ref: visitasGuiadasRef,
-            prefixo: "Seção visitas guiadas:",
-          },
-          {
-            ref: historiaRef,
-            prefixo: "Seção nossa história:",
-          },
-          {
-            ref: principiosRef,
-            prefixo: "Seção nossos princípios:",
-          },
-        ]} */
+        audioguiaTexto="Sejam todos bem-vindos ao MUSSPE, o Museu de Solos de Pernambuco!
+O Museu de Solos de Pernambuco Professor Mateus Rosas Ribeiro (MUSSPE) é um espaço de educação não formal, localizado no Departamento de Agronomia da Universidade Federal Rural de Pernambuco (DEPA/UFRPE), Campus de Dois Irmãos, em Recife. Seu objetivo é promover a educação em solos para públicos diversos, incluindo-se crianças, jovens e adultos de todas as idades e níveis de escolarização, aproximando a sociedade das atividades desenvolvidas em ambiente universitário.
+A partir deste portal você conhecerá nosso acervo, história, equipe, princípios, e claro, agendar uma visita para nos conhecer.  
+"
         imagem={mateuszinho}
         larguraTexto={250}
         titulo="Conheça nossos solos, rochas e minerais!"
@@ -98,10 +72,7 @@ export default function Home() {
         </Link>
       </Apresentacao>
       {/* início-noticias*/}
-      <section
-        ref={noticiasRef}
-        className="relative h-[200px] bg-[#FFDCD2] sm:h-[300px]"
-      >
+      <section className="relative h-[200px] bg-[#FFDCD2] sm:h-[300px]">
         <img
           src={apreesq}
           alt="Decoração esquerda"
@@ -157,10 +128,7 @@ export default function Home() {
         </div>
       </section>
       {/* sobre-nós */}
-      <section
-        ref={sobreNosRef}
-        className="relative h-[860px] bg-[#471A24] py-4 text-[#FFDCD2] md:h-auto"
-      >
+      <section className="relative h-[860px] bg-[#471A24] py-4 text-[#FFDCD2] md:h-auto">
         <img
           src={imgesq}
           alt="Decoração esquerda"
@@ -218,10 +186,7 @@ export default function Home() {
       </section>
 
       {/* Visitas guiadas */}
-      <section
-        ref={visitasGuiadasRef}
-        className="relative overflow-hidden bg-[#FFDCD2] text-[#471A24] sm:h-[840px] md:h-[565px]"
-      >
+      <section className="relative overflow-hidden bg-[#FFDCD2] text-[#471A24] sm:h-[840px] md:h-[565px]">
         <div className="absolute mt-64 flex sm:mt-48 md:mt-48 lg:mt-48 xl:mt-48">
           <img
             src={backgroundImg}
@@ -296,10 +261,7 @@ export default function Home() {
       </section>
 
       {/* Nossa história */}
-      <section
-        ref={historiaRef}
-        className="h-[515px] bg-[#471A24] sm:h-[565px]"
-      >
+      <section className="h-[515px] bg-[#471A24] sm:h-[565px]">
         <div className="flex flex-col items-center">
           <div className="flex items-center gap-3 py-6 font-barlow-extrabold text-4xl text-[#FFDCD2]">
             <img
@@ -326,10 +288,7 @@ export default function Home() {
       </section>
 
       {/* nossos princípios */}
-      <section
-        ref={principiosRef}
-        className="relative bg-[#FFDCD2] py-4 text-[#471A24] sm:h-[1880px] md:h-[610px] lg:h-[650px]"
-      >
+      <section className="relative bg-[#FFDCD2] py-4 text-[#471A24] sm:h-[1880px] md:h-[610px] lg:h-[650px]">
         <img
           src={imgprincipiosesq}
           alt="Decoração esquerda"
