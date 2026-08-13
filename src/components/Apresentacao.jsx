@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import apreesq from "/imagens/apresentacao-esquerda.webp";
 import apredir from "/imagens/apresentacao-direita.webp";
-import { FaInstagram, FaYoutube, FaTiktok, FaFacebook } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaTiktok, FaYoutube } from "react-icons/fa";
+import BotaoAudioguia from "./Botao-audioguia";
 
 export default function Apresentacao({
   imagem,
@@ -11,6 +12,8 @@ export default function Apresentacao({
   tamanhoImagem = 350,
   larguraTexto = 300,
   ajusteBottom,
+  audioguiaTexto = "",
+  audioguiaSecoes = [],
 }) {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -51,7 +54,7 @@ export default function Apresentacao({
         className="absolute right-0 w-[150px] md:w-[200px]"
         draggable="false"
       />
-      <div className="mb-[-150px] flex hidden flex-col space-y-2 px-3 py-6 md:mb-[-120px] md:flex">
+      <div className="mb-[-150px] hidden flex-col space-y-2 px-3 py-6 md:mb-[-120px] md:flex">
         <a
           href="https://www.instagram.com/museudesolospe/?hl=pt-br"
           target="_blank"
@@ -111,6 +114,10 @@ export default function Apresentacao({
           </p>
           {children}
         </div>
+        <BotaoAudioguia
+          audioguiaTexto={audioguiaTexto || `${titulo}. ${descricao}`}
+          audioguiaSecoes={audioguiaSecoes}
+        />
       </div>
     </section>
   );

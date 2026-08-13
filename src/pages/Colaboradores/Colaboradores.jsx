@@ -276,6 +276,7 @@ function BolsistasTab() {
                 <Botao
                   tamanhoFonte="text-xs sm:text-base md:text-lg"
                   paddingX="px-2 sm:px-4"
+                  ariaLabel="Abrir currículo Lattes do colaborador"
                 >
                   Currículo
                 </Botao>
@@ -311,6 +312,7 @@ function VoluntariosTab() {
                 <Botao
                   tamanhoFonte="text-xs sm:text-base md:text-lg"
                   paddingX="px-2 sm:px-4"
+                  ariaLabel="Abrir currículo Lattes do voluntário"
                 >
                   Currículo
                 </Botao>
@@ -378,13 +380,18 @@ export default function Colaboradores() {
         imagem={colaboradoresImg}
         titulo={"Colaboradores(as)"}
         descricao={
-          "Atualmente, a equipe do MUSSPE é composta por 31 membros, sendo 1 coordenador, 11 bolsistas e 19 colaboradores (as)."
+          "Atualmente, a equipe do MUSSPE é composta por 30 membros, sendo 2 coordenadores, 9 bolsistas e 19 colaboradores (as)."
+        }
+        audioguiaTexto={
+          "Venha conhecer a equipe de colaboradores! Atualmente, a equipe do MUSSPE é composta por 30 membros, sendo 2 coordenadores, 9 estagiários, 19 colaboradores, e claro, nosso time de apoiadores: UFRPE, EMBRAPA Solos, CNPq, FACEPE, Ministério da Ciência, Tecnologia, Inovações e Comunicações e FNDCT. Na Coordenação temos: Clarissa Buarque e Professor Mateus Rosas Ribeiro Filho. No Educativo temos: Givanildo Ferreira, José Clayton Lopes, Marcelo Carvalho, Marina Soares, Messias Barbosa e Wesllaine Andrade. Na Comunicação temos: Anthony Guerra, Gabriel Leão e Geovana Gabrielli."
         }
       >
         <Botao
           tamanhoFonte="text-[18px] sm:text-[20px] py-[2.5px] md:text-[16px] lg:text-[20px]"
           paddingY="md:py-[1.5px] lg:py-[2.5px]"
           onClick={scrollToColaboradores}
+          ariaLabel="Ir para a seção da equipe de colaboradores"
+          className="mb-16 md:mb-0"
         >
           <FaArrowDown className="mr-2 inline" />
           Conheça nossa equipe

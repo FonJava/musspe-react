@@ -102,6 +102,7 @@ export default function ContainerNoticiaDuplo({
             tamanhoFonte="text-[25px]"
             paddingX="px-[30px]"
             disabled={disabled}
+            ariaLabel={botao}
           >
             {botao}
           </Botao>
@@ -111,6 +112,7 @@ export default function ContainerNoticiaDuplo({
             tamanhoFonte="text-[25px]"
             paddingX="px-[30px]"
             disabled={disabled2}
+            ariaLabel={botao2}
           >
             {botao2}
           </Botao>

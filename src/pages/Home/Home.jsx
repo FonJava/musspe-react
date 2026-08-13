@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import Botao from "../../components/Botao";
 import Carrossel from "../../components/Carrossel";
@@ -52,6 +51,7 @@ export default function Home() {
     <>
       {/* apresentação */}
       <Apresentacao
+        audioguiaTexto="Sejam todos bem-vindos ao MUSSPE, o Museu de Solos de Pernambuco! O Museu de Solos de Pernambuco Professor Mateus Rosas Ribeiro (MUSSPE) é um espaço de educação não formal, localizado no Departamento de Agronomia da Universidade Federal Rural de Pernambuco (DEPA/UFRPE), Campus de Dois Irmãos, em Recife. Seu objetivo é promover a educação em solos para públicos diversos, incluindo-se crianças, jovens e adultos de todas as idades e níveis de escolarização, aproximando a sociedade das atividades desenvolvidas em ambiente universitário. A partir deste portal você conhecerá nosso acervo, história, equipe, princípios, e claro, agendar uma visita para nos conhecer."
         imagem={mateuszinho}
         larguraTexto={250}
         titulo="Conheça nossos solos, rochas e minerais!"
@@ -61,6 +61,8 @@ export default function Home() {
           <Botao
             tamanhoFonte="text-[18px] sm:text-[20px] py-[2.5px] md:text-[16px] lg:text-[20px]"
             paddingY="md:py-[1.5px] lg:py-[2.5px]"
+            ariaLabel="Agendar visita ao MUSSPE"
+            className="mb-16 md:mb-0"
           >
             Agende uma visita
           </Botao>
@@ -101,6 +103,7 @@ export default function Home() {
                 marginY="my-1 sm:my-2"
                 paddingY="py-1 sm:py-1.5"
                 tamanhoFonte="text-[10px] sm:text-[18px] lg:text-[20px]"
+                ariaLabel="Acessar a página de notícias do MUSSPE"
               >
                 Confira agora
               </Botao>
@@ -168,7 +171,12 @@ export default function Home() {
               estado.
             </p>
             <Link to="/acervo">
-              <Botao marginY="my-3 md:my-0">Confira nosso acervo</Botao>
+              <Botao
+                marginY="my-3 md:my-0"
+                ariaLabel="Ir para a página do acervo do MUSSPE"
+              >
+                Confira nosso acervo
+              </Botao>
             </Link>
           </div>
         </div>
@@ -230,7 +238,9 @@ export default function Home() {
 
                 <div className="mb-8 flex-shrink-0 md:mb-20">
                   <Link to="/visita">
-                    <Botao>Agende uma visita</Botao>
+                    <Botao ariaLabel="Agendar visita guiada ao MUSSPE">
+                      Agende uma visita
+                    </Botao>
                   </Link>
                 </div>
               </div>
@@ -266,7 +276,9 @@ export default function Home() {
           />
           <div>
             <Link to="/colaboradores">
-              <Botao>Conheça nossos colaboradores</Botao>
+              <Botao ariaLabel="Conhecer a página de colaboradores do MUSSPE">
+                Conheça nossos colaboradores
+              </Botao>
             </Link>
           </div>
         </div>

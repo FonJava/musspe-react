@@ -42,8 +42,15 @@ export default function Acervo() {
         tamanhoImagem={350}
         larguraTexto={310}
         ajusteBottom="mb-[20px] md:mb-[0px]"
+        audioguiaTexto={
+          "Que tal conhecer nosso acervo? Atualmente, nosso acervo é composto por 35 monolitos (12 perfis da Zona da Mata, 11 perfis do Agreste e 12 perfis de solos do Sertão), e cerca de 427 exemplares de rochas, fósseis e minerais. O acervo do MUSSPE te leva em uma viagem ao longo do nosso estado, do Sertão ao Litoral. Dentre os principais materiais didáticos, os macromonolitos se destacam, sendo conceituado como uma seção vertical do solo, coletada em campo de forma a manter intactas as características naturais do perfil, como: estrutura, organização dos horizontes, cor, transições, porosidade, raízes e concreções. Esses perfis mostram a composição, a estratificação e a estrutura do solo de maneira muito semelhante à visualização do solo em uma trincheira em campo. A maioria dos perfis é coletada em uma coluna com 30 cm de largura e até 1,50 m de profundidade. Eles são conservados por impregnação com laca diluída. No site do MUSSPE você ainda poderá encontrar o nosso mapa interativo, onde é possível identificar a localização dos solos de referência, bem como suas descrições."
+        }
       >
-        <Botao onClick={scrollToColecao}>
+        <Botao
+          onClick={scrollToColecao}
+          ariaLabel="Ir para a seção de coleção do acervo"
+          className="mb-16 md:mb-0"
+        >
           <FaArrowDown className="mr-2 inline" />
           Conheça nosso acervo!
         </Botao>
@@ -127,6 +134,7 @@ export default function Acervo() {
                 <Botao
                   tamanhoFonte="text-lg md:text-base"
                   onClick={() => setIsSolosModalOpen(true)}
+                  ariaLabel="Ver lista de solos"
                 >
                   Ver lista
                 </Botao>
@@ -142,6 +150,7 @@ export default function Acervo() {
                 <Botao
                   tamanhoFonte="text-lg md:text-base"
                   onClick={() => setIsRochasModalOpen(true)}
+                  ariaLabel="Ver lista de rochas"
                 >
                   Ver lista
                 </Botao>
@@ -157,6 +166,7 @@ export default function Acervo() {
                 <Botao
                   tamanhoFonte="text-lg md:text-base"
                   onClick={() => setIsMineraisModalOpen(true)}
+                  ariaLabel="Ver lista de minerais"
                 >
                   Ver lista
                 </Botao>

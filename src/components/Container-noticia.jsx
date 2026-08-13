@@ -21,6 +21,7 @@ export default function ContainerNoticia({
   ajusteMt = "",
   ajusteMb = "",
   disabled = false,
+  headingRef = null,
 }) {
   return (
     <div className="mx-auto mb-[30px] mt-[10px] flex min-h-[200px] w-[90%] flex-col rounded-[20px] bg-brand-roxo lg:w-[800px]">
@@ -28,7 +29,10 @@ export default function ContainerNoticia({
         <span className="float-right p-[20px] font-barlow-italic text-brand-bege">
           {data}
         </span>
-        <h3 className="mx-auto mb-0 mt-[40px] w-[90%] p-[20px] text-justify font-barlow-extrabold text-[24px] text-brand-bege md:mx-0 md:mt-0 md:w-[400px]">
+        <h3
+          ref={headingRef}
+          className="mx-auto mb-0 mt-[40px] w-[90%] p-[20px] text-justify font-barlow-extrabold text-[24px] text-brand-bege md:mx-0 md:mt-0 md:w-[400px]"
+        >
           {titulo}
         </h3>
       </div>
@@ -96,7 +100,12 @@ export default function ContainerNoticia({
       </div>
       <div className="mx-auto mb-[50px] mt-[-90px]">
         <Link to={link}>
-          <Botao tamanhoFonte="text-[25px]" paddingX="px-[30px]" disabled={disabled}>
+          <Botao
+            tamanhoFonte="text-[25px]"
+            paddingX="px-[30px]"
+            disabled={disabled}
+            ariaLabel={botao}
+          >
             {botao}
           </Botao>
         </Link>
