@@ -1,5 +1,11 @@
 import React, { useState, useEffect, Suspense, lazy } from "react";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  useLocation,
+  Navigate,
+} from "react-router-dom";
 import { doc, getDoc, setDoc, increment } from "firebase/firestore";
 
 import { db, authReady } from "./assets/firebase";
@@ -14,7 +20,6 @@ const Acervo = lazy(() => import("./pages/Acervo/Acervo"));
 const Colaboradores = lazy(() => import("./pages/Colaboradores/Colaboradores"));
 const Jogos = lazy(() => import("./pages/Jogos/Jogos"));
 const Visita = lazy(() => import("./pages/Visita/Visita"));
-const NotFound = lazy(() => import("./pages/NotFound/NotFound"));
 
 function AppWrapper() {
   const location = useLocation();
@@ -32,7 +37,7 @@ function AppWrapper() {
       "/visita": "visita",
     };
 
-    const page = pathToPage[location.pathname] || "notfound";
+    const page = pathToPage[location.pathname] || "home";
 
     setActivePage(page);
   }, [location.pathname]);
@@ -92,7 +97,7 @@ function AppWrapper() {
             <Route path="/jogos" element={<Jogos />} />
             <Route path="/colaboradores" element={<Colaboradores />} />
             <Route path="/visita" element={<Visita />} />
-            <Route path="*" element={<NotFound />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </Suspense>
       </main>
