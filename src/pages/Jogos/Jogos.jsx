@@ -33,6 +33,9 @@ export default function Jogos() {
         descricao={
           "Explore nossas atividades interativas sobre solos, minerais e geodiversidade. Descubra, aprenda e divirta-se com experiências educativas cheias de curiosidades e desafios!"
         }
+        audioguiaTexto={
+          "No site temos disponíveis 12 games educativos, acesse, aprenda e se divirta. Existem os jogos de Perseguição no Labirinto, o qual aborda assuntos relacionados a Conservação dos Sólos. O Jogo de associação sobre as Práticas conservacionistas do solo. O Jogo do tipo anagrama, sobre os processos de degradação dos sólos. O Jogo de Verdadeiro ou Falso, sobre temáticas relacionadas a Conservação dos sólos. Um jogo do tipo Quiz, sobre as funções do solo. Também temos diversos jogos de caça-palavras, visando identificar os minerais primários e secundários, as rochas sedimentares, metamórficas e ígneas, O nosso décimo game trata-se de um jogo de classificação sobre os tipos de rochas. Além disso, temos o questionário sobre os tipos de sólos. E por fim um game sobre o intemperismo."
+        }
       >
         <Botao
           tamanhoFonte="text-[18px] sm:text-[20px] py-[2.5px] md:text-[16px] lg:text-[20px]"
