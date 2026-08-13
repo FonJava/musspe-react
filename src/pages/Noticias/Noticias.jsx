@@ -104,7 +104,7 @@ export default function Noticias() {
         className="min-h-[700px] bg-brand-dark py-[80px]"
       >
         <ContainerNoticia
-          ref={noticiaRef1}
+          headingRef={noticiaRef1}
           titulo={"O MUSSPE está na nova edição da revista FACEPE!"}
           resumo={
             'É com grande satisfação que compartilhamos que o artigo de opinião "MUSSPE: Ciência, Memória e Educação em Solos" foi publicado na 17ª edição da Revista Inovação & Desenvolvimento da FACEPE. A publicação reforça o papel do MUSSPE como um espaço de divulgação científica, educação e valorização do conhecimento sobre os solos, destacando a importância da integração entre ciência, memória e sociedade. Esse reconhecimento representa mais um passo na missão do museu de tornar a ciência do solo cada vez mais acessível, despertando o interesse da comunidade e fortalecendo a educação científica em Pernambuco. Parabenizamos todos os autores e colaboradores que contribuíram para essa conquista. Que este seja mais um incentivo para continuarmos promovendo conhecimento, inovação e impacto social por meio da ciência.'
@@ -122,7 +122,7 @@ export default function Noticias() {
           ajusteMb={"mb-[-40px]"}
         />
         <ContainerNoticia
-          ref={noticiaRef2}
+          headingRef={noticiaRef2}
           titulo={
             "Trabalho do MUSSPE é premiado com Menção Honrosa no CONEX/JEPEX"
           }
@@ -139,7 +139,7 @@ export default function Noticias() {
           ajusteMt={"mt-[40px] md:mt-0"}
         />
         <ContainerNoticia
-          ref={noticiaRef3}
+          headingRef={noticiaRef3}
           titulo={"Resultado do Processo Seletivo MUSSPE 2026"}
           resumo={
             "Recebemos muitas inscrições e somos muito gratos a todos que demonstraram interesse em fazer parte do Museu de Solos de Pernambuco. Parabenizamos os bolsistas selecionados e desejamos um caminho de muito aprendizado, trocas e crescimento. Obrigada a todos que participaram!"
