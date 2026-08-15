@@ -51,7 +51,7 @@ export default function Home() {
     <>
       {/* apresentação */}
       <Apresentacao
-        audioguiaTexto="Sejam todos bem-vindos ao MUSSPE, o Museu de Solos de Pernambuco! O Museu de Solos de Pernambuco Professor Mateus Rosas Ribeiro (MUSSPE) é um espaço de educação não formal, localizado no Departamento de Agronomia da Universidade Federal Rural de Pernambuco (DEPA/UFRPE), Campus de Dois Irmãos, em Recife. Seu objetivo é promover a educação em solos para públicos diversos, incluindo-se crianças, jovens e adultos de todas as idades e níveis de escolarização, aproximando a sociedade das atividades desenvolvidas em ambiente universitário. A partir deste portal você conhecerá nosso acervo, história, equipe, princípios, e claro, agendar uma visita para nos conhecer."
+        audio="audio-home.mp3"
         imagem={mateuszinho}
         larguraTexto={250}
         titulo="Conheça nossos solos, rochas e minerais!"

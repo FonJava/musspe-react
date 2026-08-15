@@ -3,137 +3,107 @@ import { FaStop, FaVolumeUp } from "react-icons/fa";
 import { useLocation } from "react-router-dom";
 import Botao from "./Botao";
 
-function speak(text, lang = "pt-BR", onEnd) {
-  if (typeof window === "undefined" || !window.speechSynthesis) {
-    return;
-  }
-
-  const utterance = new SpeechSynthesisUtterance(text);
-  utterance.lang = lang;
-  utterance.rate = 1.8;
-  utterance.pitch = 1;
-  utterance.onend = onEnd;
-  utterance.onerror = onEnd;
-
-  window.speechSynthesis.speak(utterance);
-}
-
-function collectReadableText(node) {
-  if (!node) {
-    return "";
-  }
-
-  if (node.nodeType === Node.TEXT_NODE) {
-    return node.textContent || "";
-  }
-
-  if (node.nodeType !== Node.ELEMENT_NODE) {
-    return "";
-  }
-
-  if (node.hasAttribute?.("data-audioguia-ignore")) {
-    return "";
-  }
-
-  let text = "";
-  node.childNodes.forEach((child) => {
-    text += `${collectReadableText(child)} `;
-  });
-
-  return text;
-}
-
-function normalizeText(value) {
-  return String(value || "")
-    .replace(/\s+/g, " ")
-    .trim();
-}
-
 export default function BotaoAudioguia({
-  audioguiaTexto = "",
-  audioguiaSecoes = [],
-  ariaLabel = "Audioguia, clique para escutar a página",
-  positionClassName = "absolute bottom-4 right-4",
-  className = "",
+  audio,
   children = "Audioguia",
-  lang = "pt-BR",
+  ariaLabel = "Audioguia, clique para escutar sobre o conteudo da página",
+  className = "",
+  positionClassName = "absolute bottom-4 right-4",
   ...rest
 }) {
   const location = useLocation();
-  const [isSpeaking, setIsSpeaking] = useState(false);
-  const isMountedRef = useRef(false);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef(null);
+  const mountedRef = useRef(false);
+
+  const resolveAudioPath = (audioPath) => {
+    if (!audioPath) return "";
+    if (audioPath.startsWith("/")) return audioPath;
+    if (audioPath.startsWith("audios/")) return `/${audioPath}`;
+    return `/audios/${audioPath}`;
+  };
+
+  const stopAudio = () => {
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+    }
+
+    if (mountedRef.current) {
+      setIsPlaying(false);
+    }
+  };
 
   useEffect(() => {
-    isMountedRef.current = true;
+    mountedRef.current = true;
 
     return () => {
-      isMountedRef.current = false;
+      mountedRef.current = false;
+      stopAudio();
     };
   }, []);
 
   useEffect(() => {
-    if (typeof window === "undefined" || !window.speechSynthesis) {
-      return;
-    }
-
-    window.speechSynthesis.cancel();
-    setIsSpeaking(false);
+    stopAudio();
   }, [location.pathname]);
 
   useEffect(() => {
-    return () => {
-      if (typeof window !== "undefined" && window.speechSynthesis) {
-        window.speechSynthesis.cancel();
+    if (!audio) return;
+
+    const src = resolveAudioPath(audio);
+    const currentAudio = new Audio(src);
+    currentAudio.preload = "auto";
+    currentAudio.onended = () => {
+      if (mountedRef.current) {
+        setIsPlaying(false);
       }
     };
-  }, []);
 
-  const stopSpeech = () => {
-    if (typeof window !== "undefined" && window.speechSynthesis) {
-      window.speechSynthesis.cancel();
-    }
+    audioRef.current = currentAudio;
 
-    if (isMountedRef.current) {
-      setIsSpeaking(false);
-    }
-  };
+    return () => {
+      currentAudio.pause();
+      currentAudio.currentTime = 0;
+    };
+  }, [audio]);
 
-  const handleClick = () => {
-    if (isSpeaking) {
-      stopSpeech();
+  const handleClick = async () => {
+    if (!audio) return;
+
+    if (isPlaying && audioRef.current) {
+      stopAudio();
       return;
     }
 
-    const parts = [normalizeText(audioguiaTexto)];
+    const audioUrl = resolveAudioPath(audio);
 
-    audioguiaSecoes.forEach((secao) => {
-      const sectionText = collectReadableText(secao?.ref?.current);
-      const prefix = normalizeText(secao?.prefixo);
-      const sufixo = normalizeText(secao?.sufixo);
-
-      if (sectionText) {
-        parts.push([prefix, sectionText, sufixo].filter(Boolean).join(" "));
-      }
-    });
-
-    const textToRead = parts
-      .filter(Boolean)
-      .join(" ")
-      .replace(/\s+/g, " ")
-      .trim();
-    if (!textToRead) {
-      return;
+    if (!audioRef.current) {
+      audioRef.current = new Audio(audioUrl);
+      audioRef.current.preload = "auto";
+      audioRef.current.onended = () => {
+        if (mountedRef.current) {
+          setIsPlaying(false);
+        }
+      };
     }
 
-    setIsSpeaking(true);
-    speak(textToRead, lang, () => {
-      if (isMountedRef.current) {
-        setIsSpeaking(false);
+    const currentAudio = audioRef.current;
+
+    if (currentAudio.src !== window.location.origin + audioUrl) {
+      currentAudio.src = audioUrl;
+    }
+
+    try {
+      await currentAudio.play();
+      if (mountedRef.current) {
+        setIsPlaying(true);
       }
-    });
+    } catch (error) {
+      stopAudio();
+    }
   };
 
-  const buttonLabel = isSpeaking ? "Parar audioguia" : ariaLabel;
+  const buttonLabel = isPlaying ? "Parar audioguia" : ariaLabel;
 
   return (
     <Botao
@@ -147,13 +117,13 @@ export default function BotaoAudioguia({
         <FaVolumeUp
           size={18}
           className={`absolute transition-all duration-300 ease-in-out ${
-            isSpeaking ? "rotate-90 scale-0 opacity-0" : "scale-100 opacity-100"
+            isPlaying ? "rotate-90 scale-0 opacity-0" : "scale-100 opacity-100"
           }`}
         />
         <FaStop
           size={14}
           className={`absolute transition-all duration-300 ease-in-out ${
-            isSpeaking
+            isPlaying
               ? "rotate-0 scale-100 opacity-100"
               : "-rotate-90 scale-0 opacity-0"
           }`}

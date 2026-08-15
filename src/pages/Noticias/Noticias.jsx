@@ -1,5 +1,3 @@
-import { useRef } from "react";
-
 import Apresentacao from "../../components/Apresentacao";
 import BarraVisita from "../../components/Barra-visita";
 import mzinho from "/imagens/mzinho-alt.webp";
@@ -38,10 +36,6 @@ import imgFacepe2 from "/imagens/noticias/n14/facepe2.jpg";
 import imgFacepe3 from "/imagens/noticias/n14/facepe3.jpg";
 
 export default function Noticias() {
-  const noticiaRef1 = useRef(null);
-  const noticiaRef2 = useRef(null);
-  const noticiaRef3 = useRef(null);
-
   const scrollToNoticias = () => {
     const noticiasSection = document.getElementById("noticias-section");
     if (noticiasSection) {
@@ -73,20 +67,7 @@ export default function Noticias() {
         descricao={
           "Saiba em primeira mão das nossas coletas, oficinas, exposições e muito mais. Aqui você encontra tudo sobre as iniciativas científicas e culturais do Museu de Solos de Pernambuco."
         }
-        audioguiaTexto={
-          "Quer ficar por dentro de tudo que o MUSSPE vem desenvolvendo? Saiba em primeira mão das nossas coletas, oficinas, exposições e muito mais. Aqui você encontra tudo sobre as iniciativas científicas e culturais do Museu de Solos de Pernambuco. Confira nossas últimas notícias."
-        }
-        audioguiaSecoes={[
-          {
-            ref: noticiaRef1,
-            sufixo: ".",
-          },
-          {
-            ref: noticiaRef2,
-            sufixo: ".",
-          },
-          { ref: noticiaRef3, sufixo: "." },
-        ]}
+        audio="audio-noticias.mp3"
       >
         <Botao
           tamanhoFonte="text-[18px] sm:text-[20px] py-[2.5px] md:text-[16px] lg:text-[20px]"
@@ -104,7 +85,6 @@ export default function Noticias() {
         className="min-h-[700px] bg-brand-dark py-[80px]"
       >
         <ContainerNoticia
-          headingRef={noticiaRef1}
           titulo={"O MUSSPE está na nova edição da revista FACEPE!"}
           resumo={
             'É com grande satisfação que compartilhamos que o artigo de opinião "MUSSPE: Ciência, Memória e Educação em Solos" foi publicado na 17ª edição da Revista Inovação & Desenvolvimento da FACEPE. A publicação reforça o papel do MUSSPE como um espaço de divulgação científica, educação e valorização do conhecimento sobre os solos, destacando a importância da integração entre ciência, memória e sociedade. Esse reconhecimento representa mais um passo na missão do museu de tornar a ciência do solo cada vez mais acessível, despertando o interesse da comunidade e fortalecendo a educação científica em Pernambuco. Parabenizamos todos os autores e colaboradores que contribuíram para essa conquista. Que este seja mais um incentivo para continuarmos promovendo conhecimento, inovação e impacto social por meio da ciência.'
@@ -122,7 +102,6 @@ export default function Noticias() {
           ajusteMb={"mb-[-40px]"}
         />
         <ContainerNoticia
-          headingRef={noticiaRef2}
           titulo={
             "Trabalho do MUSSPE é premiado com Menção Honrosa no CONEX/JEPEX"
           }
@@ -139,7 +118,6 @@ export default function Noticias() {
           ajusteMt={"mt-[40px] md:mt-0"}
         />
         <ContainerNoticia
-          headingRef={noticiaRef3}
           titulo={"Resultado do Processo Seletivo MUSSPE 2026"}
           resumo={
             "Recebemos muitas inscrições e somos muito gratos a todos que demonstraram interesse em fazer parte do Museu de Solos de Pernambuco. Parabenizamos os bolsistas selecionados e desejamos um caminho de muito aprendizado, trocas e crescimento. Obrigada a todos que participaram!"

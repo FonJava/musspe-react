@@ -382,9 +382,7 @@ export default function Colaboradores() {
         descricao={
           "Atualmente, a equipe do MUSSPE é composta por 30 membros, sendo 2 coordenadores, 9 bolsistas e 19 colaboradores (as)."
         }
-        audioguiaTexto={
-          "Venha conhecer a equipe de colaboradores! Atualmente, a equipe do MUSSPE é composta por 30 membros, sendo 2 coordenadores, 9 estagiários, 19 colaboradores, e claro, nosso time de apoiadores: UFRPE, EMBRAPA Solos, CNPq, FACEPE, Ministério da Ciência, Tecnologia, Inovações e Comunicações e FNDCT. Na Coordenação temos: Clarissa Buarque e Professor Mateus Rosas Ribeiro Filho. No Educativo temos: Givanildo Ferreira, José Clayton Lopes, Marcelo Carvalho, Marina Soares, Messias Barbosa e Wesllaine Andrade. Na Comunicação temos: Anthony Guerra, Gabriel Leão e Geovana Gabrielli."
-        }
+        audio="audio-colaboradores.mp3"
       >
         <Botao
           tamanhoFonte="text-[18px] sm:text-[20px] py-[2.5px] md:text-[16px] lg:text-[20px]"

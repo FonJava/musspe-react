@@ -12,8 +12,7 @@ export default function Apresentacao({
   tamanhoImagem = 350,
   larguraTexto = 300,
   ajusteBottom,
-  audioguiaTexto = "",
-  audioguiaSecoes = [],
+  audio = "",
 }) {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -114,10 +113,7 @@ export default function Apresentacao({
           </p>
           {children}
         </div>
-        <BotaoAudioguia
-          audioguiaTexto={audioguiaTexto || `${titulo}. ${descricao}`}
-          audioguiaSecoes={audioguiaSecoes}
-        />
+        <BotaoAudioguia audio={audio} />
       </div>
     </section>
   );

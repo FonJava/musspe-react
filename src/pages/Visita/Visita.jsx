@@ -96,7 +96,7 @@ export default function Visita() {
       <section className="bg-brand-bege">
         <div className="flex justify-end px-4 pt-8 md:pt-4">
           <BotaoAudioguia
-            audioguiaTexto="Infelizmente nosso museu está em reforma e as visitas estão temporariamente suspensas! Estamos tornando nosso espaço mais acolhedor, acessível, inclusivo e moderno para receber vocês."
+            audio="audio-visitas.mp3"
             positionClassName="relative"
           />
         </div>
