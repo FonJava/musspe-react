@@ -50,6 +50,33 @@ export default function Jogos() {
         id="jogos-section"
         className="min-h-[700px] bg-brand-dark py-[40px] sm:py-[80px]"
       >
+       <ContainerJogo
+          titulo={"Classificação em grupos: Tipos de rochas"}
+          ano={"(2024)"}
+          desenvolvedores={
+            "Lucas V S Euclides e Glêvia K. Lima (MUSSPE/UFRPE/UAST)"
+          }
+          imagem={classGrupos}
+          link={"https://wordwall.net/play/79663/066/166"}
+        />
+        <ContainerJogo
+          titulo={"Quiz Show: Funções do solo"}
+          ano={"(2024)"}
+          desenvolvedores={
+            "Carlos A C C Silva e Glêvia K. Lima (MUSSPE/UFRPE/UAST)"
+          }
+          imagem={quiz}
+          link={"https://wordwall.net/play/13918/281/888"}
+        />
+        <ContainerJogo
+          titulo={"Caça-Palavras: Minerais primários e secundários"}
+          ano={"(2024)"}
+          desenvolvedores={
+            "Lucas V S Euclides e Glêvia K. Lima (MUSSPE/UFRPE/UAST)"
+          }
+          imagem={caçaPalavras}
+          link={"https://wordwall.net/play/80298/652/309"}
+        />
         <ContainerJogo
           titulo={"Perseguição no Labirinto: Conservação dos Solos"}
           ano={"(2025)"}
@@ -89,25 +116,14 @@ export default function Jogos() {
           imagem={vf}
           link={"https://wordwall.net/play/89885/602/241"}
         />
-
-        <ContainerJogo
-          titulo={"Quiz Show: Funções do solo"}
-          ano={"(2024)"}
+         <ContainerJogo
+          titulo={"Questionário: Tipos de solos"}
+          ano={"(2025)"}
           desenvolvedores={
-            "Carlos A C C Silva e Glêvia K. Lima (MUSSPE/UFRPE/UAST)"
+            "Gabriel R C Leão, Glévia K. Lima, Anthony Guerra, Gabriel Henrique e Geovana Gabrielli (MUSSPE/UFRPE/UAST)"
           }
-          imagem={quiz}
-          link={"https://wordwall.net/play/13918/281/888"}
-        />
-
-        <ContainerJogo
-          titulo={"Caça-Palavras: Minerais primários e secundários"}
-          ano={"(2024)"}
-          desenvolvedores={
-            "Lucas V S Euclides e Glêvia K. Lima (MUSSPE/UFRPE/UAST)"
-          }
-          imagem={caçaPalavras}
-          link={"https://wordwall.net/play/80298/652/309"}
+          imagem={questionario}
+          link={"https://wordwall.net/play/93957/780/121"}
         />
 
         <ContainerJogo
@@ -138,26 +154,6 @@ export default function Jogos() {
           }
           imagem={caçaPalavras}
           link={"https://wordwall.net/play/115305/170/386"}
-        />
-
-        <ContainerJogo
-          titulo={"Classificação em grupos: Tipos de rochas"}
-          ano={"(2024)"}
-          desenvolvedores={
-            "Lucas V S Euclides e Glêvia K. Lima (MUSSPE/UFRPE/UAST)"
-          }
-          imagem={classGrupos}
-          link={"https://wordwall.net/play/79663/066/166"}
-        />
-
-        <ContainerJogo
-          titulo={"Questionário: Tipos de solos"}
-          ano={"(2025)"}
-          desenvolvedores={
-            "Gabriel R C Leão, Glévia K. Lima, Anthony Guerra, Gabriel Henrique e Geovana Gabrielli (MUSSPE/UFRPE/UAST)"
-          }
-          imagem={questionario}
-          link={"https://wordwall.net/play/93957/780/121"}
         />
 
         <ContainerJogo
